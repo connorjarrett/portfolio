@@ -10,6 +10,6 @@ I believe that the website is now finished. I think I will take the next couple 
 
 ### 🚧 Construction Update 5/11/2022
 
-Work on the website is going smoothly and lots of the content is now filled in. I think it will be ready for release sometime soon. Although I might hold the release until Christmas just for the extra festivities 🎄
+Work on the website is going smoothly and lots of the content is now filled in. I think it will be ready for release sometime soon.
 
 ### 🚩Work begins September 2022
