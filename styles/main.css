@@ -1,0 +1,248 @@
+.hero {
+    position: relative;
+    background-color: var(--main-colour);
+
+    width: 100%;
+    /* aspect-ratio: 16/9; */
+
+    /* max-height: 100vh; */
+    /* min-height: 50vh; */
+
+    height: 100%;
+    height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    box-shadow: #343434 0px 0px 20px;
+    
+    z-index: 100;
+    margin-bottom: 1px;
+}
+
+.hero .text-container {
+    text-align: center;
+    font-size: 2.5vw;
+
+    width: 90%;
+    height: 90%;
+
+    position: relative;
+}
+
+.hero .text-container h1 {
+    transition: all 1s;
+    position: relative;
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.hero #hero-intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero #hero-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: transparent;
+    -webkit-text-stroke: rgb(0, 0, 0) 0.2vw;
+
+    width: 100%;
+}
+
+.hero #hero-name.mobile {
+    -webkit-text-stroke: transparent 0;
+    color: var(--main-colour);
+
+    text-shadow:
+    -0.2vw -0.2vw 0 #000,
+     0   -0.2vw 0 #000,
+     0.2vw -0.2vw 0 #000,
+     0.2vw  0   0 #000,
+     0.2vw  0.2vw 0 #000,
+     0    0.2vw 0 #000,
+    -0.2vw  0.2vw 0 #000,
+    -0.2vw  0   0 #000;
+}
+
+.cover {
+    transition: all 2s;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--main-colour);
+}
+
+/* Sections */
+
+.section .trigger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 50%);
+    height: 20%;
+}
+
+.section .title {
+    transition: all .85s;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-100%, -50%);
+
+    display: flex;
+    align-items: center;
+
+    font-size: 3.5vw;
+}
+
+.section .title .icon {
+    font-size: calc(12px + 3vw);
+    margin: 10px;
+}
+
+.section hr {
+    transition: left .9s, height 3s, opacity 1s;
+
+    opacity: 0;
+    position: absolute;
+    width: 2px;
+
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    height: 0;
+
+    background-color: black;
+}
+
+.section .text {
+    transition: all 1.3s;
+    opacity: 0;
+
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 50%;
+    top: 50%;
+
+    width: calc(100% - 37.5% - 50px);
+    overflow-wrap: break-word;
+}
+
+.section .text p, .section .text h2 {
+    margin: 0;
+}
+
+.section.visible .title {
+    left: calc(37.5% - 25px);
+}
+
+.section.visible hr {
+    opacity: 1;
+    left: 37.5%;
+
+    height: 80%;
+}
+
+.section.visible .text {
+    opacity: 1;
+    left: calc(37.5% + 25px);
+}
+
+
+/* About */
+.about {
+    width: 100%;
+}
+
+.about .header {
+    position: relative;
+
+    background-color: white;
+    width: 100%;
+    aspect-ratio: 35/9;
+
+    overflow: hidden;
+}
+
+.about .header video, .about .header img {
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+
+    object-position: 0 90%;
+    object-fit: cover;
+    border: none;
+    clip-path: inset(1px 1px);
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    z-index: 1;
+    filter: saturate(2);
+}
+
+.about .header .gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    background-image: linear-gradient(90deg, #5c6d7a70, transparent);
+    /* background-image: linear-gradient(180deg, transparent 50%, white),linear-gradient(90deg, #5c6d7a, transparent); */
+}
+
+.about .header h2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+
+    transform: translate(0, -50%);
+    font-size: 5vw;
+
+    margin: 0;
+    z-index: 10;
+
+    color: var(--main-colour);
+}
+
+.about .content {
+    width: 100%;
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+.section .text .subsection {
+    margin-left: 3%;
+}
+
+.section .text .subsection .underline {
+    transition: all 3s;
+    height: 0.1px;
+}
+
+.section .text .subsection h3 {
+    display: inline-block;
+    font-size: 1.4m;
+
+    margin: 1px;
+}

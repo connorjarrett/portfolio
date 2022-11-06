@@ -1,0 +1,32 @@
+{
+    "name": "Connor Jarrett - Portfolio",
+    "lang": "en-GB",
+    "short_name": "conjardev.github.io",
+    "description":"Porfolio for Full Stack Developer, Connor Jarrett",
+    "theme_color": "#f7f016",
+    "background_color": "#f7f016",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "media/maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "media/128x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "media/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }

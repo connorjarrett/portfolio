@@ -1,30 +1,286 @@
-<html>
-  <head>
-    <title>Construction</title>
-  </head>
-  <body>
-    
-    <style>
-      body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: black;
-        background-color: #f7f016;
-        
-        font-size: 2vw;
-        
-        
-        height: 100vh;
-        width: 100vw;
-        
-        overflow: hidden;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    </style
-    
-    <h1>&#128679;Construction In Progress!&#128679;</h1>
-  </body
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="canonical" href="https://conjardev.github.io"/>
 
+    <meta charset="UTF-8">
+    <meta property="og:url" content="https://conjardev.github.io/" />
+    <meta name="description" content="Connor Jarrett | Full-Stack Web Developer">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Portfolio,Developer,Connor,Full Stack, website coder, portfolio, portfolio website, web dev, full stack developer, full stack, stack programmer,Connor Jarrett, connorjrt">
+    
+    <meta property="og:title" content="Connor Jarrett" />
+    <meta property="og:site_name" content="Connor Jarrett | Portfolio">
+    <meta property="og:description" content="Connor Jarrett | Full-Stack Web Developer | Portfolio" />
+    <meta property="og:image" content="media/landing-image.png" />
+    <meta name="twitter:image" content=" media/landing-image.png">
+    <meta name="twitter:image:alt" content="Landing page for Connor Jarrett's Portfolio">
+
+    <meta name="twitter:site" content="@ConnorJrt">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="media/16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="media/32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="media/128x128.png" sizes="128x128">
+
+    <link rel="icon" type="image/ico" href="media/16x16_ico.ico" sizes="16x16">
+    <link rel="icon" type="image/ico" href="media/32x32_ico.ico" sizes="32x32">
+    <link rel="icon" type="image/ico" href="media/128x128_.png" sizes="128x128">
+
+    <link rel="shortcut icon" type="image/png" href="media/maskable.png">
+    <link rel="apple-touch-icon" href="media/maskable.png">
+
+    <meta name="application-name" content="conjardev.github.io" />
+    <meta name="theme-color" content="#f7f016"/>
+    <meta name="msapplication-TileColor" content="#f7f016" />
+
+    <!-- Main -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/universal.css">
+    <link rel="stylesheet" href="styles/mobile-friendly.css">
+    <link rel="stylesheet" href="styles/section-themes.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>Connor Jarrett</title>
+</head>
+<body>
+    <!-- Hero -->
+    <div class="hero" id="home">
+        <div class="text-container">
+            <h1 id="hero-intro">Hi there;</h1>
+            <h1 id="hero-name">I'm Connor<div class="cover"></div></h1>
+        </div>
+        <div onclick="scrollBeyond(this.parentElement)" class="scrollToDiscover" id="hero-scroll-discover">
+            <span class="icon">mouse</span>
+            <p>Scroll to discover</p>
+        </div>
+    </div>
+
+    <!-- Development -->
+    <div class="development section" id="development">
+        <div class="trigger"></div>
+        <div class="content">
+            <h2 class="title">&lt;Developer&gt;</h2>
+            <hr>
+            <div class="text fadeInChildren">
+                <h2>Full-Stack Website Developer</h2>
+                <p>I specialise in HTML, JavaScript, PHP and MySQL</p><br>
+                <div class="fadeInChildren">
+                    <!-- Code with passion -->
+                    <div class="subsection">
+                        <h3>Code with passion<div class="underline"></div></h3>
+                        <p>
+                            On every project I work on, I put everything I have into it and always try
+                            to learn something new with each project.
+                        </p>
+                    </div>
+                    <br>
+                    <!-- Written by a human -->
+                    <div class="subsection">
+                        <h3>Written by a human<div class="underline"></div></h3>
+                        <p>
+                            I am not a fan of no-code solutions, instead preferring to write everything
+                            myself, I find that with this method I end up with more control over the
+                            quality of what I produce.
+                        </p>
+                    </div>
+                    <br>
+                    <!-- Always learning -->
+                    <div class="subsection">
+                        <h3>Always learning<div class="underline"></div></h3>
+                        <p>
+                            I'm not going to pretend that I know everything, I'm always learning something
+                            new and I'm excited by a challenge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Design -->
+    <div class="design section" id="design">
+        <div class="trigger"></div>
+        <div class="content">
+            <h2 class="title"><span class="icon">brush</span>Designer</h2>
+            <hr>
+            <div class="text fadeInChildren">
+                <h2>Web Frontend and Vector Graphic designer</h2>
+                <p>I used to be a freelance graphic designer, but now focus on web frontend.</p><br>
+                
+                <!-- The look of the future -->
+                <div class="subsection">
+                    <h3>The look of the future<div class="underline"></div></h3>
+                    <p>
+                        With my designs, I usually go for a modern aesthetic. This usually entails lots of
+                        whites and greys, mixed with rounded edges.
+                    </p>
+                </div>
+                <br>
+                <!-- Responsive -->
+                <div class="subsection">
+                    <h3>Responsive<div class="underline"></div></h3>
+                    <p>
+                        I always try to make every webpage I work on fully responsive to different
+                        sized devices, and have gotten much better at this over the years.
+                    </p>
+                </div>
+                <br>
+                <!-- UX -->
+                <div class="subsection">
+                    <h3>Intuative UX<div class="underline"></div></h3>
+                    <p>
+                        On all my projects, I work hard to ensure that the User Experience is as intuitive
+                        as possible and that this scales to multiple platforms.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="skills section" id="skills">
+        <div class="trigger"></div>
+        <div class="content">
+            <h2 class="title"><span class="icon">auto_awesome</span>My Skills<br>& Tools</h2>
+            <hr>
+            <div class="text fadeInChildren">
+                <h3>My Skills</h3>
+                <div class="skills-subsection fadeInChildren">
+                    <!-- Javascript will take care of filling this in -->
+                </div>
+                <br>
+                <h3>Tools I Use</h3>
+                <div class="tools-subsection fadeInChildren">
+                    <!-- Javascript will take care of filling this in -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact section" id="contact">
+        <div class="trigger"></div>
+        <div class="content">
+            <h2 class="title"><span class="icon">mail</span>Reach Out</h2>
+            <hr>
+            <div class="text">
+                <h3>Drop a message</h3>
+                <div class="socials"></div>
+                <form class="fadeInChildren" action="https://getform.io/f/5ae4769a-10a5-43d3-963d-d1fcdbab0ca0" method="POST">
+                    <label for="contact-name">Name*</label>
+                    <input id="contact-name" type="text" name="Name" required>
+
+                    <label for="contact-email">Email*</label>
+                    <input id="contact-email" type="email" name="Email" required>
+
+                    <label for="contact-message">Message*</label>
+                    <textarea id="contact-message" name="Message" required></textarea>
+
+                    <input value="Send Message" type="submit">
+                    <blockquote>*Currently unavailable for commision</blockquote>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about" id="about">
+        <div class="header">
+            <h2>About <i>Me</i><div class="underline"></div></h2>
+            <div class="gradient"></div>
+            <img id="backup-img" src="media/webp/london-eye.webp" alt="A photo from of the London eye spinning, with the Soutbank Place apartments behind it">
+            <video id="ldn-video" src="media/min-london-eye-loop.mp4" alt="A video of the London eye spinning, with the Soutbank Place apartments behind it" autoplay muted loop oncontextmenu="return false;">
+        </div>
+
+        <div class="content">
+            <div class="text-content">
+                <!-- My Life -->
+                <h3>My Life <div class="underline"></div></h3>
+                <p>
+                    I was born in the UK and have lived there my entire life. From a young
+                    age I was always on a computer creating something. I've been making
+                    some form of website for as long as I can remember and I really enjoy
+                    doing it. In more recent years my projects have been getting more and
+                    more advanced, integrating the backend more with PHP and MySQL.
+                </p>
+
+                <hr>
+
+                <!-- My Motive -->
+                <h3>My Motive <div class="underline"></div></h3>
+                <p>
+                    I am an aspiring and passionate full-stack web developer. I have
+                    a huge passion for Development, UX and Design. For my whole life
+                    I have been trying to top what I've done before and I love looking
+                    for new challenges. 
+                </p>
+
+                <hr>
+
+                <h3>My Interests <div class="underline" id="interests"></div></h3>
+                <p>
+                    <ul class="fadeInChildren interests">
+                        <li>
+                            <a href="#development">Web Development</a> | I have grown up with websites
+                            and they have always been a part of my life. As time has gone
+                            on I have progressively improved my development skills. In recent years I
+                            started to intergrate more of the backend and also utilize tools like
+                            jQuery to help enhance my code. Most recently I have been working on
+                            improving my SEO, which I think I have implamented sucessfully on this site.
+                            <br>
+                        </li>
+                        <li>
+                            <a href="#design">Design</a> | In the past few years I have been using
+                            Adobe Illustrator to try and enhance my art and design skills. I have
+                            used this to create many design elements that I wouldn't be able to make
+                            before, which has also greatly improved my UI design skills. As well as
+                            this, for a brief period I also did freelance graphic design on Fiverr.
+                            <br>
+                        </li>
+                        <li>
+                            <a href="#interests">Server Management</a> | Recently, I have started to learn how to
+                            manage servers. Currently, I have a Dell PowerEdge R610 which runs multiple
+                            VMs, one of which is an Apache web server.
+                        </li>
+                    </ul>
+                </p>
+
+
+            </div>
+            <hr>
+            <img src="media/webp/ldn-buildings.webp" alt="A picture of the Southbank Place apartments through two buildings in Covent Garden">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Made with &hearts; by Connor Jarrett, &copy; 2022-<span class="year"></span></p>
+        <ul>
+            <li onclick="anchor('development')">Development</li>
+            <li onclick="anchor('design')">Design</li>
+            <li onclick="anchor('skills')">Skills</li>
+            <li onclick="anchor('contact')">Contact</li>
+            <li onclick="anchor('about')">About</li>
+        </ul>
+        <a href="https://github.com/conjardev/conjardev.github.io">See behind the scenes</a>
+        <div class="socials"></div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/skills-and-tools.js"></script>
+</body>
+</html>
