@@ -1,0 +1,4 @@
+Sitemap: https://conjardev.github.io/info/sitemap.xml
+
+User-agent: *
+Disallow:
