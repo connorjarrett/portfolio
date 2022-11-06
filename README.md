@@ -3,6 +3,7 @@
 This will be a nice website that tells everyone About Me, My Skills and more. It may also include the projects I work on but that is for a later addition.
 
 # Update Log
+### Now released
 
 ### 🚧 Construction Update 5/11/2022 ~8pm GMT
 
