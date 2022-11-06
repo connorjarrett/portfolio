@@ -1,0 +1,8 @@
+[
+    {"icon":"code", "name":"HTML"},
+    {"icon":"code", "name":"JavaScript"},
+    {"icon":"storage", "name":"PHP"},
+    {"icon":"code", "name":"jQuery"},
+    {"icon":"format_paint", "name":"CSS"},
+    {"icon":"database", "name":"MySQL"}
+]
