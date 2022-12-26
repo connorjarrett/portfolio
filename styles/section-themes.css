@@ -28,6 +28,104 @@
     color: white;
 }
 
+/* Work */
+.section.work {
+    background-color: #f07782;
+}
+
+.section.work .title {
+    color: white;
+
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.section.work .scroll {
+    position: absolute;
+    height: 100%;
+    top: calc(20px + 3.5vw);
+    padding-top: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+}
+
+.section.work .scroll .project {
+    height: calc(100% - (80px + 3.5vw));
+    width: calc((100% / 3) - 20px);
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 100% 0;
+
+    position: absolute;
+    transition: left 20ms, opacity 0.5s, width 0.7s, grid 0.7s;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.54);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section.work .scroll .project > div {
+    overflow: hidden;
+    margin: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.section.work .scroll .project .description h3 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bolder;
+} 
+
+.section.work .scroll .project .description a {
+    margin-left: 2px;
+    color: #052fff;
+}
+
+.section.work .scroll .project .description .thumb {
+    position: relative;
+    object-fit: cover;
+    bottom: 0;
+    height: 45%;
+    max-width: 90%;
+
+    transition: left 0.7s;
+    border-radius: 0.5rem;
+
+    aspect-ratio: 16/9;
+}
+
+.section.work .scroll .project .detail * {
+    margin: 0;
+}
+/* .section.work .scroll .project .detail {
+    border-left: 1px solid #c89ca0;
+} */
+
+.section.work .scroll .project:hover {
+    left: 0 !important;
+    z-index: 100;
+    width: calc(100% - 20px);
+
+    transition: left 1s, width 1s, grid 1s;
+    grid-template-columns: 50% 50%;
+}
+
+.section.work .scroll .project:hover ~ .project {
+    opacity: 0.2;
+}
 
 /* Skills */
 .section.skills {

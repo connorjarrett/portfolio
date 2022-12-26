@@ -31,6 +31,10 @@
     .section.contact form input {
         width: 100% !important;
     }
+
+    .section.work .scroll .project .description h3 {
+        font-size: 1.5em !important;
+    }
 }
 
 @media screen and (max-width: 8in) {
@@ -56,5 +60,10 @@
     .skills-subsection .chip {
         width: 13vw !important;
         min-width: 90px;
+    }
+
+    .section.work .scroll .project > div {
+        padding: 10px !important;
+        margin: 10px !important;
     }
 }
