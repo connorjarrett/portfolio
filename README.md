@@ -33,7 +33,9 @@ This design concept was my 3rd iteration. One of those iterations was very simil
 ---
 
 # Development Update Log
-**🚩 6/11/2022 - Work complete**
+**🆕 26/12/2022 - Added "work" tab**
+
+**🚩 6/11/2022 - Initial Launch**
 
 **🚧 Construction Update 5/11/2022 ~8pm GMT**
 
@@ -44,5 +46,3 @@ I believe that the website is now finished. I think I will take the next couple 
 Work on the website is going smoothly and lots of the content is now filled in. I think it will be ready for release sometime soon.
 
 **🚩Work begins September 2022**
-
-> File generated automatically from Notion
