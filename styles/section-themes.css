@@ -324,8 +324,7 @@
 
 /* About Me */
 .about {
-    background-color: #efefef;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    background-color: #efefef
 }
 
 .about h3 {
@@ -336,6 +335,10 @@
     /* -webkit-text-stroke: #efefef 5px; */
 
     margin: 0;
+}
+
+.about .header {
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .about .content {

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+      url('Mona-Sans.woff2') format('woff2 supports variations'),
+      url('Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
 * {
     scroll-behavior: smooth;
 }
@@ -8,10 +17,11 @@
 
 html {
     height: 100%;
+    font-family: 'Mona Sans' !important;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     height: 100%;
     overflow-x: hidden;
 
@@ -73,7 +83,7 @@ body {
 .section .content {
     width: 100%;
 
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
 }
 
 
