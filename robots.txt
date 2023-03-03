@@ -1,4 +1,3 @@
-Sitemap: https://connorjarrett.com/info/sitemap.xml
-
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://connorjarrett.com/sitemap.xml

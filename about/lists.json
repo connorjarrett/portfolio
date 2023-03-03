@@ -1,0 +1,15 @@
+{
+    "whois":[
+        {"name":"Location", "icon":"pin_drop", "value":"Hampshire, England"},
+        {"name":"Age", "icon":"person", "value":"<span class='age'></span>"},
+        {"name":"Founder", "icon":"domain", "value":"<a target='_BLANK' href='https://cade.dev'>Cade</a>"}
+    ],
+
+    "quickfacts":[
+        {"name":"Birthday", "icon":"cake", "value":"18th Sept 2007"},
+        {"name":"Favourite Game", "icon":"stadia_controller", "value":"Watch_Dogs 2"},
+        {"name":"Favourite Film", "icon":"movie", "value":"Mission Impossible: Fallout"},
+        {"name":"Computer", "icon":"desktop_mac", "value":"Mac"},
+        {"name":"Dream City", "icon":"apartment", "value":"London"}
+    ]
+}

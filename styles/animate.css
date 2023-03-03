@@ -1,0 +1,98 @@
+/* Arrow */
+#arrow {
+    transition: all 300ms ease;
+}
+
+/* Projects Section */
+section.projects ul > li {
+    transition: all 250ms;
+}
+
+section.projects ul > li:hover {
+    transform: scale(1.2);
+    background-color: #4e00f2;
+
+    z-index: 100;
+}
+
+/* Work */
+section.work .content > .job * {
+    transition: all 400ms;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+section.work .job .company {
+    transition-delay: 100ms;
+}
+
+section.work .job .period {
+    transition-delay: 200ms;
+}
+
+section.work .job .role {
+    transition-delay: 300ms;
+}
+
+section.work .content > .job.unplayed * {
+    transition: all 0s;
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+/* Skills and Tools */
+section.skillsTools aside div {
+    transition: all 450ms, transform 1s;
+    scale: 1;
+}
+
+section.skillsTools aside div:hover {
+    scale: 1.01;
+}
+
+/* About */
+section.about span {
+    transition: opacity 1s;
+}
+
+section.about.played span {
+    opacity: 1 !important;
+}
+
+/* Email */
+section.contact .email-main {
+    transition: transform 200ms;
+}
+
+section.contact .email-main:hover {
+    transform: scale(1.1);
+}
+
+/* Gallery */
+section.gallery .gallery-container > div {
+    transition: scale 300ms;
+}
+
+section.gallery .gallery-container > div:hover {
+    scale: 0.99;
+}
+
+/* Animated Underline */
+
+.underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background-color: black;
+
+    top: 75%;
+    left: 50%;
+
+    transform: translate(-50%);
+    transition: all 250ms;
+}
+
+.underline:hover::after {
+    width: calc(100% - 20px);
+}

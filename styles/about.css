@@ -1,0 +1,392 @@
+body {
+    min-height: 500vh;
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+main {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+    transition: background 500ms;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: all 250ms; */
+}
+
+section.hero {
+    position: relative;
+    width: 70vw;
+    max-width: 20in;
+    aspect-ratio: 756 / 491;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+
+    transition: scale 500ms ease-out, height 250ms;
+    border-radius: 0;
+}
+
+section.hero.anim-desktop {
+    border-radius: 0 !important;
+}
+
+section.hero.anim-mobi {
+    aspect-ratio: 9/19 !important;
+
+
+    width: unset;
+    max-width: 95vw;
+    height: 90vh;
+    transition: all 250ms, scale 500ms ease-out;
+}
+
+section.hero.anim-mobi #code {
+    border-radius: inherit;
+}
+
+section.hero.anim-mobi #code > span, section.hero.mobile #code > span {
+    color: rgb(26, 26, 26) !important;
+}
+
+section.hero #code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 10px;
+    z-index: 2;
+    font-size: 0.7em;
+
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    
+    color: white;
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    transition: opacity 1s;
+}
+
+section.hero #code > span {
+    width: 100vw;
+    transition: width 500ms;
+    display: inline-block;
+    white-space: pre;
+    position: relative;
+    z-index: 10;
+}
+
+section.hero #heading-seo {
+    position: absolute;
+    color: black;
+    z-index: 1;
+}
+
+section.hero #hero-ascii {
+    position: relative;
+    z-index: 10;
+
+    font-weight: 100;
+    font-family: monospace;
+    white-space: pre;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    color: green;
+    font-size: min(2vw, 1em);
+}
+
+section.hero.anim-desktop .background {
+    opacity: 0;
+    position: absolute;
+    content: '';
+
+    width: 130%;
+    height: 130%;
+
+    background-image: url(../media/misc/laptop-bezel.png);
+    background-size: 100%;
+    z-index: 100;
+
+    background-position-y: 0;
+    background-position-x: 0;
+    background-repeat: no-repeat;
+    
+    transition: opacity 250ms;
+}
+
+section.hero.anim-mobi .background {
+    opacity: 0;
+    position: absolute;
+    content: '';
+
+    width: 105%;
+    height: 101%;
+
+    background-image: url(../media/misc/phone-bezel.png);
+    background-size: 100%;
+    z-index: 100;
+
+    background-position-y: 0;
+    background-position-x: 0;
+    background-repeat: no-repeat;
+    
+    transition: opacity 250ms;
+}
+
+body > main #scroll {
+    position: absolute;
+    bottom: 10%;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    filter: invert(1);
+    opacity: 1;
+    transition: all 200ms;
+
+    font-size: 0.9em;
+    font-weight: 350;
+}
+
+body > main #scroll img {
+    position: relative;
+    width: 35%;
+    margin-bottom: 5px;
+
+    transition: all 500ms ease;
+}
+
+@media screen and (max-height: 650px) {
+    section.hero {
+        width: unset;
+        height: 90vh;
+    }
+}
+
+body > article.content-main {
+    z-index: 0;
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #fafafa;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    top: 300vh;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+body > article.content-main section.limit {
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 40px;
+    max-width: 15in;
+    margin-bottom: 25px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+body > article.content-main h2 {
+    font-weight: 800;
+    line-height: 95%;
+    margin: 0;
+    font-size: min(max(2.5em, 3vw),5em);
+}
+
+body > article.content-main h2 img {
+    height: 1em;
+}
+
+@media screen and (max-width: 6in) {
+    body > article.content-main h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    body > article.content-main h2 img {
+        width: 1em;
+        margin-bottom: 5px;
+    }
+}
+
+body > article.content-main p {
+    font-weight: 300;
+    margin: 0;
+    font-size: min(max(2em, 2vw),3em);
+}
+
+body > article.content-main #list {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+body > article.content-main #list li {
+    font-size: 1em;
+    display: flex;
+    white-space: pre;
+    align-items: center;
+    margin-bottom: 3px;
+
+    font-size: min(max(0.6em,3vw),1.2em);
+    font-weight: 300;
+}
+
+body > article.content-main #list b {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 4in) {
+    body > article.content-main #list b {
+        display: none;
+    }
+}
+
+body > article.content-main #list .icon {
+    margin-right: 5px;
+    color: #2e2e2e;
+}
+
+section.who {
+    display: flex;
+    justify-content: space-between;
+
+    height: 600px;
+}
+
+section.who img {
+    width: 35%;
+    height: 100%;
+    border-radius: 100vw;
+    object-fit: cover;
+}
+
+section.who article {
+    width: calc(65% - 25px);
+}
+
+section.who button {
+    border-radius: 100vw;
+    border: none;
+    
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    color: white !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+section.who button a {
+    color: white !important;
+    text-decoration: none !important;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 5px 15px 5px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+section.who button .icon {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 7in) {
+    section.who {
+        flex-direction: column;
+        align-items: center;
+        height: unset;
+    }
+
+    section.who img {
+        width: 80%;
+        height: 200px;
+
+        margin-bottom: 15px;
+        object-position: 0 25%;
+    }
+
+    section.who article {
+        width: 100%;
+    }
+}
+
+section.work #work {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+section.work #work div {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+section.work #work div h3 {
+    margin: 0;
+    font-size: min(max(1.5em, 2vw),1.8em);
+}
+
+section.work #work div h4 {
+    margin: 0;
+    font-weight: 400;
+
+    font-size: min(max(1em, 1vw),1.3em);
+}
+
+section.work #work div h5 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 350;
+
+    font-size: min(max(0.8em, 0.8vw),1em);
+}
+
+@media screen and (max-width: 9in) {
+    section.work #work {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 6in) {
+    section.work #work {
+        grid-template-columns: 100%;
+    }
+}
+
+section.skills #skills {
+    padding-left: 20px;
+}

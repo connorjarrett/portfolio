@@ -1,0 +1,18 @@
+{
+    "skills": [
+        {"name":"HTML", "description":"I use this to structure my web pages"},
+        {"name":"JavaScript", "description":"I use this to add life to my websites"},
+        {"name":"jQuery", "description":"I use this to enhance my JavaScript"},
+        {"name":"CSS", "description":"I use this to decorate my websites"},
+        {"name":"PHP", "description":"I use this to build my backend code"},
+        {"name":"MySQL", "description":"I use this to make and manage databases"}
+    ],
+    "tools": [
+        {"name":"VSCode", "description":"This is my code editor", "url":"https://code.visualstudio.com/"},
+        {"name":"GitHub", "description":"I use this for version control", "url":"https://github.com/conjardev"},
+        {"name":"Notion", "description":"I use this to manage my life and projects", "url":"https://www.notion.so/product"},
+        {"name":"Putty", "description":"I use this to connect to my servers", "url":"https://www.putty.org/"},
+        {"name":"Adobe Illustrator", "description":"I use this for graphic design", "url":"https://www.adobe.com/uk/products/illustrator"},
+        {"name":"Figma", "description":"I use this to plan my web pages before I start development", "url":"https://www.figma.com"}
+    ]
+}

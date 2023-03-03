@@ -1,0 +1,38 @@
+/* 2 Column */
+section.mobile.columns .content {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+section.mobile.columns.invert .content {
+    flex-direction: column-reverse;
+}
+
+section.mobile.columns .titleBlock {
+    text-align: center !important;
+    width: 100%;
+    margin-left: 0;
+    font-size: min(max(2em, 5vw),7em) !important;
+}
+
+section.mobile.columns .emoji {
+    margin-left: 50% !important;
+    transform: translate(-50%);
+}
+
+/* Work */
+section.mobile.work .content {
+    padding: 50px;
+}
+
+@media screen and (max-width: 7in) {
+    section.mobile.work .content {
+        width: 100%;
+    }
+
+    section.work .job {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+}

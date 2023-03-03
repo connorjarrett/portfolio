@@ -1,29 +1,41 @@
 {
-    "name": "Connor Jarrett - Portfolio",
+    "name": "Connor Jarrett",
     "lang": "en-GB",
     "short_name": "connorjarrett.com",
-    "description":"Porfolio for Full Stack Developer, Connor Jarrett",
-    "theme_color": "#f7f016",
-    "background_color": "#f7f016",
+    "description":"Resume and Portfolio for Full Stack Developer, Connor Jarrett",
+    "theme_color": "#0a0418",
+    "background_color": "#0a0418",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
     "start_url": "/",
     "icons": [
       {
-        "src": "media/maskable.png",
+        "src": "media/favicon/maskable_icon_x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "media/favicon/maskable_icon_x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "media/favicon/maskable_icon_x512.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
       },
       {
-        "src": "media/128x128.png",
-        "sizes": "128x128",
+        "src": "media/favicon/180.png",
+        "sizes": "180x180",
         "type": "image/png",
         "purpose": "any"
       },
       {
-        "src": "media/512x512.png",
+        "src": "media/favicon/512.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"

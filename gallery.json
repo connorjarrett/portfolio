@@ -1,0 +1,26 @@
+[
+        {
+            "path":"ldn_man.jpg",
+            "title": "Crossing",
+            "location": [51.5100139, -0.1226611],
+            "description":"A man crossing the road in London, in front of Southbank Place development"
+        },
+        {
+            "path":"ldn_building.jpg",
+            "title": "Waterloo",
+            "location": [51.5041806, -0.114475],
+            "description":"View of the Southbank Place development from Waterloo"
+        },
+        {
+            "path":"ldn_empty.jpg",
+            "title": "Bank",
+            "location": [51.5140139, -0.0868917],
+            "description":"Outside Bank station, empty"
+        },
+        {
+            "path":"ldn_shard.jpg",
+            "title": "Shard",
+            "location": [51.5059722, -0.0900528],
+            "description":"The Shard from outside Borough Market"
+        }
+]

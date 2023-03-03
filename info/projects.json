@@ -1,9 +1,0 @@
-[
-    {
-        "name": "Cade",
-        "description": "The web design app of the future",
-        "url": "cade.dev",
-        "image": "https://cade.dev/api/blogThumbnail?code=welcome-to-cade",
-        "detail":"### About Cade\nI started Cade as a winter project, and realised how lacking the space was for free website design. I decided that I would make something truly simple and easy to use so that anyone could get online.\n\n\n[Learn More](https://cade.dev/about)"
-    }
-]

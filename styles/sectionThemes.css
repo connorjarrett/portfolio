@@ -1,0 +1,615 @@
+/* Main */
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: unset;
+    min-height: 100%;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+section .content {
+    height: 100%;
+    max-width: 20in;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+    
+    /* margin-bottom: 40px; */
+}
+
+section .trigger {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+    height: 90%;
+}
+
+/* Hero */
+section.hero {
+    background-color: #000000 !important;
+    height: 100%;
+
+    overflow-x: hidden;
+    min-height: 400px;
+}
+
+section.hero .content {
+    width: 100%;
+    max-width: 19in;
+
+    box-sizing: border-box;
+    padding: min(150px, 5vw);
+
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+section.hero .centre {
+    position: relative;
+
+    font-size: min(max(3em, 6vh),10em);
+    text-align: center;
+    width: 100%;
+
+    min-height: 250px;
+    height: 40%;
+    aspect-ratio: 1/1;
+}
+
+section.hero .centre h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+
+    font-size: 0.9em;
+
+    margin: 0;
+
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+section.hero .centre h2 {
+    position: absolute;
+    text-transform: lowercase;
+    z-index: 2;
+
+    width: 100%;
+    top: 70%;
+
+    color: #E2E2E2;
+    font-size: 0.35em;
+}
+
+section.hero .centre img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    top: 50%;
+    left: 50%;
+    height: 100%;
+
+    filter: brightness(0.6);
+    opacity: 0.8;
+
+    background-color: black;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    border-radius: 100%;
+
+    z-index: 1;
+}
+
+section.hero .parallax {
+    position: absolute;
+    z-index: 0;
+
+    width: 100vw;
+    height: 100%;
+
+    filter: brightness(7);
+}
+
+section.hero .parallax div {
+    width: 100%;
+    height: 50%;
+
+    opacity: 1;
+
+    transition: all linear 1000ms;
+
+    background-image: url("../media/misc/hero-text-comp.png");
+    background-size: cover;
+}
+
+section.hero .parallax .top {
+    z-index: 1;
+    background-position-x: -1%;
+}
+
+section.hero .parallax .bottom {
+    z-index: 0;
+    background-position-x: 1%;
+}
+
+
+section.hero #arrow {
+    filter: invert(1);
+    position: absolute;
+    height: 0.3in;
+    bottom: 25px;
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+section:not(.ignoreOrder):nth-child(odd) {
+    /* background-color: #100326; */
+    /* background-color: #0a0418; */
+    background-color: #000000;
+}
+
+section:not(.ignoreOrder):nth-child(even) {
+    /* background-color: #11072A; */
+    /* background-color: #0c031c; */
+    background-color: #010101;
+}
+
+/* Tag */
+section.tag {
+    overflow: hidden;
+}
+
+section.tag h2 {
+    line-height: 85%; 
+    font-size: min(max(20px, 7vw),8em);
+    text-shadow: calc(min(max(20px, 7vw),8em) / 20) calc(min(max(20px, 7vw),8em) / 20) 0px #202020;
+    width: 100vw;
+}
+
+section.tag span { 
+    position: absolute;
+    transform: translate(0, -50%);
+    width: 100%;
+    left: 0;
+}
+
+/* About */
+section.about .content {
+    width: 100%;
+}
+
+section.about .trigger {
+    height: 40%;
+}
+
+section.about h2 {
+    margin: 0;
+    width: 80%;
+
+    text-align: left;
+    line-height: 95%; 
+    font-size: min(max(2.5em, 4vw),6em);
+}
+
+section.about #about-seo {
+    display: none;
+}
+
+section.about span {
+    position: relative;
+}
+
+section.about a {
+    border: none;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 50%;
+    /* transform: translate(0, 100%);     */
+    font-size: 0.5em;
+    height: 80%;
+
+    padding: 0 10px 0 10px;
+    background-color: white;
+    color: black;
+
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    transition: scale 260ms;
+}
+
+section.about a:hover {
+    scale: 0.9;
+}
+
+/* 2 Column */
+section.columns .content {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    padding: 75px;
+    box-sizing: border-box;
+}
+
+section.columns .titleBlock {
+    text-align: left;
+    font-weight: 900;
+    font-size: min(max(20px, 10vw),8em);;
+}
+
+section.columns .titleBlock * {
+    margin: 0;
+}
+
+section.columns .contentBlock {
+    width: 95%;
+    margin-left: auto;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+
+    text-align: left;
+}
+
+section.columns .contentBlock .emoji {
+    aspect-ratio: 1/1;
+    width: 25%;
+    margin-left: 75%;
+}
+
+section.columns .contentBlock p {
+    font-weight: 100;
+    font-size: min(max(20px, 1.5vw),4em);
+}
+
+section.columns.invert .content {
+    grid-template-columns: 45% 55%;
+}
+
+section.columns.invert .titleBlock {
+    text-align: right;
+}
+
+section.columns.invert .contentBlock {
+    margin-right: 0;
+}
+
+section.columns.invert .contentBlock .emoji {
+    margin-left: 0;
+}
+
+/* Work */
+section.work {
+    /* height: unset; */
+    /* min-height: unset; */
+
+    min-height: max-content;
+    max-height: 100vh;
+}
+
+section.work .content {
+    width: min(90%,10in);
+    padding: 75px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
+
+section.work h2 {
+    font-size: min(max(3em, 7vw),8em);
+    margin: 0;
+    margin-right: auto;
+}
+
+section.work .job {
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+section.work .job:nth-child(odd) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+section.work .job .company {
+    font-size: min(max(2em, 5vw),4em);
+    line-height: 90%;
+    margin: 0;
+    font-weight: 900;
+}
+
+section.work .job .company a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+section.work .job:hover .company a {
+    color: rgb(231, 231, 231) !important;
+    text-decoration: underline !important;
+}
+
+section.work .job .period {
+    font-size: calc(min(max(2em, 5vw),4em) / 2);
+    text-align: left;
+    font-weight: 800;
+    margin: 0;
+}
+
+section.work .job .role {
+    font-size: calc(min(max(3em, 5vw),4em) / 4);
+    text-align: left;
+    margin: 0;
+}
+
+/* Personal Projects */
+section.projects .content {
+    width: 100%;
+}
+
+section.projects h2 {
+    font-size: min(max(4em, 7vw),8em);
+    margin: 0;
+    line-height: 90%;
+}
+
+section.projects p {
+    font-size: min(max(20px, 1.5vw),4em);
+    margin: 0;
+    font-weight: lighter;
+}
+
+section.projects ul {
+    padding: 0;
+    width: 90%;
+    list-style-type: none;
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4,25%);
+}
+
+section.projects ul > li {
+    position: relative;
+    margin: 10px;
+    padding: 25px;
+
+    width: 90%;
+
+    box-sizing: border-box;
+    border-radius: 1rem;
+    /* background-color: #150a30; */
+    background-color: #020204;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transform: scale(1);
+}
+
+section.projects li a {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.projects li h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+section.projects li h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 9in) {
+    section.projects ul {
+        grid-template-columns: repeat(3,calc(100% / 3));
+    }
+}
+
+@media screen and (max-width: 6.5in) {
+    section.projects ul {
+        grid-template-columns: repeat(2,calc(100% / 2));
+    }
+}
+
+@media screen and (max-width: 4.5in) {
+    section.projects ul {
+        grid-template-columns: 100%;
+    }
+
+    section.projects ul > li:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Skills and Tools */
+section.skillsTools {
+    overflow-x: hidden;
+}
+
+section.skillsTools .content {
+    margin-bottom: 40px;
+}
+
+section.skillsTools h2 {
+    font-size: min(max(20px, 7vw),8em);
+    margin: 25px;
+}
+
+section.skillsTools .column-container {
+    width: 150%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section.skillsTools .column-container aside {
+    width: 100%;
+}
+
+section.skillsTools #skills > div {background-color: #4e00f2;}
+section.skillsTools #tools > div {background-color: #0a1453;}
+
+section.skillsTools .column-container aside > div {
+    width: 100%;
+    height: 140px;
+    /* padding: 20px; */
+    margin-top: 10px;
+
+    box-sizing: border-box;
+    border-radius: 50rem;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    z-index: 5;
+
+    transform: translateX(0);
+}
+
+section.skillsTools #skills > div:nth-child(even), section.skillsTools #tools > div:nth-child(odd) {
+    z-index: 10 !important;
+}
+
+section.skillsTools .column-container h3 {
+    font-size: min(max(20px, 1.5vw),2em);
+    font-weight: 800;
+    margin: 0;
+}
+
+section.skillsTools .column-container h4 {
+    font-size: min(max(12px, 1vw),1em);
+    font-weight: 400;
+    margin: 0;
+}
+
+section.skillsTools .column-container a {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+}
+
+@media screen and (max-width: 9in) {
+    section.skillsTools .column-container {
+        width: 100%;
+    }
+
+    section.skillsTools .column-container aside > div {
+        border-radius: 10vmin;
+    }
+
+    section.skillsTools .column-container aside > div *:not(h3) {
+        display: none;
+    }
+}
+
+/* Gallery */
+section.gallery {
+    min-height: unset;
+    height: 50vh;
+    min-height: 7in;
+}
+
+section.gallery h2 {
+    font-size: min(max(3em, 5vw),7em);
+    line-height: 90%;
+
+    margin: 0;
+
+    text-align: left;
+    margin-right: auto;
+}
+
+section.gallery h3 {
+    font-size: 1em;
+    
+    margin: 0;
+    
+    font-weight: normal;
+
+    margin-right: auto;
+    text-align: left;
+}
+
+section.gallery a {
+    font-size: 1em;
+    
+    color: #c7c7c7;
+    text-decoration: none;
+
+    margin: 0;
+    margin-bottom: 25px;
+
+    margin-right: auto;
+    text-align: left;
+}
+
+section.gallery a:hover {
+    text-decoration: underline;
+}
+
+section.gallery .content {
+    width: 90%;
+    max-width: 15in !important;
+    padding: 40px;
+    box-sizing: border-box;
+
+    max-height: 7in;
+}
+
+/* Rest of gallery is in gallery.css */
+
+/* Contact */
+section.contact h2 {
+    line-height: 85%; 
+    font-size: min(max(20px, 7vw),8em);
+    margin: 0;
+}
+
+section.contact p {
+    font-weight: 100;
+    font-size: min(max(15px, 1.5vw),2em);
+    margin: 0;
+}
+
+section.contact .email-main {
+    position: relative;
+
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 1vmin;
+
+    margin-top: 35px;
+    cursor: pointer;
+}
