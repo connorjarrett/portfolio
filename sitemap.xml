@@ -6,21 +6,21 @@
 		<priority>1.00</priority>
 		<lastmod>2023-03-02</lastmod>
 
-		<image:image>
-			<image:loc>https://connorjarrett.com/media/connor.jpg</image:loc>
-			<image:loc>https://connorjarrett.com/media/avatar.png</image:loc>
-			<image:loc>https://connorjarrett.com/media/screenshots/hero.png</image:loc>
-			<image:loc>https://connorjarrett.com/media/screenshots/about-text.png</image:loc>
-		</image:image>
+		
+		<image:image><image:loc>https://connorjarrett.com/media/connor.jpg</image:loc></image:image>
+		<image:image><image:loc>https://connorjarrett.com/media/avatar.png</image:loc></image:image>
+		<image:image><image:loc>https://connorjarrett.com/media/screenshots/hero.png</image:loc></image:image>
+		<image:image><image:loc>https://connorjarrett.com/media/screenshots/about-text.png</image:loc></image:image>
+		
 	</url>
 	<url>
 		<loc>https://www.connorjarrett.com/about</loc>
 		<priority>0.67</priority>
 		<lastmod>2023-03-01</lastmod>
 
-		<image:loc>https://connorjarrett.com/media/screenshots/about-hero.png</image:loc>
-		<image:loc>https://connorjarrett.com/media/connor.jpg</image:loc>
-		<image:loc>https://connorjarrett.com/media/avatar.png</image:loc>
+		<image:image><image:loc>https://connorjarrett.com/media/screenshots/about-hero.png</image:loc></image:image>
+		<image:image><image:loc>https://connorjarrett.com/media/connor.jpg</image:loc></image:image>
+		<image:image><image:loc>https://connorjarrett.com/media/avatar.png</image:loc></image:image>
 	</url>
 	<url>
 		<loc>https://www.connorjarrett.com/case-studies/cade</loc>
