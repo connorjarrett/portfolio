@@ -9,7 +9,8 @@
             "path":"ldn_building.jpg",
             "title": "Waterloo",
             "location": [51.5041806, -0.114475],
-            "description":"View of the Southbank Place development from Waterloo"
+            "description":"View of the Southbank Place development from Waterloo",
+            "thumbnailAdjust": "10%"
         },
         {
             "path":"ldn_empty.jpg",
@@ -21,13 +22,15 @@
             "path":"ldn_shard.jpg",
             "title": "Shard",
             "location": [51.5059722, -0.0900528],
-            "description":"The Shard from outside Borough Market"
+            "description":"The Shard from outside Borough Market",
+            "thumbnailAdjust": "35%"
         },
         {
             "path":"sf_181_freemont.jpg",
             "title": "181 Freemont",
             "location": [37.7889778, -122.3967528],
-            "description":"The 181 Freemont building from Salesforce Park"
+            "description":"The 181 Freemont building from Salesforce Park",
+            "thumbnailAdjust": "33%"
         },
         {
             "path":"sf_gg.jpg",
@@ -39,13 +42,15 @@
             "path":"sf_jp_chase.jpg",
             "title": "JPMorgan Chase",
             "location": [37.7884778, -122.3991111],
-            "description":"The JPMorgan Chase building on Mission Street"
+            "description":"The JPMorgan Chase building on Mission Street",
+            "thumbnailAdjust": "75%"
         },
         {
             "path":"sf_salesforce.jpg",
             "title": "Salesforce Tower",
             "location": [37.7892889, -122.39725],
-            "description":"Salesforce Tower in the sunset, from Salesforce Park"
+            "description":"Salesforce Tower in the sunset, from Salesforce Park",
+            "thumbnailAdjust": "5%"
         },
         {
             "path":"sf_1255_battery.jpg",

@@ -36,6 +36,10 @@ $(document).ready(function() {
                             e2.classList = "new"
                             e3.classList = "new"
 
+                            e1.style.objectPosition = gallery[i].thumbnailAdjust ? `0 ${gallery[i].thumbnailAdjust}` : "unset" 
+                            e2.style.objectPosition = gallery[i+1].thumbnailAdjust ? `0 ${gallery[i+1].thumbnailAdjust}` : "unset"
+                            e3.style.objectPosition = gallery[i+2].thumbnailAdjust ? `0 ${gallery[i+2].thumbnailAdjust}` : "unset"
+
                             setTimeout(function(){
                                 e1.classList = "hold"
                                 e2.classList = "hold"
