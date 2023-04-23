@@ -12,7 +12,7 @@ $(document).ready(function() {
                 }
                 
                 function galleryLoop(start, loop) {
-                    var interval = 3000
+                    var interval = 5000
 
                     if (start) {
                         interval = 0
@@ -29,8 +29,8 @@ $(document).ready(function() {
                                 e3 = document.createElement("img")
 
                             e1.style.transitionDelay = "0s"
-                            e2.style.transitionDelay = "50ms"
-                            e3.style.transitionDelay = "100ms"
+                            e2.style.transitionDelay = "75ms"
+                            e3.style.transitionDelay = "150ms"
 
                             e1.classList = "new"
                             e2.classList = "new"
