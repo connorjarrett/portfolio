@@ -22,5 +22,11 @@
             "title": "Shard",
             "location": [51.5059722, -0.0900528],
             "description":"The Shard from outside Borough Market"
+        },
+        {
+            "path":"sf_181_freemont.jpg",
+            "title": "181 Freemont",
+            "location": [37.7889778,-122.3967528],
+            "description":"The 181 Freemont building from Salesforce Park"
         }
 ]
