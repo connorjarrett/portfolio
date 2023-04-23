@@ -26,7 +26,31 @@
         {
             "path":"sf_181_freemont.jpg",
             "title": "181 Freemont",
-            "location": [37.7889778,-122.3967528],
+            "location": [37.7889778, -122.3967528],
             "description":"The 181 Freemont building from Salesforce Park"
+        },
+        {
+            "path":"sf_gg.jpg",
+            "title": "The Golden Gate",
+            "location": [37.8269694, -122.499925],
+            "description":"The Golden Gate bridge from Hawk Hill"
+        },
+        {
+            "path":"sf_jp_chase.jpg",
+            "title": "JPMorgan Chase",
+            "location": [37.7884778, -122.3991111],
+            "description":"The JPMorgan Chase building on Mission Street"
+        },
+        {
+            "path":"sf_salesforce.jpg",
+            "title": "Salesforce Tower",
+            "location": [37.7892889, -122.39725],
+            "description":"Salesforce Tower in the sunset, from Salesforce Park"
+        },
+        {
+            "path":"sf_1255_battery.jpg",
+            "title": "1255 Battery",
+            "location": [37.8020806, -122.4023611],
+            "description":"1255 Battery Street in Levi's Plaza"
         }
 ]
