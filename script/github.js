@@ -1,12 +1,13 @@
 const maxAmount = 15
 var added = 0
 
-function card(url, nameText, descriptionText) {
+function card(url, nameText, descriptionText, homepage) {
     // Create List Element
     let li = document.createElement("li")
     let link = document.createElement("a")
     link.href = url
     link.target = "_BLANK"
+    link.classList = "main"
     link.ariaLabel = nameText
 
     let title = document.createElement("h3")
@@ -15,10 +16,26 @@ function card(url, nameText, descriptionText) {
     let description = document.createElement("h4")
     description.innerHTML = descriptionText
 
+    let weblink
+    if (homepage) {
+        weblink = document.createElement("a")
+        weblink.href = homepage
+        weblink.classList = "icon"
+        weblink.innerHTML = "open_in_new"
+        weblink.ariaLabel = `Homepage of ${nameText}`
+        weblink.target = "_BLANK"
+
+    }
+
     li.appendChild(link)
 
     li.appendChild(title)
     li.appendChild(description)
+
+    if (weblink) {
+        li.appendChild(weblink)
+    }
+
     $("section.projects ul")[0].appendChild(li)
 }
 
@@ -44,7 +61,7 @@ $(document).ready(function() {
                     continue;
                 }
 
-                card(repo["html_url"], repo["name"], repo["description"])
+                card(repo["html_url"], repo["name"], repo["description"], repo.homepage)
                 added += 1
             }
 
