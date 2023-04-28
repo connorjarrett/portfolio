@@ -1,5 +1,25 @@
 $(document).ready(function() {
     if ($(".gallery-container")) {
+        // Indexing Images
+        if ($("#googlebotimages").length > 0) {
+            $.ajax({
+                url:"./gallery.json",
+                async: false,
+                success: function(gallery){
+                    for (let i=0; i<gallery.length; i++) {
+                        var photo = gallery[i]
+
+                        var img = document.createElement("img")
+                        img.src = `media/gallery/${photo.path}`
+                        img.alt = photo.description
+
+                        document.getElementById("googlebotimages").appendChild(img)
+                    }
+                }
+            })
+        }
+
+
         // Scroll
         $.ajax({
             url:"./gallery.json",
@@ -36,9 +56,9 @@ $(document).ready(function() {
                             e2.classList = "new"
                             e3.classList = "new"
 
-                            e1.style.objectPosition = gallery[i].thumbnailAdjust ? `0 ${gallery[i].thumbnailAdjust}` : "unset" 
-                            e2.style.objectPosition = gallery[i+1].thumbnailAdjust ? `0 ${gallery[i+1].thumbnailAdjust}` : "unset"
-                            e3.style.objectPosition = gallery[i+2].thumbnailAdjust ? `0 ${gallery[i+2].thumbnailAdjust}` : "unset"
+                            e1.style.objectPosition = gallery[i].thumbnailAdjust ? `50% ${gallery[i].thumbnailAdjust}` : "unset" 
+                            e2.style.objectPosition = gallery[i+1].thumbnailAdjust ? `50% ${gallery[i+1].thumbnailAdjust}` : "unset"
+                            e3.style.objectPosition = gallery[i+2].thumbnailAdjust ? `50% ${gallery[i+2].thumbnailAdjust}` : "unset"
 
                             setTimeout(function(){
                                 e1.classList = "hold"

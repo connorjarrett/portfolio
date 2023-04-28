@@ -593,6 +593,10 @@ section.gallery .content {
     max-height: 7in;
 }
 
+#googlebotimages {
+    display: none;
+}
+
 /* Rest of gallery is in gallery.css */
 
 /* Contact */
