@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 		xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
-		<loc>https://connorjarrett.com</loc>
+		<loc>https://www.connorjarrett.com</loc>
 		<priority>1.00</priority>
 		<lastmod>2023-03-02</lastmod>
 
 		
-		<image:image><image:loc>https://connorjarrett.com/media/connor.jpg</image:loc></image:image>
-		<image:image><image:loc>https://connorjarrett.com/media/avatar.png</image:loc></image:image>
-		<image:image><image:loc>https://connorjarrett.com/media/screenshots/hero.png</image:loc></image:image>
-		<image:image><image:loc>https://connorjarrett.com/media/screenshots/about-text.png</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/connor.jpg</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/avatar.png</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/screenshots/hero.png</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/screenshots/about-text.png</image:loc></image:image>
 		
 	</url>
 	<url>
-		<loc>https://connorjarrett.com/about</loc>
+		<loc>https://www.connorjarrett.com/about</loc>
 		<priority>0.67</priority>
 		<lastmod>2023-03-01</lastmod>
 
-		<image:image><image:loc>https://connorjarrett.com/media/screenshots/about-hero.png</image:loc></image:image>
-		<image:image><image:loc>https://connorjarrett.com/media/connor.jpg</image:loc></image:image>
-		<image:image><image:loc>https://connorjarrett.com/media/avatar.png</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/screenshots/about-hero.png</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/connor.jpg</image:loc></image:image>
+		<image:image><image:loc>https://www.connorjarrett.com/media/avatar.png</image:loc></image:image>
 	</url>
 	<url>
-		<loc>https://connorjarrett.com/case-studies/cade</loc>
+		<loc>https://www.connorjarrett.com/case-studies/cade</loc>
 		<priority>0.33</priority>
 		<lastmod>2023-03-02</lastmod>
 	</url>
