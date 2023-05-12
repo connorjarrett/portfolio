@@ -107,10 +107,10 @@ $(document).ready(function() {
 
     // Create about text
     const about = `Connor Jarrett is a ${age} year old British full stack website
-    developer and designer. His passion is fulfilling his full potential and solving
-    problems with creative solutions.<br> %link%`
+    developer and designer. His passion is perfecting everything he creates and solving
+    problems with creative solutions.<br> %expand% <br> %blog%`
 
-    $("section.about #about-seo").html(about.replace("<br> %link%",""))
+    $("section.about #about-seo").html(about.replace("<br> %expand% <br> %blog%",""))
     let aboutSplit = about.split(" ")
 
     for (i=0; i<aboutSplit.length; i++) {
@@ -120,8 +120,10 @@ $(document).ready(function() {
         span.dataset.nosnippet = ""
         span.innerHTML = aboutSplit[i] + " "
 
-        if (aboutSplit[i] == "%link%") {
+        if (aboutSplit[i] == "%expand%") {
             span.innerHTML = `<a href="about" aria-label="About Connor Jarrett">More About Me</a> `
+        } else if (aboutSplit[i] == "%blog%") {
+            span.innerHTML = `<a href="https://labnotebook.connorjarrett.com" aria-label="Connor Jarrett's Lab Notebook">Read my Blog</a> `
         }
 
         $("section.about #about")[0].appendChild(span)
