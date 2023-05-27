@@ -302,7 +302,7 @@ section.work {
     /* min-height: unset; */
 
     min-height: max-content;
-    max-height: 100vh;
+    max-height: unset;
 }
 
 section.work .content {
