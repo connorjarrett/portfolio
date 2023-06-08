@@ -108,9 +108,9 @@ $(document).ready(function() {
     // Create about text
     const about = `Connor Jarrett is a ${age} year old British full stack website
     developer and designer. His passion is perfecting everything he creates and solving
-    problems with creative solutions.<br> %expand% <br> %blog%`
+    problems with creative solutions.<br> %expand%`
 
-    $("section.about #about-seo").html(about.replace("<br> %expand% <br> %blog%",""))
+    $("section.about #about-seo").html(about.replace("<br> %expand%",""))
     let aboutSplit = about.split(" ")
 
     for (i=0; i<aboutSplit.length; i++) {
