@@ -221,9 +221,9 @@ section.about span {
 section.about a {
     border: none;
     cursor: pointer;
-    /* position: absolute; */
+
     top: 50%;
-    /* transform: translate(0, 100%);     */
+
     font-size: 0.5em;
     height: 80%;
 
@@ -288,11 +288,15 @@ section.blog .postings article {
 
     opacity: 0.75;
     transition: all 350ms, box-shadow 250ms, opacity 500ms;
+
+    height: 100%;
 }
 
 section.blog .postings article img {
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     width: 100%;
+
+    aspect-ratio: 16/9;
 }
 
 section.blog .postings article:hover {
@@ -301,6 +305,36 @@ section.blog .postings article:hover {
     border: 1px solid black;
     background-color: white;
     box-shadow: 5px 5px #dd00ff;
+}
+
+section.blog .content > a {
+    border: none;
+    cursor: pointer;
+
+    top: 50%;
+
+    font-size: 1.7em;
+    height: 80%;
+
+    padding: 0.5em 10px 0.5em 10px;
+    background-color: white;
+    color: black;
+
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    transition: scale 260ms;
+
+    line-height: 95%;
+    margin: 25px 5px;
+    align-self: flex-start;
+
+    font-weight: 700;
+}
+
+section.blog .content > a:hover {
+    scale: 0.9;
 }
 
 @media screen and (max-width: 7in) {
