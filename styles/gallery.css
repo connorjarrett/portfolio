@@ -113,9 +113,12 @@ section.gallery .gallery-offshoot#bottom {
 
 .gallery-enlarge img {
     width: 40%;
-    height: 100%;
+    /* height: 100%; */
 
+    border-radius: 1em;
     object-fit: contain;
+
+    max-height: 90%;
 }
 
 .gallery-enlarge .content {
