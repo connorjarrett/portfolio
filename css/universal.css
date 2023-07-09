@@ -164,6 +164,9 @@ main > section:last-child {
 @media screen and (max-width: 7.5in) {
     .container--large {
         width: calc(100% - 25px);
+    }
+
+    .container {
         border-radius: var(--radiusSmall);
     }
 }
