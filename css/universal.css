@@ -224,7 +224,12 @@ main > section:last-child {
 }
 
 .btn--halfround button {
-    border-radius: 5px;
+    border-radius: var(--btnRadius1);
+}
+
+.btn.centre {
+    width: auto;
+    margin: 0 auto 0 auto;
 }
 
 .btn button::after {
