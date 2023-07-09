@@ -1,0 +1,11 @@
+.home--hero h1 {
+    line-height: 83%;
+    font-size: 6em;
+    color: var(--black1);
+}
+
+.home--hero h2 {
+    font-size: 2.5em;
+    color: var(--accent1);
+    text-transform: lowercase;
+}
