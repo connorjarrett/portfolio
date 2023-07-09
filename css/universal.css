@@ -346,3 +346,15 @@ main > section:last-child {
 .btn--underline button:hover::before {  
     width:  100%;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table tr {
+    border-bottom: 3px solid var(--accent1);
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
