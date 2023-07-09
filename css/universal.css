@@ -278,3 +278,19 @@ main > section:last-child {
 .btn--cta-down:hover button::after {
     margin-top: 5px;
 }
+
+.btn--underline button::before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    translate: 0 1.3em;
+
+    transition: all 200ms;
+}
+
+.btn--underline button:hover::before {  
+    width:  100%;
+}
