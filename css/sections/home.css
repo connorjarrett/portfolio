@@ -11,3 +11,42 @@
     color: var(--accent1);
     text-transform: lowercase;
 }
+
+.home--hero .btn button {
+    font-weight: 600;
+    background-color: var(--accent1);
+    color: white;
+    font-size: 1.15em;
+    text-transform: lowercase;
+}
+
+/*  */
+
+.home--inspiration h2 {
+    line-height: 91%;
+    font-weight: 700;
+    font-size: 4em;
+    color: var(--black1);
+}
+
+.home--inspiration .btn button {
+    font-weight: 500;
+    background-color: var(--accent2);
+    color: var(--black2);
+    font-size: 1.15em;
+}
+
+.home--inspiration .imagecontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.home--inspiration .imagecontainer img {
+    background-color: white;
+    aspect-ratio: 1/1;
+    border-radius: var(--radiusSmall);
+    width: 100%;
+
+    margin: 0 auto 0 auto;
+}
