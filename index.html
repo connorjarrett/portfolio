@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="./css/universal.css">
     <link rel="stylesheet" href="./css/sections/home.css">
 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+
     <title>Connor Jarrett</title>
 </head>
 <body>
