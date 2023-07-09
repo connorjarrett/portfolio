@@ -147,6 +147,23 @@ main > section:last-child {
     object-fit: cover;
 }
 
+.container .background .bind--top {
+    position: relative;
+    top: 25px;
+    margin-bottom: auto;
+}
+
+.container .background .bind--bottom {
+    position: relative;
+    bottom: 25px;
+    margin-top: auto;
+}
+
+.container .background.padded {
+    padding: 0 40px 0 40px;
+    box-sizing: border-box;
+}
+
 .container article {
     padding: 0 80px 0 80px;
     box-sizing: border-box;
