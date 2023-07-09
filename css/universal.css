@@ -13,10 +13,10 @@
 :root {
     --radiusLarge: 60px;
     --radiusSmall: 30px;
-    --endPadding: 80px;
 
     --sectionGap: 2em;
     --minHeight: 700px;
+    --minHeightSmall: 450px;
 
     --black1: #121212;
     --black2: #212121;
@@ -33,6 +33,7 @@
 
     --btn: #3D8AFF;
     --btnRadius1: 13px;
+    --btnRadius2: 20px;
 }
 
 html {
@@ -77,23 +78,23 @@ a:not(.btn).centre, h1.centre, h2.centre, h3.centre, h4.centre, h5.centre, h6.ce
 
 main {
     background-color: white;
-    border-radius: 0 0 var(--endPadding) var(--endPadding);
-    padding-bottom: calc(var(--endPadding) * 2);
+    border-radius: 0 0 var(--radiusLarge) var(--radiusLarge);
+    padding-bottom: calc(var(--sectionGap) * 2);
 }
 
 footer {
     position: relative;
     z-index: -1;
-    top: calc((var(--endPadding) * -1) - 10px);
+    top: calc((var(--radiusLarge) * -1) - 10px);
     height: 200px;
     background-color: black;
 
-    padding: calc(var(--endPadding) + 50px) 0 0 0;
+    padding: calc(var(--sectionGap) + 50px) 0 0 0;
 }
 
 @media screen and (max-width: 8in) {
     :root {
-        --endPadding: 40px;
+        --sectionGap: 40px;
     }
 }
 
@@ -224,6 +225,23 @@ main > section:last-child {
     max-width: 1360px;
 }
 
+.containergrid--parent--square {
+    height: max-content;
+    min-height: unset !important;
+}
+
+.containergrid--square {
+    min-height: unset !important;
+    height: unset;
+    position: relative;
+}
+
+.containergrid--square .container {
+    aspect-ratio: 1/1;
+    height: unset;
+    min-height: var(--minHeightSmall) !important;
+}
+
 .container--aspect::before {
     /* 
         The person that thought of this was a genius and it wasn't me.
@@ -240,14 +258,14 @@ main > section:last-child {
         width: calc(100% - 30px);
     }
 
-    .containergrid {
+    .containergrid:not(.dontbreak) {
         position: unset;
         grid-template-columns: 100%;
         grid-template-rows: unset;
         gap: var(--sectionGap);
     }
 
-    .containergrid .container {
+    .containergrid:not(.dontbreak) .container {
         width: 100% !important;
     }
 
@@ -259,7 +277,7 @@ main > section:last-child {
         content: unset;
     }
 
-    .containergrid .container::before {
+    .containergrid:not(.dontbreak) .container::before {
         /* 
             The person that thought of this was a genius and it wasn't me.
             https://zoox.com/about/
