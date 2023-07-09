@@ -239,6 +239,36 @@ main > section:last-child {
     .container--large {
         width: calc(100% - 30px);
     }
+
+    .containergrid {
+        position: unset;
+        grid-template-columns: 100%;
+        grid-template-rows: unset;
+        gap: var(--sectionGap);
+    }
+
+    .containergrid .container {
+        width: 100% !important;
+    }
+
+    .container--centrecontent article {
+        position: absolute;
+    }
+    
+    .containergrid--parent::before {
+        content: unset;
+    }
+
+    .containergrid .container::before {
+        /* 
+            The person that thought of this was a genius and it wasn't me.
+            https://zoox.com/about/
+        */
+        content: '';
+        padding-top: 58.75%;
+        display: block;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 7.5in) {
