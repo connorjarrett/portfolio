@@ -324,7 +324,7 @@ main > section:last-child {
 }
 
 .btn--cta-down button::after {
-    content: '↓';
+    content: '\2193'; /* ↓ */
 }
 
 .btn--cta-down:hover button::after {
