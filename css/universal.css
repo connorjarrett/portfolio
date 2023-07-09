@@ -209,6 +209,12 @@ main > section:last-child {
     align-items: flex-start;
 }
 
+.container--centrecontent article {
+    position: relative;
+    width: max-content;
+    margin: 0 auto 0 auto;
+}
+
 .container--large {
     /* Sizes */
     width: calc(100% - 100px);
