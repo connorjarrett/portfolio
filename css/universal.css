@@ -104,7 +104,7 @@ main > section {
     display: grid;
     place-items: center;
 
-    margin-bottom: 2em;
+    margin-bottom: var(--sectionGap);
 }
 
 main > section:last-child {
@@ -120,6 +120,12 @@ main > section:last-child {
     width: 100%;
     top: 0;
     left: 0;
+
+    min-height: var(--minHeight) !important;
+}
+
+.containergrid--parent {
+    min-height: var(--minHeight) !important;
 }
 
 .containergrid::before {
