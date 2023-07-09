@@ -65,9 +65,14 @@ nav h1 {
     background-color: transparent !important;
 }
 
-.centre {
+a:not(.btn).centre, h1.centre, h2.centre, h3.centre, h4.centre, h5.centre, h6.centre, p.centre {
     width: 100%;
     text-align: center;
+}
+
+.centre {
+    width: auto;
+    margin: 0 auto 0 auto;
 }
 
 main {
