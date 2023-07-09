@@ -310,20 +310,17 @@ main > section:last-child {
 .btn button::after {
     position: absolute;
 
-    margin-left: 5px;
-    transition: margin 250ms;
-}
-
-.btn--cta-right button::after {
-    position: absolute;
-
-    content: '»';
     margin-left: 2.5px;
     transition: margin 250ms;
 }
 
+.btn--cta-right button::after {
+    /* content: '\00BB'; /* » */
+    content: '\2192'; /* → */
+}
+
 .btn--cta-right:hover button::after {
-    margin-left: 5px;
+    margin-left: 5px !important;
 }
 
 .btn--cta-down button::after {
@@ -343,7 +340,7 @@ main > section:last-child {
     background-color: black;
     translate: 0 1.3em;
 
-    transition: all 200ms;
+    transition: all 250ms;
 }
 
 .btn--underline button:hover::before {  
