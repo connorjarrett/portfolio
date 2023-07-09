@@ -235,6 +235,7 @@ main > section:last-child {
 }
 
 .btn button {
+    position: relative;
     border: none;
     background-color: var(--btn);
     font-size: 1em;
