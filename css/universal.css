@@ -235,11 +235,27 @@ main > section:last-child {
 .btn button::after {
     position: absolute;
 
+    margin-left: 5px;
+    transition: margin 250ms;
+}
+
+.btn--cta-right button::after {
+    position: absolute;
+
     content: '»';
     margin-left: 2.5px;
     transition: margin 250ms;
 }
 
-.btn:hover button::after {
+.btn--cta-right:hover button::after {
     margin-left: 5px;
+}
+
+.btn--cta-down button::after {
+    content: '↓';
+}
+
+
+.btn--cta-down:hover button::after {
+    margin-top: 5px;
 }
