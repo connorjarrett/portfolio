@@ -220,7 +220,7 @@ main > section:last-child {
     width: calc(100% - 100px);
 
     /* Clamps */
-    min-height: 516px;
+    min-height: var(--minHeight);
     max-width: 1360px;
 }
 
