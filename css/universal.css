@@ -99,6 +99,24 @@ main > section:last-child {
     margin-bottom: 0;
 }
 
+.containergrid {
+    display: grid !important;
+    background-color: transparent !important;
+}
+
+.containergrid::before {
+    position: absolute;
+}
+
+.containergrid .container {
+    height: 100%;
+    width: 100%;
+}
+
+.containergrid--70-30 {
+    grid-template-columns: 70% 30%;
+}
+
 .container {
     border-radius: var(--radiusLarge);
     background: var(--main1);
