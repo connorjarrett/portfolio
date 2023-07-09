@@ -302,6 +302,11 @@ main > section:last-child {
     border-radius: var(--btnRadius1);
 }
 
+.btn--pad button {
+    padding: 15px 20px 15px 20px;
+    border-radius: var(--btnRadius2);
+}
+
 .btn button::after {
     position: absolute;
 
