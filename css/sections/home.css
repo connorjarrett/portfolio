@@ -1,3 +1,4 @@
+/* Hero */
 .home--hero h1 {
     line-height: 83%;
     font-weight: 700;
@@ -20,8 +21,7 @@
     text-transform: lowercase;
 }
 
-/*  */
-
+/* Inspiration  */
 .home--inspiration h2 {
     line-height: 91%;
     font-weight: 700;
@@ -49,4 +49,23 @@
     width: 100%;
 
     margin: 0 auto 0 auto;
+}
+
+/* Skills & Tools */
+.home--skillstools {
+    color: var(--black1);
+}
+
+.home--skillstools h2 {
+    font-size: 2.5em;
+}
+
+.home--skillstools table {
+    color: var(--black2);
+    font-size: 2.5em;
+    min-width: 60%;
+}
+
+.home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
+    text-align: right;
 }
