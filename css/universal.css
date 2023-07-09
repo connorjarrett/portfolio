@@ -220,7 +220,7 @@ main > section:last-child {
     background-color: var(--btn);
     font-size: 1em;
     cursor: pointer;
-    padding: 10px 25px 10px 10px;
+    padding: 10px 40px 10px 25px;
 }
 
 .btn--halfround button {
