@@ -1,6 +1,7 @@
 .home--hero h1 {
     line-height: 83%;
-    font-size: 6em;
+    font-weight: 700;
+    font-size: 6.5em;
     color: var(--black1);
 }
 
