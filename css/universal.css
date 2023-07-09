@@ -58,6 +58,10 @@ nav h1 {
     text-transform: lowercase;
 }
 
+.transparent {
+    background-color: transparent !important;
+}
+
 .centre {
     width: 100%;
     text-align: center;
@@ -102,6 +106,12 @@ main > section:last-child {
 .containergrid {
     display: grid !important;
     background-color: transparent !important;
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .containergrid::before {
@@ -110,7 +120,16 @@ main > section:last-child {
 
 .containergrid .container {
     height: 100%;
-    width: 100%;
+    width: calc(100% - 10px);
+    justify-self: center;
+}
+
+.containergrid .container:first-child {
+    justify-self: flex-start;
+}
+
+.containergrid .container:last-child {
+    justify-self: flex-end;
 }
 
 .containergrid--70-30 {
