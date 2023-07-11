@@ -69,3 +69,23 @@
 .home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
     text-align: right;
 }
+
+/* Contact */
+.home--contact .btn button {
+    background-color: var(--accent2);
+}
+
+.home--contact h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--black1);
+}
+
+.home--contact #contact p {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--black2);
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
