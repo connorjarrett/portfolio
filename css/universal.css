@@ -213,6 +213,7 @@ main > section:last-child {
 .container--centrecontent article {
     position: relative;
     width: max-content;
+    max-width: 100%;
     margin: 0 auto 0 auto;
 }
 
