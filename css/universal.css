@@ -344,10 +344,31 @@ main > section:last-child {
 
 .btn--cta-down button::after {
     content: '\2193'; /* ↓ */
+    transition: none;
+}
+
+.btn--cta-down button {
+    overflow-y: hidden;
+}
+
+.btn--cta-down button::before {
+    position: absolute;
+
+    margin-top: -2em;
+    right: 23px;
+    
+
+    content: '\2193'; /* ↓ */
+}
+
+.btn--cta-down:hover button::before {
+    margin-top: 0;
+    transition: margin 250ms;
 }
 
 .btn--cta-down:hover button::after {
-    margin-top: 5px;
+    margin-top: 2em;
+    transition: margin 250ms;
 }
 
 .btn--underline button::before {
