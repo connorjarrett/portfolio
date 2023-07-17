@@ -34,6 +34,8 @@
     --btn: #3D8AFF;
     --btnRadius1: 13px;
     --btnRadius2: 20px;
+
+    --grad: radial-gradient(141.42% 141.42% at -0.00% 100.00%, #FDC426 0%, #89D1F0 43.11%, #DF6FDF 100%);
 }
 
 html {
