@@ -34,12 +34,15 @@
     background-color: var(--accent2);
     color: var(--black2);
     font-size: 1.15em;
+    margin-top: 1em;
 }
 
 .home--inspiration .imagecontainer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    align-items: center;
 }
 
 .home--inspiration .imagecontainer img {
@@ -47,8 +50,76 @@
     aspect-ratio: 1/1;
     border-radius: var(--radiusSmall);
     width: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 
-    margin: 0 auto 0 auto;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img {
+    animation-name: jiggle-top;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img {
+    animation-name: jiggle-bottom;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(1) {
+    width: 60%;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(2) {
+    width: 75%;
+    animation-delay: 750ms;
+    animation-duration: 4s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(3) {
+    width: 70%;
+    animation-delay: 625ms;
+    animation-duration: 5.1s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(4) {
+    width: 60%;
+    animation-delay: 750ms;
+    animation-duration: 3.4s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(1) {
+    width: 75%;
+    animation-delay: 500ms;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(2) {
+    width: 60%;
+    animation-delay: 625ms;
+    animation-duration: 4s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(3) {
+    width: 65%;
+    animation-delay: 1s;
+    animation-duration: 3.5s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(4) {
+    width: 75%;
+    animation-delay: 0;
+    animation-duration: 4.87s;
+}
+
+@keyframes jiggle-top {
+    0%   {margin-top: -10px;}
+    50% {margin-top: 10px;}
+    100% {margin-top: -10px;}
+}
+
+@keyframes jiggle-bottom {
+    0%   {margin-bottom: -10px;}
+    50% {margin-bottom: 10px;}
+    100% {margin-bottom: -10px;}
 }
 
 /* Skills & Tools */
