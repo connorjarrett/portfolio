@@ -17,14 +17,28 @@
 
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script>
-        const lenis = new Lenis()
+        const lenis = new Lenis({
+            duration: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        })
+
+        window.lenis = lenis;
 
         function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
 
-        requestAnimationFrame(raf)
+        requestAnimationFrame(raf);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // lenis.scrollTo(this.getAttribute('href'))
+            });
+        })
     </script>
 
     <title>Connor Jarrett</title>
