@@ -1,0 +1,8 @@
+.text--animate-chunks {
+    display: block;
+}
+
+.text--animate-chunks span {
+    white-space: pre-wrap;
+    display: inline-block;
+}
