@@ -66,7 +66,7 @@
 .home--inspiration .imagecontainer:nth-child(1) img:nth-child(1) {
     width: 60%;
     animation-delay: 500ms;
-    animation-duration: 2s;
+    animation-duration: 3.5s;
 }
 
 .home--inspiration .imagecontainer:nth-child(1) img:nth-child(2) {
@@ -84,12 +84,13 @@
 .home--inspiration .imagecontainer:nth-child(1) img:nth-child(4) {
     width: 60%;
     animation-delay: 750ms;
-    animation-duration: 3.4s;
+    animation-duration: 3.2s;
 }
 
 .home--inspiration .imagecontainer:nth-child(2) img:nth-child(1) {
     width: 75%;
-    animation-delay: 500ms;
+    animation-delay: 575ms;
+    animation-duration: 5s;
 }
 
 .home--inspiration .imagecontainer:nth-child(2) img:nth-child(2) {
