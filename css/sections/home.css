@@ -162,3 +162,15 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
+
+.home--contact h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.home--contact #icebreakers p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--black3);
+}
