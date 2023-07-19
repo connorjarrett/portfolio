@@ -53,6 +53,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
+    object-fit: cover;
 }
 
 .home--inspiration .imagecontainer:nth-child(1) img {
