@@ -318,6 +318,7 @@ main > section:last-child {
     font-size: 1em;
     cursor: pointer;
     padding: 10px 25px 10px 25px;
+    width: 100%;
 }
 
 .btn--cta-down button, .btn--cta-right button {
