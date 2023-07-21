@@ -32,14 +32,6 @@
         }
 
         requestAnimationFrame(raf);
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                // lenis.scrollTo(this.getAttribute('href'))
-            });
-        })
     </script>
 
     <title>Connor Jarrett</title>
@@ -79,6 +71,24 @@
                 <article>
                     <h2 class="centre text--animate-chunks" data-interval="75">I'm a developer, designer and student inspired by the world around me.</h2>
                     <a href="./about/" class="btn btn--halfround btn--cta-right centre"><button>About Me</button></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="home--work">
+            <div class="container container--large container--aspect">
+                <div class="background">
+                </div>
+                <article>
+                    <h2>Experience</h2>
+                    <div class="job">
+                        <h3>Cade</h3>
+                        <span class="info">
+                            <h4>2022 - 2023</h4>
+                            <h5>Founder</h5>
+                        </span>
+                        <a href="./about/" class="btn btn--halfround"><button>More</button></a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -148,6 +158,26 @@
             </div>
         </section>
 
+        <section class="home--blog">
+            <div class="container container--large container--aspect transparent containergrid--parent">
+                <div class="containergrid containergrid--50-50">
+                    <div class="container container--centrecontent">
+                        <article>
+                            <h2>Lab Notebook</h2>
+                            <img src="./public/images/logos/labnotebook.svg">
+                        </article>
+                    </div>
+
+                    <div class="container container--centrecontent">
+                        <article>
+                            <h2>GitHub / conjardev</h2>
+                            <img src="./public/images/logos/ghconjardev.svg">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="home--contact">
             <div class="container container--large transparent containergrid--parent containergrid--parent--square">
                 <div class="containergrid containergrid--square containergrid--50-50 dontbreak">
@@ -166,7 +196,7 @@
                             <p>I love travelling, my favourite holiday was to San Francisco in April 2023</p>
                             <p>I love the James Bond and Mission Impossible movies.</p>
                             <p>I play video games in my spare time, especially Watchdogs 2.</p>
-                            <a class="btn btn--halfround btn--cta-right"><button>More facts</button></a>
+                            <a class="btn btn--halfround btn--cta-right"><button>More about me</button></a>
                         </article>
                     </div>
                 </div>

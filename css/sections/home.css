@@ -124,6 +124,64 @@
     100% {margin-bottom: -10px;}
 }
 
+/* Experience */
+.home--work {
+    color: var(--black1);
+}
+
+.home--work h2 {
+    font-size: 4em;
+}
+
+.home--work .job {
+    background-color: white;
+    width: 70%;
+    border-radius: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.home--work .job h3 {
+    font-size: 3.5em;
+    color: var(--black2);
+}
+
+.home--work .job .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-left: 5%;
+}
+
+.home--work .job .info h4, .home--work .job .info h5 {
+    font-size: 1.75em;
+}
+
+.home--work .job .info h4 {
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.home--work .job .info h5 {
+    font-weight: 400;
+    color: var(--black2);
+}
+
+.home--work .job .btn {
+    margin-left: auto;
+}
+
+.home--work .job button {
+    height: 100%;
+    font-weight: 600;
+    font-size: 1.25em;
+
+    padding: 15px 50px 15px 50px;
+}
+
 /* Skills & Tools */
 .home--skillstools {
     color: var(--black1);
@@ -146,6 +204,7 @@
 /* Contact */
 .home--contact .btn button {
     background-color: var(--accent2);
+    color: var(--black2);
 }
 
 .home--contact h2 {
