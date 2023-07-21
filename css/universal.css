@@ -314,8 +314,13 @@ main > section:last-child {
     position: relative;
     border: none;
     background-color: var(--btn);
+    color: white;
     font-size: 1em;
     cursor: pointer;
+    padding: 10px 25px 10px 25px;
+}
+
+.btn--cta-down button, .btn--cta-right button {
     padding: 10px 40px 10px 25px;
 }
 
