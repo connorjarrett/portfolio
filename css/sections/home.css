@@ -229,14 +229,14 @@
     border-radius: 20px;
 }
 
-.home--blog .card--cap .btn {
-    width: 70%;
-}
-
 .home--blog .card--cap button {
     font-weight: 600;
     font-size: 1.3em;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
+}
+
+.home--blog .card button::before {
+    background-color: white;
 }
 
 .home--blog .card--cap {
