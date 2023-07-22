@@ -21,6 +21,10 @@
     text-transform: lowercase;
 }
 
+.home--hero .btn#work button {
+    background-color: var(--accent3);
+}
+
 /* Inspiration  */
 .home--inspiration h2 {
     line-height: 91%;

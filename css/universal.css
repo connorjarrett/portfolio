@@ -406,3 +406,9 @@ table tr {
 table tr:last-child {
     border-bottom: none;
 }
+
+.flex--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
