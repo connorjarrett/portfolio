@@ -149,8 +149,8 @@ main > section:last-child {
     justify-self: flex-end;
 }
 
-.containergrid--70-30 {
-    grid-template-columns: 70% 30%;
+.containergrid--60-40 {
+    grid-template-columns: 60% 40%;
 }
 
 .containergrid--50-50 {
