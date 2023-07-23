@@ -203,6 +203,8 @@
 
 .home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
     text-align: right;
+    margin-left: 1em;
+    display: block;
 }
 
 /* Lab Notebook & GitHub */
