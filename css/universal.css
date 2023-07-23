@@ -371,12 +371,12 @@ main > section:last-child {
 
 .btn--cta-down:hover button::before {
     margin-top: 0;
-    transition: margin 250ms;
+    transition: margin 300ms;
 }
 
 .btn--cta-down:hover button::after {
     margin-top: 2em;
-    transition: margin 250ms;
+    transition: margin 300ms;
 }
 
 .btn--underline button::before {
