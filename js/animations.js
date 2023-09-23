@@ -1,3 +1,8 @@
+/*
+animations.js
+Handles animations - typically scroll based
+*/
+
 function isElementInViewport (el) {
 
     // Special bonus for those using jQuery
