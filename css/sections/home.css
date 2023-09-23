@@ -275,6 +275,10 @@
     place-items: center;
 }
 
+.home--blog .card:not(.card--cap) .btn:not(#web) {
+    margin-left: auto
+}
+
 .home--blog #blog .card img {
     height: 100%;
     aspect-ratio: 4/3;
@@ -298,10 +302,6 @@
 .home--blog #github .card p#description {
     font-weight: 600;
     margin: 0;
-}
-
-.home--blog #github .card:not(.card--cap) .btn:not(#web) {
-    margin-left: auto
 }
 
 .home--blog #github .card .btn#web {
