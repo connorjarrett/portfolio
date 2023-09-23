@@ -1,0 +1,116 @@
+@media screen and (max-width: 9.5in) {
+    @container (width < 6in) {
+        .home--skillstools article, .home--skillstools table {
+            width: 100%;
+        }
+    }
+}
+
+@container (width < 5in) {
+    .container article {
+        padding: 20px;
+    }
+
+    .container {
+        border-radius: var(--radiusSmall) !important;
+    }
+
+    .home--inspiration .imagecontainer {
+        display: none;
+    }
+
+    .home--inspiration h2 {
+        font-size: 3em;
+    }
+
+    .home--hero .container .background img {
+        object-position: 63%
+    }
+
+    .home--hero h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 4.5em
+    }
+
+    .home--hero h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 2em
+    }
+
+    .home--hero .flex--horizontal {
+        flex-direction: column-reverse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home--contact h2 {
+        font-size: 2.5em
+    }
+
+    .home--contact h3 {
+        font-size: 2em
+    }
+
+    .home--contact #icebreakers p {
+        font-size: 1em;
+        margin: 10px 0 10px 0;
+    }
+
+    .home--contact #contact p {
+        font-size: 1em
+    }
+}
+
+@media screen and (max-width: 8in) {
+    .home--inspiration .imagecontainer img:nth-child(2),  .home--inspiration .imagecontainer img:nth-child(3) {
+        opacity: 0;
+    }
+
+    .home--inspiration .imagecontainer:nth-child(1) img {
+        width: 70% !important;
+        border-radius: 20px;
+    }
+
+    .home--inspiration .imagecontainer:nth-child(2) img {
+        width: 100% !important;
+    }
+}
+
+@container (width < 4.5in) {
+    .home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 9.5in) {
+    .home--skillstools article {
+        left: 50%;
+        translate: -50%;
+    }
+}
+
+@container (width < 4in) {
+    .home--blog #blog .card img {
+        display: none;
+    }
+}
+
+
+@container (width < 4in) {
+    .home--blog #github .card p#description {
+        display: none;
+    }
+}
+
+@container (width < 2.7in) {
+    .home--blog #github .card .btn#web {
+        display: none
+    }
+
+    .home--blog .card:not(.card--cap) .btn:not(#web) button {
+        padding: 15px 10px 15px 10px;
+        border-radius: var(--btnRadius1)
+    }
+}
