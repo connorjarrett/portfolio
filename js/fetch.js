@@ -31,14 +31,22 @@ $.ajax({
             "portfolio"
         ]
 
-        const reduced = repoData.filter((r)=>{
-            return blacklist.find((e) => e == r.name)
+        const reduced = repoData.filter((r) => {
+            return !blacklist.find((e) => e == r.name)
         })
 
-        // Shuffle Array
-        const shuffled = repoData.sort(() => 0.5 - Math.random());
+        // Sort Array
+        var sorted = reduced.sort((a, b) => {
+            return new Date(b["updated_at"]).valueOf() - new Date(a["updated_at"]).valueOf()
+        })
 
-        var slice = shuffled.slice(0,3)
+        var slice = sorted.slice(0,3).sort((a, b) => {
+            if (b.homepage) {
+                return 1
+            } else {
+                return -1
+            }
+        })
 
         document.querySelectorAll(".home--blog #github .card:not(.card--cap)").forEach((card, i) => {
             let repo = slice[i]
