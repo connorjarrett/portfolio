@@ -1,0 +1,4 @@
+/*
+fetch.js
+Fetch blog and GitHub
+*/
