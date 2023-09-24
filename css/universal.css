@@ -480,3 +480,30 @@ table tr:last-child {
     flex-direction: row;
     gap: 10px;
 }
+
+.socials {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+.socials img {
+    height: 32px;
+    cursor: pointer;
+}
+
+footer .flex--horizontal {
+    width: 100%;
+}
+
+footer .socials {
+    margin-left: auto;
+}
+
+footer h2 {
+    position: relative;
+    display: block;
+    margin: auto 0 auto 0;
+    font-size: 2em;
+}
