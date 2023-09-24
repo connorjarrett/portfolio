@@ -26,7 +26,7 @@ HTMLElement.prototype.onViewportEnter = function(f) {
     async function check() {
         if (isElementInViewport(el) && !el.dataset.viewportChecked) {
             el.dataset.viewportChecked = "true"
-            console.log("E")
+
             f(el)
         }
         
