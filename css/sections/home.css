@@ -308,6 +308,18 @@
     margin-left: -10px;
 }
 
+/* .home--blog #github .card .btn button.expanded::after {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    border-left: 1px solid red;
+} */
+
+.home--blog #github .card .btn button.expanded {
+    padding: 15px 40px 15px 40px;
+}
+
 .home--blog #github .card .btn#web button {
     background-color: var(--accent3);
     border-radius: 100vw;

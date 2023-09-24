@@ -64,7 +64,7 @@ $.ajax({
                 card.innerHTML = `
                 <p id="title">/${repo.name}</p>
                 <p id="description">${/*repo.description*/""}</p>
-                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button>Code</button></a>
+                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button class="expanded">Code</button></a>
                 `
             }
         })
