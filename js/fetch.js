@@ -15,7 +15,7 @@ $.ajax({
             card.innerHTML = `
             <img src="${post.image}" alt=${post.SEOdescription}>
             <p>${post.title}</p>
-            <a class="btn btn--halfround btn--underline btn--pad" href="${post.url}" target="_BLANK"><button>Read</button></a>
+            <a class="btn btn--halfround btn--underline btn--pad" href="${post.share.url}cjrt" target="_BLANK"><button>Read</button></a>
             `
         })
     }
