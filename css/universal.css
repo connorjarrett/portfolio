@@ -94,13 +94,25 @@ main {
 }
 
 footer {
-    position: relative;
-    z-index: -1;
-    top: calc((var(--radiusLarge) * -1) - 10px);
-    height: 200px;
-    background-color: black;
+    background-color: #F7F7F7;
 
-    padding: calc(var(--sectionGap) + 50px) 0 0 0;
+    display: grid;
+    place-items: center;
+}
+
+footer .container {
+    min-height: unset !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+footer .container::before {
+    content: none;
+}
+
+
+footer .container article {
+    position: relative;
 }
 
 @media screen and (max-width: 8in) {
