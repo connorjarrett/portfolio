@@ -19,23 +19,8 @@
     <link rel="apple-touch-icon" href="public/images/favicon/touchicon.png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-    <script>
-        const lenis = new Lenis({
-            duration: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-        })
-
-        window.lenis = lenis;
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf);
-    </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+    <script src="./js/lenis.js"></script>
 
     <title>Connor Jarrett</title>
 </head>
@@ -50,7 +35,7 @@
                     <h1>Hi,<br>I'm Connor</h1>
                     <h2 class="text--animate-chunks">Web Developer & Student</h2>
                     <span class="flex--horizontal">
-                        <a href="#contact" class="btn btn--halfround btn--cta-down" id="contact"><button>Contact</button></a>
+                        <a href="#contact" class="btn btn--halfround btn--cta-down"><button>Contact</button></a>
                         <a href="./work/" class="btn btn--halfround btn--cta-right" id="work"><button>Work</button></a>
                     </span>
                 </article>
