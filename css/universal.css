@@ -89,8 +89,10 @@ a:not(.btn).centre, h1.centre, h2.centre, h3.centre, h4.centre, h5.centre, h6.ce
 main {
     background-color: #F7F7F7;
     /* border-radius: 0 0 var(--radiusLarge) var(--radiusLarge); */
-    padding-bottom: calc(var(--sectionGap) * 2);
-    padding-top: var(--sectionGap);
+    /* padding-bottom: calc(var(--sectionGap) * 2);
+    padding-top: calc(var(--sectionGap) * 2); */
+
+    padding: calc(var(--sectionGap) * 2) 0 calc(var(--sectionGap) * 2) 0;
 }
 
 footer {
@@ -560,6 +562,6 @@ footer h2 {
 }
 
 footer p.copyright {
-    margin: 2em 0 0 0;
+    margin: 3.5em 0 0 0;
     color: var(--black3);
 }
