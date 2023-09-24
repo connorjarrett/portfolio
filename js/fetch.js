@@ -13,7 +13,7 @@ $.ajax({
             let post = slice[i]
 
             card.innerHTML = `
-            <img src="${post.image}">
+            <img src="${post.image}" alt=${post.SEOdescription}>
             <p>${post.title}</p>
             <a class="btn btn--halfround btn--underline btn--pad" href="${post.url}" target="_BLANK"><button>Read</button></a>
             `
