@@ -505,6 +505,15 @@ main > section:last-child {
     transition: all 250ms;
 }
 
+a:not(.btn) {
+    color: var(--btn);
+    text-decoration: none;
+}
+
+a:not(.btn):hover {
+    text-decoration: underline;
+}
+
 table {
     border-collapse: collapse;
 }
