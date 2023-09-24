@@ -1,7 +1,7 @@
 # connorjarrett.com
-A website about me (V3)
+A website about me (V2)
 
-## V3 - What's new?
+## V2 - What's new?
 - New theme!
 - Better integration with Lab Notebook
 - Work is prioritised
