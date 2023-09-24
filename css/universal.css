@@ -10,6 +10,13 @@
     font-stretch: 75% 125%;
 }
 
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url('../public/Material-Symbols.woff2') format('woff2');
+}
+
 :root {
     --radiusLarge: 60px;
     --radiusSmall: 30px;
@@ -347,6 +354,8 @@ main > section:last-child {
     cursor: pointer;
     padding: 10px 25px 10px 25px;
     width: 100%;
+
+    overflow: hidden;
 }
 
 .btn--cta-down button, .btn--cta-right button {
@@ -362,6 +371,17 @@ main > section:last-child {
     border-radius: var(--btnRadius2);
 }
 
+.btn button::after, .btn button::before {
+    /*  Compatability */
+    font-family: 'Material Symbols Rounded';
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 200,
+    'opsz' 24
+}
+
 .btn button::after {
     position: absolute;
 
@@ -375,7 +395,8 @@ main > section:last-child {
 
 .btn--cta-right button::after {
     /* content: '\00BB'; /* » */
-    content: '\2192'; /* → */
+    /* content: '\2192'; /* → */
+    content: 'east';
 }
 
 .btn--cta-right:hover button::after {
@@ -383,7 +404,9 @@ main > section:last-child {
 }
 
 .btn--cta-down button::after {
-    content: '\2193'; /* ↓ */
+    /*- content: '\2193'; /* ↓ */
+    content: 'south';
+
     transition: none;
 }
 
@@ -395,10 +418,11 @@ main > section:last-child {
     position: absolute;
 
     margin-top: -2em;
-    right: 23px;
-    
+    /* right: 23px; */
+    right: 1em;
 
-    content: '\2193'; /* ↓ */
+    /*- content: '\2193'; /* ↓ */
+    content: 'south';
 }
 
 .btn--cta-down:hover button::before {
