@@ -105,6 +105,10 @@
     .home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
         display: none;
     }
+
+    .home--blog .card:not(.card--cap) .btn:not(#web) button.expanded {
+        padding: 15px 20px 15px 20px
+    }
 }
 
 @container (width < 4in) {
