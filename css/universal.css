@@ -431,7 +431,7 @@ main > section:last-child {
 
     margin-top: -2em;
     /* right: 23px; */
-    right: 1em;
+    right: 1.05em;
 
     /*- content: '\2193'; /* ↓ */
     content: 'south';
