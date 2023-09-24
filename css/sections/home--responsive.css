@@ -4,6 +4,26 @@
             width: 100%;
         }
     }
+
+    .home--skillstools article {
+        left: 50%;
+        translate: -50%;
+    }
+}
+
+@media screen and (max-width: 8in) {
+    .home--inspiration .imagecontainer img:nth-child(2),  .home--inspiration .imagecontainer img:nth-child(3) {
+        opacity: 0;
+    }
+
+    .home--inspiration .imagecontainer:nth-child(1) img {
+        width: 70% !important;
+        border-radius: 20px;
+    }
+
+    .home--inspiration .imagecontainer:nth-child(2) img {
+        width: 100% !important;
+    }
 }
 
 @container (width < 5in) {
@@ -63,31 +83,9 @@
     }
 }
 
-@media screen and (max-width: 8in) {
-    .home--inspiration .imagecontainer img:nth-child(2),  .home--inspiration .imagecontainer img:nth-child(3) {
-        opacity: 0;
-    }
-
-    .home--inspiration .imagecontainer:nth-child(1) img {
-        width: 70% !important;
-        border-radius: 20px;
-    }
-
-    .home--inspiration .imagecontainer:nth-child(2) img {
-        width: 100% !important;
-    }
-}
-
 @container (width < 4.5in) {
     .home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
         display: none;
-    }
-}
-
-@media screen and (max-width: 9.5in) {
-    .home--skillstools article {
-        left: 50%;
-        translate: -50%;
     }
 }
 
@@ -95,10 +93,7 @@
     .home--blog #blog .card img {
         display: none;
     }
-}
 
-
-@container (width < 4in) {
     .home--blog #github .card p#description {
         display: none;
     }
