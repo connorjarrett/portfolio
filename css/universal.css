@@ -369,6 +369,10 @@ main > section:last-child {
     transition: margin 250ms;
 }
 
+.btn--cta-right.btn--pad button {
+    padding-right: 40px;
+}
+
 .btn--cta-right button::after {
     /* content: '\00BB'; /* » */
     content: '\2192'; /* → */
