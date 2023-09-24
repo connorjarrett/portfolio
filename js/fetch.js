@@ -56,14 +56,14 @@ $.ajax({
             if (repo.homepage) {
                 card.innerHTML = `
                 <p id="title">/${repo.name}</p>
-                <p id="description">${repo.description}</p>
+                <p id="description">${/*repo.description*/""}</p>
                 <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button>Code</button></a>
                 <a class="btn btn--halfround btn--pad" id="web" href="${repo.homepage}" target="_BLANK"><button>&#8599;</button></a>
                 `
             } else {
                 card.innerHTML = `
                 <p id="title">/${repo.name}</p>
-                <p id="description">${repo.description}</p>
+                <p id="description">${/*repo.description*/""}</p>
                 <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button>Code</button></a>
                 `
             }
