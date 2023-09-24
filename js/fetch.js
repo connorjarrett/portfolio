@@ -57,14 +57,14 @@ $.ajax({
                 card.innerHTML = `
                 <p id="title">/${repo.name}</p>
                 <p id="description">${/*repo.description*/""}</p>
-                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button>Code</button></a>
-                <a class="btn btn--halfround btn--cta-newtab btn--pad" id="web" href="${repo.homepage}" target="_BLANK"><button>&nbsp;</button></a>
+                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button aria-label="Read the code for ${repo.name}">Code</button></a>
+                <a class="btn btn--halfround btn--cta-newtab btn--pad" id="web" href="${repo.homepage}" target="_BLANK"><button aria-label="Check out the website for ${repo.name}">&nbsp;</button></a>
                 `
             } else {
                 card.innerHTML = `
                 <p id="title">/${repo.name}</p>
                 <p id="description">${/*repo.description*/""}</p>
-                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button class="expanded">Code</button></a>
+                <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button aria-label="Read the code for ${repo.name}" class="expanded">Code</button></a>
                 `
             }
         })
