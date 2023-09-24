@@ -109,6 +109,16 @@
         display: none
     }
 
+    .home--blog #github .card:not(.card--cap) .btn:not(#web) button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+    }
+
     .home--blog .card:not(.card--cap) .btn:not(#web) button {
         padding: 15px 10px 15px 10px;
         border-radius: var(--btnRadius1)
