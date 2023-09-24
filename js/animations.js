@@ -32,7 +32,9 @@ HTMLElement.prototype.onViewportEnter = function(f) {
         
     }
 
-    window.addEventListener('scroll', () =>check());
+    check()
+
+    window.addEventListener('scroll', () => check());
 }
 
 document.querySelectorAll(".text--animate-chars").forEach(item => {
