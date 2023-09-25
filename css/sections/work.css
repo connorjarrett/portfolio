@@ -1,6 +1,6 @@
 /* Hero */
 .work--hero .container {
-    background-color: var(--main1);
+    background-color: var(--accent4);
 }
 
 .work--hero h1 {
@@ -13,20 +13,20 @@
 .work--hero h2 {
     font-size: 2.5em;
     font-weight: 900;
-    color: var(--accent1);
+    color: var(--accent3);
     text-transform: lowercase;
 }
 
 .work--hero .btn button {
     font-weight: 600;
-    background-color: var(--accent1);
+    background-color: var(--accent3);
     color: white;
     font-size: 1.15em;
     text-transform: lowercase;
 }
 
 .work--hero .btn#about button {
-    background-color: var(--accent3);
+    background-color: var(--accent1);
 }
 
 /* Experience */
