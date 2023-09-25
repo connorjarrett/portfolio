@@ -78,6 +78,19 @@ nav h1 {
     background-color: transparent !important;
 }
 
+.icon {
+    font-family: 'Material Symbols Rounded';
+
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 200,
+    'opsz' 24;
+
+    vertical-align: bottom;
+    margin-right: 0.2em;
+}
+
 a:not(.btn).centre, h1.centre, h2.centre, h3.centre, h4.centre, h5.centre, h6.centre, p.centre {
     width: 100%;
     text-align: center;
