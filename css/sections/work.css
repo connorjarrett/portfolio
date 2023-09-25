@@ -26,7 +26,7 @@
 }
 
 .work--hero .btn#about button {
-    background-color: var(--accent1);
+    background-color: var(--btn);
 }
 
 /* Experience */
