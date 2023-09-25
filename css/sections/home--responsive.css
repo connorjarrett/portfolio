@@ -26,33 +26,7 @@
     }
 }
 
-@media screen and (max-width: 6in) {
-    footer .container article {
-        padding: 30px;
-    }
-
-    footer h2 {
-        font-size: 1.5em;
-    }
-
-    footer .container .flex--horizontal {
-        flex-direction: column;
-    }
-
-    footer .socials {
-        margin-left: 0;
-    }
-}
-
 @container (width < 5in) {
-    .container article {
-        padding: 20px;
-    }
-
-    .container {
-        border-radius: var(--radiusSmall) !important;
-    }
-
     .home--inspiration .imagecontainer {
         display: none;
     }
