@@ -71,7 +71,7 @@ document.querySelectorAll(".text--animate-chars").forEach(item => {
 
 document.querySelectorAll(".text--animate-chunks").forEach(item => {
     const completedText = item.innerHTML
-    const split = completedText.split(/(?= )/g)
+    const split = completedText.split(" ")
 
     item.innerHTML = ""
 
@@ -81,7 +81,7 @@ document.querySelectorAll(".text--animate-chunks").forEach(item => {
 
     split.forEach(word => {
         let span = document.createElement("span")
-        span.innerHTML = word
+        span.innerHTML = `${word} `
 
         span.style.opacity = "0"
         span.style.translate = "0 -10px"
