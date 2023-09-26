@@ -1,0 +1,45 @@
+/* Hero */
+.about--hero .container {
+    background-color: black;
+}
+
+.about--hero h1 {
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 2em;
+    color: white;
+}
+
+.about--hero h2 {
+    font-size: 3.5em;
+    font-weight: 900;
+    color: var(--btn);
+    
+    /* -webkit-text-stroke-width: 10px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-size-adjust: 100%;
+    paint-order: stroke fill; */
+
+    text-shadow:
+    -8px -8px 0 #000,
+     0   -8px 0 #000,
+     8px -8px 0 #000,
+     8px  0   0 #000,
+     8px  8px 0 #000,
+     0    8px 0 #000,
+    -8px  8px 0 #000,
+    -8px  0   0 #000;
+}
+
+.about--hero .btn button {
+    font-weight: 600;
+    background-color: var(--btn);
+    color: white;
+    font-size: 1.15em;
+    text-transform: lowercase;
+}
+
+.about--hero .btn#about button {
+    color: var(--black2);
+    background-color: var(--accent2);
+}
