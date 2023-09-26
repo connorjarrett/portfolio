@@ -1,0 +1,309 @@
+/* Hero */
+.home--hero .container {
+    background-color: var(--main1);
+}
+
+.home--hero h1 {
+    line-height: 83%;
+    font-weight: 700;
+    font-size: 6.5em;
+    color: var(--black1);
+}
+
+.home--hero h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: var(--accent1);
+    text-transform: lowercase;
+}
+
+.home--hero .btn button {
+    font-weight: 600;
+    background-color: var(--accent1);
+    color: white;
+    font-size: 1.15em;
+    text-transform: lowercase;
+}
+
+.home--hero .btn#work button {
+    background-color: var(--accent3);
+}
+
+/* Inspiration  */
+.home--inspiration h2 {
+    line-height: 95%;
+    font-weight: 700;
+    font-size: 4em;
+    color: var(--black1);
+}
+
+.home--inspiration .btn button {
+    font-weight: 500;
+    background-color: var(--accent2);
+    color: var(--black2);
+    font-size: 1.15em;
+    margin-top: 1em;
+}
+
+.home--inspiration .imagecontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    align-items: center;
+}
+
+.home--inspiration .imagecontainer img {
+    background-color: white;
+    aspect-ratio: 1/1;
+    border-radius: var(--radiusSmall);
+    width: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    object-fit: cover;
+    container-type: inline-size;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img {
+    animation-name: jiggle-top;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img {
+    animation-name: jiggle-bottom;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(1) {
+    width: 60%;
+    animation-delay: 500ms;
+    animation-duration: 3.5s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(2) {
+    width: 75%;
+    animation-delay: 750ms;
+    animation-duration: 4s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(3) {
+    width: 70%;
+    animation-delay: 625ms;
+    animation-duration: 5.1s;
+}
+
+.home--inspiration .imagecontainer:nth-child(1) img:nth-child(4) {
+    width: 60%;
+    animation-delay: 750ms;
+    animation-duration: 3.2s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(1) {
+    width: 75%;
+    animation-delay: 575ms;
+    animation-duration: 5s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(2) {
+    width: 60%;
+    animation-delay: 625ms;
+    animation-duration: 4s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(3) {
+    width: 65%;
+    animation-delay: 1s;
+    animation-duration: 3.5s;
+}
+
+.home--inspiration .imagecontainer:nth-child(2) img:nth-child(4) {
+    width: 75%;
+    animation-delay: 0;
+    animation-duration: 4.87s;
+}
+
+@keyframes jiggle-top {
+    0%   {margin-top: -10px;}
+    50% {margin-top: 10px;}
+    100% {margin-top: -10px;}
+}
+
+@keyframes jiggle-bottom {
+    0%   {margin-bottom: -10px;}
+    50% {margin-bottom: 10px;}
+    100% {margin-bottom: -10px;}
+}
+
+/* Skills & Tools */
+.home--skillstools {
+    color: var(--black1);
+}
+
+.home--skillstools h2 {
+    font-size: 2.5em;
+}
+
+.home--skillstools table {
+    color: var(--black2);
+    font-size: 2.5em;
+    min-width: 60%;
+}
+
+.home--skillstools table tr td:not(.home--skillstools table tr td:first-child):last-child {
+    text-align: right;
+    font-size: 0.75em;
+    margin-left: 1em;
+    height: 1.75em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Lab Notebook & GitHub */
+.home--blog article {
+    padding: 50px 80px 50px 80px;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(5, calc(calc(100% - 20px * 4) / 5));
+    gap: 20px;
+    grid-template-columns: 100%;
+}
+
+.home--blog h2 {
+    display: none;
+}
+
+.home--blog img.heading {
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+.home--blog .card {
+    width: 100%;
+    height: 100%;
+    background-color: #F7F7F7;
+
+    color: var(--black2);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+
+    box-sizing: border-box;
+    container-type: inline-size;
+}
+
+.home--blog .card--cap button {
+    font-weight: 600;
+    font-size: 1.3em;
+    padding: 20px 40px 20px 40px;
+
+    background-color: var(--accent2);
+    color: var(--black2);
+}
+
+.home--blog .card:not(.card--cap) button::before {
+    background-color: white;
+}
+
+.home--blog .card--cap {
+    display: grid;
+    place-items: center;
+}
+
+.home--blog .card:not(.card--cap) .btn:not(#web) {
+    margin-left: auto
+}
+
+.home--blog #blog .card img {
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.home--blog #blog .card p {
+    font-weight: 600;
+    font-size: 1em;
+
+    margin: 0;
+}
+
+.home--blog #github .card p#title {
+    font-weight: 600;
+    font-size: 2em;
+    margin: 0;
+}
+
+.home--blog #github .card p#description {
+    font-weight: 600;
+    margin: 0;
+}
+
+.home--blog #github .card .btn#web {
+    margin-left: -10px;
+}
+
+/* .home--blog #github .card .btn button.expanded::after {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    border-left: 1px solid red;
+} */
+
+.home--blog #github .card .btn button.expanded {
+    padding: 15px 40px 15px 40px;
+}
+
+.home--blog #github .card .btn#web button {
+    background-color: var(--accent3);
+    border-radius: 100vw;
+    padding: 15px 12px 15px 12px;
+}
+
+/* Contact */
+.home--contact .btn button {
+    background-color: var(--accent2);
+    color: var(--black2);
+}
+
+.home--contact .btn.twitter button {
+    margin-top: 5px;
+    background-color: var(--main1);
+    color: var(--black2);
+}
+
+.home--contact h2 {
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--black1);
+}
+
+.home--contact #contact p {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--black2);
+    width: 100%;
+    /* overflow-x: hidden; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.home--contact h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.home--contact #icebreakers p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--black3);
+}

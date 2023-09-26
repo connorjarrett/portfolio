@@ -1,0 +1,56 @@
+/* Hero */
+.work--hero .container {
+    background-color: var(--accent4);
+}
+
+.work--hero h1 {
+    line-height: 100%;
+    font-weight: 700;
+    font-size: 6.5em;
+    color: var(--black1);
+}
+
+.work--hero h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: var(--accent3);
+    text-transform: lowercase;
+}
+
+.work--hero .btn button {
+    font-weight: 600;
+    background-color: var(--accent3);
+    color: white;
+    font-size: 1.15em;
+    text-transform: lowercase;
+}
+
+.work--hero .btn#about button {
+    background-color: var(--btn);
+}
+
+/* Experience */
+.work--jobrow article {
+    width: 100% !important;
+}
+
+.work--jobrow h2 {
+    color: var(--black2);
+    font-size: 4em;
+}
+
+.work--jobrow h3 {
+    color: var(--black3);
+    font-size: 2em;
+}
+
+.work--jobrow p {
+    color: var(--black2);
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.work--jobrow button {
+    background: var(--accent2);
+    color: var(--black2);
+}
