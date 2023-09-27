@@ -78,6 +78,10 @@ nav h1 {
     background-color: transparent !important;
 }
 
+.hidden {
+    display: none;
+}
+
 .icon {
     font-family: 'Material Symbols Rounded';
 
