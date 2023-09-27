@@ -45,7 +45,7 @@
 
     <title>Connor Jarrett</title>
 </head>
-<body>
+<body itemprop="mainEntity" class="h-card vcard">
     <main>
         <section class="home--hero">
             <div class="container container--large container--aspect">
@@ -54,7 +54,8 @@
                 </div>
                 <article>
                     <h1>Hi,<br>I'm Connor</h1>
-                    <h2 class="text--animate-chunks">Web Developer & Student</h2>
+                    <span class="hidden n" itemprop="name"><span class="given-name">Connor</span> <span class="family-name">Jarrett</span></span>
+                    <h2 class="text--animate-chunks note" itemprop="jobTitle">Web Developer & Student</h2>
                     <span class="flex--horizontal">
                         <a href="#contact" class="btn btn--halfround btn--cta-down"><button aria-label="Contact">Contact</button></a>
                         <a href="./work/" class="btn btn--halfround btn--cta-right" id="work"><button aria-label="Work">Work</button></a>
@@ -243,8 +244,12 @@
                     </div>
                 </span>
 
-                <a href="mailto:connor@connorjarrett.com"><span class="icon">mail</span>connor@connorjarrett.com</a>
+                <a href="mailto:connor@connorjarrett.com" class="email"><span class="icon">mail</span>connor@connorjarrett.com</a>
 
+                <!-- Hidden v-card -->
+                <a class="hidden url" href="http://www.connorjarrett.com"></a>
+                <time class="hidden bday">2007-09-18</time>
+                
                 <p class="copyright">&copy; Connor Jarrett 2023. All rights reserved</p>
             </article>
         </div>
