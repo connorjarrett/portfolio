@@ -74,3 +74,43 @@
 
     border-radius: var(--radiusSmall);
 }
+
+.imagegrid {
+    width: calc(100% - var(--radiusLarge));
+    height: calc(100% - var(--radiusLarge));
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+
+    cursor: pointer;
+}
+
+.imagegrid img {
+    width: 95%;
+    height: 95%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    border-radius: var(--radiusSmall);
+    transition: all 500ms;
+
+    background-color: red;
+}
+
+.imagegrid img:hover {
+    width: 98%;
+    height: 98%;
+}
+
+.about--images .container {
+    min-height: unset !important;
+}
