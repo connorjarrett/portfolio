@@ -69,6 +69,22 @@ document.querySelectorAll(".text--animate-chars").forEach(item => {
     })
 })
 
+document.querySelectorAll(".text--animate-fadeup").forEach(item => {
+    const interval = item.dataset.interval ? parseFloat(item.dataset.interval) : 100
+
+    item.style.opacity = "0"
+    item.style.translate = "0 5px"
+    item.style.transition = `translate ${interval*10}ms, opacity ${interval*15}ms`
+
+    
+    item.onViewportEnter(() => {
+        setTimeout(() => {
+            item.style.translate = "0 0" 
+            item.style.opacity = "1"
+        }, interval)
+    })
+})
+
 document.querySelectorAll(".text--animate-chunks").forEach(item => {
     const completedText = item.innerHTML
     const split = completedText.split(" ")
