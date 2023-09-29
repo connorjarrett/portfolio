@@ -10,6 +10,26 @@ const images = [
     {
         path: "./public/images/inspiration/cablecar.jpeg",
         alt: ""
+    },
+    {
+        path: "./public/images/inspiration/golden_gate_bridge.jpeg",
+        alt: ""
+    },
+    {
+        path: "./public/images/inspiration/levis.jpeg",
+        alt: ""
+    },
+    {
+        path: "./public/images/inspiration/picadilly.jpeg",
+        alt: ""
+    },
+    {
+        path: "./public/images/inspiration/salesforce.jpeg",
+        alt: ""
+    },
+    {
+        path: "./public/images/inspiration/southbank_place.jpeg",
+        alt: ""
     }
 ]
 
