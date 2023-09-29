@@ -18,7 +18,7 @@
 
 @container (width < 5in) {
     .container article {
-        padding: 20px;
+        padding: 20px !important;
     }
 
     .container {
