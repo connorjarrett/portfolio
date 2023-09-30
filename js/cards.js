@@ -49,8 +49,13 @@ function hideCard() {
     lenis.options.wrapper = window
     lenis.options.content = document.documentElement
     
-    lenis.animatedScroll = window.scrollY
-    lenis.targetScroll = window.scrollY
+    for (let i=0; i<10; i++) {
+        setTimeout(()=>{
+            lenis.animatedScroll = window.scrollY
+            lenis.targetScroll = window.scrollY
+            lenis.scrollTo(window.scrollY)
+        }, i * 25)
+    }
 
     lenis.dimensions.resize()
 
@@ -62,10 +67,9 @@ function hideCard() {
         delete card.dataset.shown
 
         const container = card.querySelector(".container")
-
+        
         card.style.backgroundColor = ""
 
-        console.log(card.scrollTop)
         container.style.top = `calc(100% + ${card.scrollTop + 1}px)`
         container.style.translate = "0 0%"
 
