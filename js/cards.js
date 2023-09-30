@@ -15,11 +15,16 @@ function showCard(card) {
     for (let i=0; i<10; i++) {
         setTimeout(()=>{
             lenis.dimensions.resize()
+            lenis.targetScroll = 0
+            lenis.animatedScroll = 0
+
+            card.scrollTop = 0
         }, 50 * i)
     }
 
     setTimeout(()=>{
 
+        container.style.boxShadow = "0 0 95px -7px rgba(0, 0, 0, 0.58)"
         card.style.backgroundColor = "#f7f7f773"
 
         if (container.scrollHeight < window.innerHeight * 0.9) {
@@ -54,11 +59,13 @@ function hideCard() {
     if (card) {
         delete card.dataset.shown
 
-        card.style.backgroundColor = "#ffffff00"
-
         const container = card.querySelector(".container")
+
+        container.style.boxShadow = ""
+        card.style.backgroundColor = ""
+
         console.log(card.scrollTop)
-        container.style.top = `calc(100% + ${card.scrollTop}px)`
+        container.style.top = `calc(100% + ${card.scrollTop + 1}px)`
         container.style.translate = "0 0%"
 
         const duration = (parseFloat(getComputedStyle(container).getPropertyValue("transition-duration").slice(0, -1)))
