@@ -90,7 +90,7 @@
                 <div class="containergrid containergrid--square containergrid--50-50">
                     <div class="container container--centrecontent nopad breaklate">
                         <article>
-                            <div class="imagegrid">
+                            <div class="imagegrid" onclick="setCard(this)" data-card="images">
                                 <div></div>
                                 <div></div>
                                 <div></div>
@@ -98,6 +98,14 @@
                             </div>
                         </article>
                     </div>
+                </div>
+            </div>
+
+            <div class="card" id="images">
+                <div class="container container--large">
+                    <article>
+                        <h1>About Connor Jarrett</h1>
+                    </article>
                 </div>
             </div>
         </section>
@@ -130,6 +138,7 @@
         </div>
     </footer>
 
+    <script src="./js/cards.js"></script>
     <script src="./js/gallery.js"></script>
     <script src="./js/animations.js"></script>
 </body>
