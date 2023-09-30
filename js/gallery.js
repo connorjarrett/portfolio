@@ -73,14 +73,10 @@ $('document').ready(() => {
 
                     setTimeout(()=>{
                         if (div.children.length > 1) {
-                            div.children[0].style.scale = 0.99
-                        }
-
-                        if (div.children.length > 2) {
                             // Remove last child once covered
                             div.removeChild(div.children[0])
                         }
-                    }, duration)
+                    }, duration * 1000)
                 }, interval * i)
             }
         }
