@@ -383,6 +383,7 @@ main > section:last-child {
     left: 0;
 
     background-color: #ffffff00;
+    box-shadow: 0 0 0px -7px rgba(0, 0, 0, 0.58);
 
     display: none;
     justify-content: center;
@@ -395,7 +396,7 @@ main > section:last-child {
     scrollbar-width: none;
     -ms-overflow-style: none;
 
-    transition: background-color 250ms;
+    transition: box-shadow 250ms, background-color 250ms;
 }
 
 .card::-webkit-scrollbar {
