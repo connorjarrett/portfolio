@@ -1,10 +1,10 @@
-const lenis = new Lenis({
+lenis = new Lenis({
     duration: 2,
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
     direction: 'vertical',
     smooth: true,
     smoothTouch: false,
-    touchMultiplier: 2,
+    touchMultiplier: 2
 })
 
 function raf(time) {
