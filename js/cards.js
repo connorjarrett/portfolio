@@ -18,11 +18,13 @@ function showCard(card) {
             lenis.targetScroll = 0
             lenis.animatedScroll = 0
 
-            card.scrollTop = 0
+            lenis.scrollTo(0)
         }, 50 * i)
     }
 
     setTimeout(()=>{
+
+        card.classList.add("lenis-scrolling")
 
         container.style.boxShadow = "0 0 95px -7px rgba(0, 0, 0, 0.58)"
         card.style.backgroundColor = "#f7f7f773"
