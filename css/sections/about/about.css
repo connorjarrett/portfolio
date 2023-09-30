@@ -1,6 +1,6 @@
 /* Hero */
 .about--hero .container {
-    background-color: black;
+    background-color: var(--black1);
 }
 
 .about--hero h1 {
