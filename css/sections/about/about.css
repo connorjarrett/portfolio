@@ -121,6 +121,6 @@
     object-fit: cover;
 }
 
-.about--images .container {
+.about--images .containergrid .container {
     min-height: unset !important;
 }
