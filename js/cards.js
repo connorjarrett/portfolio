@@ -63,7 +63,6 @@ function hideCard() {
 
         const container = card.querySelector(".container")
 
-        container.style.boxShadow = ""
         card.style.backgroundColor = ""
 
         console.log(card.scrollTop)
@@ -71,6 +70,10 @@ function hideCard() {
         container.style.translate = "0 0%"
 
         const duration = (parseFloat(getComputedStyle(container).getPropertyValue("transition-duration").slice(0, -1)))
+
+        setTimeout(() => {
+            container.style.boxShadow = ""
+        }, duration * 750)
 
         setTimeout(() => {
             card.style.display = ""
