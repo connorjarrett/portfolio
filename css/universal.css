@@ -415,6 +415,19 @@ main > section:last-child {
     border-radius: var(--radiusSmall);
 }
 
+.card .container article {
+    justify-content: flex-start;
+}
+
+.card button.close {
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    border: none;
+
+    background-color: #4d4d4d;
+}
+
 .fill--75 {
     width: 75%;
 }
