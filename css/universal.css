@@ -422,6 +422,8 @@ main > section:last-child {
     justify-content: flex-start;
     align-items: center;
     color: var(--black2);
+
+    position: relative;
 }
 
 .card button.close {
