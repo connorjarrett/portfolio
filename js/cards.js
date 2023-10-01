@@ -44,6 +44,12 @@ function showCard(card) {
         }
     }, 25)
 
+    card.addEventListener('swiped-down', function(e) {
+        console.log(e.target); // element that was swiped
+        console.log(e.detail); // see event data below
+        hideCard()
+    });
+
 }
 
 function hideCard() {
