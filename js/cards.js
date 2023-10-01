@@ -81,11 +81,11 @@ function hideCard() {
 
         setTimeout(() => {
             container.style.boxShadow = ""
-        }, duration * 750)
+        }, duration * 1000)
 
         setTimeout(() => {
             card.style.display = ""
-        }, duration * 1000)
+        }, duration * 1200)
         
         console.log(card)
     }
