@@ -86,8 +86,6 @@ function hideCard() {
         setTimeout(() => {
             card.style.display = ""
         }, duration * 1200)
-        
-        console.log(card)
     }
 }
 
