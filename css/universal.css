@@ -423,6 +423,8 @@ main > section:last-child {
     align-items: center;
     color: var(--black2);
 
+    padding: 40px;
+
     position: relative;
 }
 
