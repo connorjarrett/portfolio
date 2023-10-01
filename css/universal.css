@@ -411,8 +411,9 @@ main > section:last-child {
     
     height: 100vh;
 
+    max-width: 1000px;
     min-height: 100px;
-    border-radius: var(--radiusSmall);
+    border-radius: var(--radiusSmall)  var(--radiusSmall) 0 0;
 }
 
 .card .container article {
