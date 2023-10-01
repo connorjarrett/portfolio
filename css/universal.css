@@ -413,7 +413,7 @@ main > section:last-child {
     
     height: max-content;
 
-    max-width: 1000px;
+    /* max-width: 1000px; */
     min-height: 100px;
     border-radius: var(--radiusSmall)   ;
 }
