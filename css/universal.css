@@ -430,6 +430,8 @@ main > section:last-child {
     height: 36px;
     border: none;
 
+    position: absolute;
+    
     cursor: pointer;
 
     background-image: url("../public/images/icons/close.svg");
