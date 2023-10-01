@@ -28,6 +28,8 @@ function showCard(card) {
 
         container.style.boxShadow = "0 0 95px -7px rgba(0, 0, 0, 0.58)"
         card.style.backgroundColor = "#f7f7f773"
+        card.style.backdropFilter = "blur(15px)"
+        card.style.webkitBackdropFilter = "blur(15px)"
 
         if (container.scrollHeight < window.innerHeight * 0.9) {
 
@@ -71,7 +73,9 @@ function hideCard() {
         card.style.backgroundColor = ""
 
         container.style.top = `calc(100% + ${card.scrollTop + 1}px)`
-        container.style.translate = "0 0%"
+        container.style.translate = ""
+        card.style.backdropFilter = ""
+        card.style.webkitBackdropFilter = ""
 
         const duration = (parseFloat(getComputedStyle(container).getPropertyValue("transition-duration").slice(0, -1)))
 

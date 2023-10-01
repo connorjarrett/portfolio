@@ -383,6 +383,8 @@ main > section:last-child {
     left: 0;
 
     background-color: #ffffff00;
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
     box-shadow: 0 0 0px -7px rgba(0, 0, 0, 0.58);
 
     display: none;
@@ -396,7 +398,7 @@ main > section:last-child {
     scrollbar-width: none;
     -ms-overflow-style: none;
 
-    transition: box-shadow 250ms, background-color 250ms;
+    transition: box-shadow 250ms, background-color 250ms, backdrop-filter 300ms, -webkit-backdrop-filter 300ms;
 }
 
 .card::-webkit-scrollbar {
