@@ -9,10 +9,10 @@ $.ajax({
     success: function(postData) {
         var slice = postData.slice(0,3)
 
-        document.querySelectorAll(".home--blog #blog .card:not(.card--cap)").forEach((card, i) => {
+        document.querySelectorAll(".home--blog #blog .listElement:not(.listElement--cap)").forEach((listElement, i) => {
             let post = slice[i]
 
-            card.innerHTML = `
+            listElement.innerHTML = `
             <img src="${post.image}" alt=${post.SEOdescription}>
             <p>${post.title}</p>
             <a class="btn btn--halfround btn--underline btn--pad" href="${post.share.url}cjrt" target="_BLANK"><button>Read</button></a>
@@ -48,20 +48,20 @@ $.ajax({
             }
         })
 
-        document.querySelectorAll(".home--blog #github .card:not(.card--cap)").forEach((card, i) => {
+        document.querySelectorAll(".home--blog #github .listElement:not(.listElement--cap)").forEach((listElement, i) => {
             let repo = slice[i]
 
             console.log(repo)
 
             if (repo.homepage) {
-                card.innerHTML = `
+                listElement.innerHTML = `
                 <p id="title">/${repo.name}</p>
                 <p id="description">${/*repo.description*/""}</p>
                 <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button aria-label="Read the code for ${repo.name}">Code</button></a>
                 <a class="btn btn--halfround btn--cta-newtab btn--pad" id="web" href="${repo.homepage}" target="_BLANK"><button aria-label="Check out the website for ${repo.name}">&nbsp;</button></a>
                 `
             } else {
-                card.innerHTML = `
+                listElement.innerHTML = `
                 <p id="title">/${repo.name}</p>
                 <p id="description">${/*repo.description*/""}</p>
                 <a class="btn btn--halfround btn--underline btn--pad" href="${repo["html_url"]}" target="_BLANK"><button aria-label="Read the code for ${repo.name}" class="expanded">Code</button></a>
