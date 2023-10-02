@@ -407,7 +407,8 @@ main > section:last-child {
 
     display: none;
     justify-content: center;
-
+    overscroll-behavior: contain;
+    
     z-index: 20;
 
     overflow-y: scroll;
