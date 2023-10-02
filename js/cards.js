@@ -1,5 +1,6 @@
 const lenisOriginalOptions = lenis.options
 
+const iOS =  (/iPad|iPhone|iPod/.test(navigator.userAgent))
 
 function showCard(card) {
     const container = card.querySelector(".container")
@@ -27,7 +28,11 @@ function showCard(card) {
 
         card.classList.add("lenis-scrolling")
 
-        container.style.boxShadow = "0 50px 95px -7px rgba(0, 0, 0, 0.58)"
+        if (!iOS) {
+            // Only show box-shadow if not iOS because elastic scroll makes it look terrible when scrolled down
+            container.style.boxShadow = "0 -5px 10px 2px rgb(157, 148, 148)"
+        }
+
         screen.style.backgroundColor = "#f7f7f773"
         screen.style.backdropFilter = "blur(15px)"
         screen.style.webkitBackdropFilter = "blur(15px)"
