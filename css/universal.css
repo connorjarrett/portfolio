@@ -406,7 +406,7 @@ main > section:last-child {
 }
 
 .card .container {
-    transition: top 500ms, translate 500ms;
+    transition: top 250ms ease-in-out, translate 250ms;
 
     translate: 0 0%;
     top: 100%;
