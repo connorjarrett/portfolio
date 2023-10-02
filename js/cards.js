@@ -43,13 +43,6 @@ function showCard(card) {
 
         }
     }, 25)
-
-    card.addEventListener('swiped-down', function(e) {
-        console.log(e.target); // element that was swiped
-        console.log(e.detail); // see event data below
-        hideCard()
-    });
-
 }
 
 function hideCard() {
@@ -115,6 +108,21 @@ function openByHash() {
         showCard(card)
     }
 }
+
+// Code for all cards
+document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener('swiped-down', (e) => {
+        console.log(e.target); // element that was swiped
+        console.log(e.detail); // see event data below
+        hideCard()
+    });
+
+    card.addEventListener("resize", (e) => {
+        if (lenis.dimensions.content == card) {
+            lenis.dimensions.resize()
+        }
+    })
+})
 
 $('document').ready(openByHash)
 $(window).on('hashchange', openByHash)
