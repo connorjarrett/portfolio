@@ -3,7 +3,8 @@ const lenisOriginalOptions = lenis.options
 
 function showCard(card) {
     const container = card.querySelector(".container")
-    
+    const screen = document.querySelector(".cardScreen")
+
     card.dataset.shown = ""
     card.style.display = "flex"
 
@@ -26,10 +27,10 @@ function showCard(card) {
 
         card.classList.add("lenis-scrolling")
 
-        container.style.boxShadow = "0 0 95px -7px rgba(0, 0, 0, 0.58)"
-        card.style.backgroundColor = "#f7f7f773"
-        card.style.backdropFilter = "blur(15px)"
-        card.style.webkitBackdropFilter = "blur(15px)"
+        container.style.boxShadow = "0 50px 95px -7px rgba(0, 0, 0, 0.58)"
+        screen.style.backgroundColor = "#f7f7f773"
+        screen.style.backdropFilter = "blur(15px)"
+        screen.style.webkitBackdropFilter = "blur(15px)"
 
         if (container.scrollHeight < window.innerHeight * 0.8) {
 
@@ -47,6 +48,8 @@ function showCard(card) {
 }
 
 function hideCard() {
+    const screen = document.querySelector(".cardScreen")
+
     lenis.dimensions.content = document.documentElement
     lenis.options.wrapper = window
     lenis.options.content = document.documentElement
@@ -70,12 +73,12 @@ function hideCard() {
 
         const container = card.querySelector(".container")
         
-        card.style.backgroundColor = ""
+        screen.style.backgroundColor = ""
 
         container.style.top = `calc(100% + ${card.scrollTop + 1}px)`
         container.style.translate = ""
-        card.style.backdropFilter = ""
-        card.style.webkitBackdropFilter = ""
+        screen.style.backdropFilter = ""
+        screen.style.webkitBackdropFilter = ""
 
         const duration = (parseFloat(getComputedStyle(container).getPropertyValue("transition-duration").slice(0, -1)))
 
