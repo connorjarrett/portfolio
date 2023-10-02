@@ -6,6 +6,8 @@ function showCard(card) {
     const container = card.querySelector(".container")
     const screen = document.querySelector(".cardScreen")
 
+    document.body.style.overflowY = "hidden"
+
     card.dataset.shown = ""
     card.style.display = "flex"
 
@@ -92,6 +94,7 @@ function hideCard() {
         }, duration * 1000)
 
         setTimeout(() => {
+            document.body.style.overflowY = ""
             card.style.display = ""
         }, duration * 1200)
     }
