@@ -33,9 +33,10 @@ function showCard(card) {
 
         if (container.scrollHeight < window.innerHeight * 0.8) {
 
-            container.style.top = "50%"
-            container.style.translate = "0 -50%"
-            card.style.overflow = "hidden"
+            // container.style.top = "50%"
+            // container.style.translate = "0 -50%"
+            container.style.translate = "0 calc(-100% + var(--radiusSmall))"
+            // card.style.overflow = "hidden"
 
         } else {
 
@@ -109,20 +110,24 @@ function openByHash() {
     }
 }
 
-// Code for all cards
-document.querySelectorAll(".card").forEach((card) => {
-    card.addEventListener('swiped-down', (e) => {
-        console.log(e.target); // element that was swiped
-        console.log(e.detail); // see event data below
-        hideCard()
-    });
 
-    card.addEventListener("resize", (e) => {
-        if (lenis.dimensions.content == card) {
-            lenis.dimensions.resize()
-        }
+$('document').ready(()=>{
+    openByHash()
+
+
+    // Code for all cards
+    document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener('swiped-down', (e) => {
+            console.log(e.target); // element that was swiped
+            console.log(e.detail); // see event data below
+            hideCard()
+        });
+
+        card.addEventListener("resize", (e) => {
+            if (lenis.dimensions.content == card) {
+                lenis.dimensions.resize()
+            }
+        })
     })
 })
-
-$('document').ready(openByHash)
 $(window).on('hashchange', openByHash)
