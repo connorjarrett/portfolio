@@ -1,6 +1,7 @@
 const lenisOriginalOptions = lenis.options
 
-const iOS =  (/iPad|iPhone|iPod/.test(navigator.userAgent))
+const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+const isMobile = typeof screen.orientation !== 'undefined'
 
 function showCard(card) {
     const container = card.querySelector(".container")
@@ -33,6 +34,11 @@ function showCard(card) {
         if (!iOS) {
             // Only show box-shadow if not iOS because elastic scroll makes it look terrible when scrolled down
             container.style.boxShadow = "0 0 35px -11px rgb(40, 40, 40)"
+        }
+
+        if (isMobile || iOS) {
+            // Add padding to the bottom of cards on mobile
+            card.querySelector("article").style.marginBottom = "60px"
         }
 
         screen.style.backgroundColor = "#f7f7f773"
