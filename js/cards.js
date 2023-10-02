@@ -31,7 +31,7 @@ function showCard(card) {
         card.style.backdropFilter = "blur(15px)"
         card.style.webkitBackdropFilter = "blur(15px)"
 
-        if (container.scrollHeight < window.innerHeight * 0.9) {
+        if (container.scrollHeight < window.innerHeight * 0.8) {
 
             container.style.top = "50%"
             container.style.translate = "0 -50%"
