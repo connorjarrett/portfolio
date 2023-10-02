@@ -30,7 +30,7 @@ function showCard(card) {
 
         if (!iOS) {
             // Only show box-shadow if not iOS because elastic scroll makes it look terrible when scrolled down
-            container.style.boxShadow = "0 -5px 10px 2px rgb(157, 148, 148)"
+            container.style.boxShadow = "0 0 35px -11px rgb(40, 40, 40)"
         }
 
         screen.style.backgroundColor = "#f7f7f773"
