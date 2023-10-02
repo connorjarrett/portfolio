@@ -112,8 +112,10 @@ function openByHash() {
 
 
 $('document').ready(()=>{
-    openByHash()
-
+    // Create screen
+    const screen = document.createElement("div")
+    screen.classList = "cardScreen"
+    document.body.appendChild(screen)
 
     // Code for all cards
     document.querySelectorAll(".card").forEach((card) => {
@@ -129,5 +131,7 @@ $('document').ready(()=>{
             }
         })
     })
+
+    openByHash()
 })
 $(window).on('hashchange', openByHash)
