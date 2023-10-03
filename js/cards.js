@@ -7,7 +7,14 @@ function showCard(card) {
     const container = card.querySelector(".container")
     const screen = document.querySelector(".cardScreen")
 
-    document.body.style.top = `${window.scrollY * -1}px`
+    if (window.scrollY == 0) {
+        const trigger = document.querySelector(`*[data-card="${card.id}"]`)
+        
+        document.body.style.top = `${(trigger.getBoundingClientRect().top)* -1}px`
+    } else {
+        document.body.style.top = `${window.scrollY * -1}px`
+    }
+
     document.body.style.overflowY = "hidden"
     document.body.style.position = "fixed"
 
