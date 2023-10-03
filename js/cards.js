@@ -7,7 +7,9 @@ function showCard(card) {
     const container = card.querySelector(".container")
     const screen = document.querySelector(".cardScreen")
 
+    document.body.style.top = `${window.scrollY * -1}px`
     document.body.style.overflowY = "hidden"
+    document.body.style.position = "fixed"
 
     card.dataset.shown = ""
     card.style.display = "flex"
@@ -66,16 +68,6 @@ function hideCard() {
     lenis.dimensions.content = document.documentElement
     lenis.options.wrapper = window
     lenis.options.content = document.documentElement
-    
-    for (let i=0; i<10; i++) {
-        setTimeout(()=>{
-            lenis.animatedScroll = window.scrollY
-            lenis.targetScroll = window.scrollY
-            lenis.scrollTo(window.scrollY)
-        }, i * 25)
-    }
-
-    lenis.dimensions.resize()
 
     window.location.hash = "_"
 
@@ -100,7 +92,20 @@ function hideCard() {
         }, duration * 1000)
 
         setTimeout(() => {
+            
+            const top = document.body.style.top
+            const scrollTo = parseInt(top.slice(0, -2)) * -1
+
+            document.body.style.top = ""
             document.body.style.overflowY = ""
+            document.body.style.position = ""
+
+            lenis.dimensions.resize()
+
+            lenis.animatedScroll = scrollTo
+            lenis.targetScroll = scrollTo
+            lenis.scrollTo(scrollTo)
+
             card.style.display = ""
         }, duration * 1200)
     }
@@ -112,7 +117,7 @@ function setCard(trigger) {
         window.location.hash = `card-${cardID}`
         
         const card = document.querySelector(`.card#${cardID}`) 
-        showCard(card)
+        // showCard(card)
     }
 }
 
