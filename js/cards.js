@@ -9,7 +9,7 @@ function showCard(card) {
 
     if (window.scrollY == 0) {
         const trigger = document.querySelector(`*[data-card="${card.id}"]`)
-        
+
         document.body.style.top = `${(trigger.getBoundingClientRect().top)* -1}px`
     } else {
         document.body.style.top = `${window.scrollY * -1}px`
