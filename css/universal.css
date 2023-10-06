@@ -511,6 +511,28 @@ main > section:last-child {
     object-fit: cover;
 }
 
+.allimages {
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.allimages .row {
+    width: 100%;
+    display: flex;
+
+}
+
+.allimages .row img {
+    height: 100%;
+    border-radius: 10px;
+    scale: 0.95;
+}
+
 .fill--75 {
     width: 75%;
 }
