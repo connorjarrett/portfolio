@@ -84,4 +84,125 @@ $('document').ready(() => {
         setInterval(loop, loopTime)
         loop()
     })
+
+    document.querySelectorAll(".allimages").forEach((container) => {
+        var promises = []
+
+        images.forEach((image) => {
+            const el = document.createElement("img")
+
+            el.src = image.path
+            el.alt = image.alt
+
+            promises.push(new Promise((res) => {
+                const im = new Image()
+
+                im.onload = () => {
+                    // const aspect = Math.round((im.width / im.height) * 100) / 100
+                    const aspect = im.width / im.height
+
+                    res({
+                        img: image,
+                        width: im.width,
+                        height: im.height,
+                        aspect: aspect,
+                        orientation: aspect < 1 ? "portrait" : "landscape"
+                    })
+                }
+
+                im.src = image.path
+            }))
+
+            container.appendChild(el)
+        })
+
+        // Once all images are loaded, sort
+        Promise.all(promises).then(data => {
+            const options = [
+                ["portrait", "landscape"],
+                ["portrait", "portrait", "portrait"],
+                ["portrait", "portrait", "landscape"],
+                ["landscape", "landscape"]
+            ]
+
+            const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
+            const minRow = options.sort((a, b) => { return b.length - a.length }).slice(-1)[0].length
+
+            const portrait = data.filter(e => e.orientation == "portrait")
+            const landscape = data.filter(e => !portrait.includes(e))
+
+            console.log(`Portrait: ${portrait.length}\nLandscape: ${landscape.length}`)
+
+            // ChatGPT written code below because I didn't know where to start with this one,
+            // surprisingly good but took loads of attempts
+
+            function generateCombinations(template) {
+                const combinations = [];
+                const rowCount = Math.ceil(data.length / template.length);
+
+                for (let i = 0; i < rowCount; i++) {
+                    const row = [];
+                    for (let j = 0; j < template.length; j++) {
+                        const dataIndex = i * template.length + j;
+                        if (dataIndex < data.length) {
+                            row.push(data[dataIndex])
+
+                            // if (template[j] === "portrait") {
+                            //     row.push(data[dataIndex])
+                            // } else if (template[j] === "landscape") {
+                            //     row.push(data[dataIndex])
+                            // }
+                        }
+                    }
+                    combinations.push(row);
+                }
+
+                return combinations;
+            }
+
+            function findBestLayout() {
+                let bestLayout = null;
+                let bestOverflowCount = data.length;
+
+                for (const template of options) {
+                    const combinations = generateCombinations(template);
+                    const overflowCount = combinations.reduce((total, row) => total + Math.max(0, row.length - maxRow), 0);
+
+                    if (overflowCount < bestOverflowCount) {
+                        bestOverflowCount = overflowCount;
+                        bestLayout = combinations;
+                    }
+                }
+
+                return bestLayout;
+            }
+
+            const bestLayout = findBestLayout();
+            
+            bestLayout.forEach((row) => {
+                const rowDiv = document.createElement("div")
+                rowDiv.classList = "row"
+
+                const combinedRowRatio = row.map(e => e.aspect).reduce((a, b) => a + b, 0)
+                var height = container.getBoundingClientRect().width / combinedRowRatio
+
+                rowDiv.style.height = `${height}px`
+
+                new ResizeObserver(() => {
+                    height = container.getBoundingClientRect().width / combinedRowRatio
+
+                    rowDiv.style.height = `${height}px`
+                }).observe(container)
+
+
+                row.forEach((image) => {
+                    const el = container.querySelector(`img[src="${image.img.path}"]`) 
+
+                    rowDiv.appendChild(el)
+                })
+
+                container.appendChild(rowDiv)
+            })
+        })
+    })
 })
