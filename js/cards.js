@@ -55,16 +55,9 @@ function showCard(card) {
         screen.style.webkitBackdropFilter = "blur(15px)"
 
         if (container.scrollHeight < window.innerHeight * 0.8) {
-
-            // container.style.top = "50%"
-            // container.style.translate = "0 -50%"
             container.style.translate = "0 calc(-100% + var(--radiusSmall))"
-            // card.style.overflow = "hidden"
-
         } else {
-
             container.style.top = "25%"
-
         }
     }, 25)
 }
