@@ -1,35 +1,35 @@
 const images = [
     {
         path: "./public/images/inspiration/bfi.jpeg",
-        alt: ""
+        alt: "The BFI IMAX in London"
     },
     {
         path: "./public/images/inspiration/bigben.jpeg",
-        alt: ""
+        alt: "Big Ben in the evening"
     },
     {
         path: "./public/images/inspiration/cablecar.jpeg",
-        alt: ""
+        alt: "A San Francisco Cable Car"
     },
     {
         path: "./public/images/inspiration/golden_gate_bridge.jpeg",
-        alt: ""
+        alt: "The Golden Gate Bridge from Hawk Hill"
     },
     {
         path: "./public/images/inspiration/levis.jpeg",
-        alt: ""
+        alt: "1255 Battery Street in Levi's Plaza"
     },
     {
         path: "./public/images/inspiration/picadilly.jpeg",
-        alt: ""
+        alt: "Picadilly Circus in London"
     },
     {
         path: "./public/images/inspiration/salesforce.jpeg",
-        alt: ""
+        alt: "Salesforce Tower at night"
     },
     {
         path: "./public/images/inspiration/southbank_place.jpeg",
-        alt: ""
+        alt: "Southbank Place in London, from Strand"
     }
 ]
 
