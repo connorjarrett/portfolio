@@ -45,7 +45,7 @@ $('document').ready(() => {
 
         function loop() {
             // Start at a random index, then move on for the amount of images allowed in the grid
-            const randomIndex =  Math.floor(Math.random() * (images.length - 0) ) + 0;
+            const randomIndex = Math.floor(Math.random() * (images.length - 0)) + 0;
 
             // Loop through each 
             for (let i = randomIndex; i < randomIndex + spaces; i++) {
@@ -54,7 +54,7 @@ $('document').ready(() => {
 
                 const div = nodes[realIndex]
                 const img = document.createElement("img")
-                
+
                 img.src = image.path
                 img.alt = image.alt
                 img.style.opacity = 0
@@ -71,7 +71,7 @@ $('document').ready(() => {
                     img.style.opacity = ""
                     img.style.scale = 1
 
-                    setTimeout(()=>{
+                    setTimeout(() => {
                         if (div.children.length > 1) {
                             // Remove last child once covered
                             div.removeChild(div.children[0])
