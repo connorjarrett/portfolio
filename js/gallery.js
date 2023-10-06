@@ -13,7 +13,7 @@ const images = [
     },
     {
         path: "./public/images/inspiration/golden_gate_bridge.jpeg",
-        alt: "The Golden Gate Bridge from Hawk Hill"
+        alt: "The Golden Gate Bridge from Fort Baker"
     },
     {
         path: "./public/images/inspiration/levis.jpeg",
