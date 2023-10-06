@@ -156,10 +156,7 @@ $('document').ready(()=>{
             hideCard()
         });
 
-        console.log("E")
-
         new ResizeObserver(() => {
-            console.log("e")
             if (lenis.dimensions.content == card) {
                 lenis.dimensions.resize()
 
