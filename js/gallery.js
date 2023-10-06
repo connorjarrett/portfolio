@@ -120,7 +120,7 @@ $('document').ready(() => {
         Promise.all(promises).then(data => {
             const options = [
                 ["portrait", "landscape"],
-                ["portrait", "portrait", "portrait"],
+                ["portrait", "portrait"],
                 ["portrait", "portrait", "landscape"],
                 ["landscape", "landscape"]
             ]
@@ -179,6 +179,8 @@ $('document').ready(() => {
 
             const bestLayout = findBestLayout();
             
+            // Back to human written code
+
             bestLayout.forEach((row) => {
                 const rowDiv = document.createElement("div")
                 rowDiv.classList = "row"
