@@ -54,12 +54,19 @@ function showCard(card) {
         screen.style.backdropFilter = "blur(15px)"
         screen.style.webkitBackdropFilter = "blur(15px)"
 
-        if (container.scrollHeight < window.innerHeight * 0.8) {
-            container.style.translate = "0 calc(-100% + var(--radiusSmall))"
-        } else {
-            container.style.top = "25%"
-        }
+        setCardOpenPosition(card)
     }, 25)
+}
+
+function setCardOpenPosition(card) {
+    const container = card.querySelector(".container")
+
+    if (container.scrollHeight < window.innerHeight * 0.8) {
+        container.style.translate = "0 calc(-100% + var(--radiusSmall))"
+    } else {
+        container.style.translate = ""
+        container.style.top = "25%"
+    }
 }
 
 function hideCard() {
@@ -141,17 +148,24 @@ $('document').ready(()=>{
 
     // Code for all cards
     document.querySelectorAll(".card").forEach((card) => {
+        const container = card.querySelector("article")
+
         card.addEventListener('swiped-down', (e) => {
             console.log(e.target); // element that was swiped
             console.log(e.detail); // see event data below
             hideCard()
         });
 
-        card.addEventListener("resize", (e) => {
+        console.log("E")
+
+        new ResizeObserver(() => {
+            console.log("e")
             if (lenis.dimensions.content == card) {
                 lenis.dimensions.resize()
+
+                setCardOpenPosition(card)
             }
-        })
+        }).observe(container)
     })
 
     openByHash()
