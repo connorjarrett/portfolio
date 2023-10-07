@@ -154,12 +154,17 @@ $('document').ready(()=>{
 
     // Code for all cards
     document.querySelectorAll(".card").forEach((card) => {
-        const container = card.querySelector("article")
+        const container = card.querySelector(".container")
+        const article = container.querySelector("article")
 
-        card.addEventListener('swiped-down', (e) => {
-            console.log(e.target); // element that was swiped
-            console.log(e.detail); // see event data below
-            hideCard()
+        container.addEventListener('swiped-down', (event) => {
+            const cardTop = container.getBoundingClientRect().top
+
+            if (cardTop > 1) { // Only if top of card is in view
+                if (event.detail.yStart < window.innerHeight / 2) { // Only if swipe starts less than halfway down the page
+                    hideCard()
+                }
+            }
         });
 
         new ResizeObserver(() => {
@@ -168,7 +173,7 @@ $('document').ready(()=>{
 
                 setCardOpenPosition(card)
             }
-        }).observe(container)
+        }).observe(article)
     })
 
     openByHash()
