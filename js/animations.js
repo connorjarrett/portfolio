@@ -117,3 +117,23 @@ document.querySelectorAll(".text--animate-chunks").forEach(item => {
         })
     })
 })
+
+document.querySelectorAll(".list--animate-fadeup").forEach(item => {
+    const interval = item.dataset.interval ? parseFloat(item.dataset.interval) : 100
+    const elements = item.querySelectorAll("li")
+
+    elements.forEach((el) => {
+        el.style.opacity = "0"
+        el.style.translate = "0 5px"
+        el.style.transition = `translate ${interval*10}ms, opacity ${interval*15}ms`
+    })
+    
+    item.onViewportEnter(() => {
+        elements.forEach((el, i) => {
+            setTimeout(() => {
+                el.style.translate = "0 0" 
+                el.style.opacity = "1"
+            }, interval * i)
+        })
+    })
+})

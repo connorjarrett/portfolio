@@ -1,4 +1,4 @@
-.text--animate-chunks,.text--animate-fadeup {
+.text--animate-chunks, .text--animate-fadeup, .list--animate-fadeup {
     display: block;
 }
 
