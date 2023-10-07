@@ -1,6 +1,16 @@
 @container (width < 10in) {
     .about--hero h2 {
         font-size: 3.5em;
+
+        text-shadow:
+        -5px -5px 0 var(--black1),
+        0   -5px 0 var(--black1),
+        5px -5px 0 var(--black1),
+        5px  0   0 var(--black1),
+        5px  5px 0 var(--black1),
+        0    5px 0 var(--black1),
+        -5px  5px 0 var(--black1),
+        -5px  0   0 var(--black1);
     }
 }
 
@@ -22,5 +32,15 @@
 
     .about--hero h2 {
         font-size: 2em;
+        
+        text-shadow:
+        -4px -4px 0 var(--black1),
+        0   -4px 0 var(--black1),
+        4px -4px 0 var(--black1),
+        4px  0   0 var(--black1),
+        4px  4px 0 var(--black1),
+        0    4px 0 var(--black1),
+        -4px  4px 0 var(--black1),
+        -4px  0   0 var(--black1);
     }
 }
