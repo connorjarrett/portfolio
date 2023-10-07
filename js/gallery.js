@@ -118,93 +118,122 @@ $('document').ready(() => {
 
         // Once all images are loaded, sort
         Promise.all(promises).then(data => {
-            const options = [
-                ["portrait", "landscape"],
-                ["portrait", "portrait"],
-                ["portrait", "portrait", "landscape"],
-                ["landscape", "landscape"]
-            ]
+            function sortIntoLayout(options) {
+                container.querySelectorAll("img").forEach((image) => container.appendChild(image))
+                container.querySelectorAll(".row").forEach((e) => e.remove())
 
-            const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
-            const minRow = options.sort((a, b) => { return b.length - a.length }).slice(-1)[0].length
+                const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
+                const minRow = options.sort((a, b) => { return b.length - a.length }).slice(-1)[0].length
 
-            const portrait = data.filter(e => e.orientation == "portrait")
-            const landscape = data.filter(e => !portrait.includes(e))
+                const portrait = data.filter(e => e.orientation == "portrait")
+                const landscape = data.filter(e => !portrait.includes(e))
 
-            console.log(`Portrait: ${portrait.length}\nLandscape: ${landscape.length}`)
+                console.log(`Portrait: ${portrait.length}\nLandscape: ${landscape.length}`)
 
-            // ChatGPT written code below because I didn't know where to start with this one,
-            // surprisingly good but took loads of attempts
+                // ChatGPT written code below because I didn't know where to start with this one,
+                // surprisingly good but took loads of attempts
 
-            function generateCombinations(template) {
-                const combinations = [];
-                const rowCount = Math.ceil(data.length / template.length);
+                function generateCombinations(template) {
+                    const combinations = [];
+                    const rowCount = Math.ceil(data.length / template.length);
 
-                for (let i = 0; i < rowCount; i++) {
-                    const row = [];
-                    for (let j = 0; j < template.length; j++) {
-                        const dataIndex = i * template.length + j;
-                        if (dataIndex < data.length) {
-                            row.push(data[dataIndex])
+                    for (let i = 0; i < rowCount; i++) {
+                        const row = [];
+                        for (let j = 0; j < template.length; j++) {
+                            const dataIndex = i * template.length + j;
+                            if (dataIndex < data.length) {
+                                row.push(data[dataIndex])
 
-                            // if (template[j] === "portrait") {
-                            //     row.push(data[dataIndex])
-                            // } else if (template[j] === "landscape") {
-                            //     row.push(data[dataIndex])
-                            // }
+                                // if (template[j] === "portrait") {
+                                //     row.push(data[dataIndex])
+                                // } else if (template[j] === "landscape") {
+                                //     row.push(data[dataIndex])
+                                // }
+                            }
+                        }
+                        combinations.push(row);
+                    }
+
+                    return combinations;
+                }
+
+                function findBestLayout() {
+                    let bestLayout = null;
+                    let bestOverflowCount = data.length;
+
+                    for (const template of options) {
+                        const combinations = generateCombinations(template);
+                        const overflowCount = combinations.reduce((total, row) => total + Math.max(0, row.length - maxRow), 0);
+
+                        if (overflowCount < bestOverflowCount) {
+                            bestOverflowCount = overflowCount;
+                            bestLayout = combinations;
                         }
                     }
-                    combinations.push(row);
+
+                    return bestLayout;
                 }
 
-                return combinations;
-            }
+                const bestLayout = findBestLayout();
+                
+                // Back to human written code
 
-            function findBestLayout() {
-                let bestLayout = null;
-                let bestOverflowCount = data.length;
+                bestLayout.forEach((row) => {
+                    const rowDiv = document.createElement("div")
+                    rowDiv.classList = "row"
 
-                for (const template of options) {
-                    const combinations = generateCombinations(template);
-                    const overflowCount = combinations.reduce((total, row) => total + Math.max(0, row.length - maxRow), 0);
-
-                    if (overflowCount < bestOverflowCount) {
-                        bestOverflowCount = overflowCount;
-                        bestLayout = combinations;
-                    }
-                }
-
-                return bestLayout;
-            }
-
-            const bestLayout = findBestLayout();
-            
-            // Back to human written code
-
-            bestLayout.forEach((row) => {
-                const rowDiv = document.createElement("div")
-                rowDiv.classList = "row"
-
-                const combinedRowRatio = row.map(e => e.aspect).reduce((a, b) => a + b, 0)
-                var height = container.getBoundingClientRect().width / combinedRowRatio
-
-                rowDiv.style.height = `${height}px`
-
-                new ResizeObserver(() => {
-                    height = container.getBoundingClientRect().width / combinedRowRatio
+                    const combinedRowRatio = row.map(e => e.aspect).reduce((a, b) => a + b, 0)
+                    var height = container.getBoundingClientRect().width / combinedRowRatio
 
                     rowDiv.style.height = `${height}px`
-                }).observe(container)
+
+                    new ResizeObserver(() => {
+                        height = container.getBoundingClientRect().width / combinedRowRatio
+
+                        rowDiv.style.height = `${height}px`
+                    }).observe(container)
 
 
-                row.forEach((image) => {
-                    const el = container.querySelector(`img[src="${image.img.path}"]`) 
+                    row.forEach((image) => {
+                        const el = container.querySelector(`img[src="${image.img.path}"]`) 
 
-                    rowDiv.appendChild(el)
+                        rowDiv.appendChild(el)
+                    })
+
+                    container.appendChild(rowDiv)
                 })
+            }
 
-                container.appendChild(rowDiv)
-            })
+            const options = {
+                big: [
+                    ["portrait", "landscape"],
+                    ["portrait", "portrait"],
+                    ["portrait", "portrait", "landscape"],
+                    ["landscape", "landscape"]
+                ],
+
+                small: [
+                    ["portrait", "landscape"],
+                    ["portrait", "portrait"],
+                    ["landscape", "landscape"]
+                ]
+            }
+
+
+            var lastSize = "big"
+            new ResizeObserver(() => {
+                const size = (container.clientWidth < 700 ? "small" : "big")
+
+                if (size != lastSize) {
+                    sortIntoLayout(options[size])
+                    lastSize = size
+                }
+
+            }).observe(container)
+
+            
+            sortIntoLayout(options[(container.clientWidth < 700 ? "small" : "big")])
+            
         })
     })
 })
