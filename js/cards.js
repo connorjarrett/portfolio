@@ -161,7 +161,15 @@ $('document').ready(()=>{
             const cardTop = container.getBoundingClientRect().top
 
             if (cardTop > 1) { // Only if top of card is in view
-                if (event.detail.yStart < window.innerHeight / 2) { // Only if swipe starts less than halfway down the page
+                if (!container.style.translate) {
+                    //  If the card is positioned near the top of the screen 
+
+                    if (event.detail.yStart < window.innerHeight / 2) { // Only if swipe starts less than halfway down the page
+                        hideCard()
+                    }
+                } else {
+                    // Card is positioned near bottom of screen
+
                     hideCard()
                 }
             }
