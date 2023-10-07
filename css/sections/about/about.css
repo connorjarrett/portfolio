@@ -50,10 +50,15 @@
     color: var(--black1);
 }
 
-.about--main p {
+.about--main p, .about--main li {
     font-size: 1.5em;
     font-weight: 500;
     color: var(--black2);
+}
+
+.about--main ul {
+    margin: 0;
+    padding-inline-start: 20px;
 }
 
 @media screen and (max-width: 9.5in) {
