@@ -1,0 +1,103 @@
+.workentry--hero .background {
+    background: var(--grad);
+}
+
+.workentry--hero article .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: 80%;
+    background-color: white;
+
+    padding: 10em 0 10em 0;
+    max-height: 90%;
+    border-radius: var(--radiusSmall);
+
+    transition: all 350ms;
+}
+
+.workentry--hero h1, .workentry--hero h2 {
+    margin-left: 5%;
+    line-height: 91%;
+}
+
+.workentry--hero h1 {
+    color: var(--black1);
+    font-size: 5em;
+    font-weight: 900;
+}
+
+.workentry--hero h2 {
+    color: var(--black3);
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.workentry--hero .line {
+    width: 100%;
+    display: grid;
+
+    transition: grid-template-columns 300ms;
+    grid-template-columns: 10% auto 10%;
+
+    margin-top: 2em;
+}
+
+.workentry--hero .line span:not(.main) {
+    background-color: #BABABA;
+    z-index: 10;
+}
+
+.workentry--hero .line span:not(.main)::before {
+    content: '';
+    background-color: white;
+    height: 200%;
+    aspect-ratio: 1/1;
+
+    border: 8px solid red;
+
+    display: block;
+    position: relative;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 100%;
+}
+
+.workentry--hero .line span:first-child::before {
+    left: 100%;
+}
+
+.workentry--hero .line .main {
+    position: relative;
+}
+
+.workentry--hero .line .main::before {
+    content: attr(data-start);
+}
+
+.workentry--hero .line .main::after {
+    content: attr(data-end);
+}
+
+.workentry--hero .line .main::before, .workentry--hero .line .main::after {
+    display: inline-block;
+    position: absolute;
+    line-height: 90%;
+    translate: -50% 100%;
+
+    color: #696969;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.workentry--hero .line .main::after {
+    translate: -50% 100%;
+    left: 100%;
+}
+
+.workentry--hero .line span {
+    height: 9px;
+    background-color: red;
+}

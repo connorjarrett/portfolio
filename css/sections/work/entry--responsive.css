@@ -1,0 +1,10 @@
+@media screen and (max-width: 6in) {
+    .workentry--hero .container .content {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .workentry--hero .container .line {
+        grid-template-columns: 15% auto 15%;
+    }
+}
