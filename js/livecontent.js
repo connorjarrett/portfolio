@@ -1,6 +1,5 @@
 const birthday = new Date(1190073600000)
 
-// Set all age texts to current age
 function calculateAge() {
     const ageDifMs = Date.now() - birthday.getTime();
     const ageDate = new Date(ageDifMs); // miliseconds from epoch
@@ -8,20 +7,29 @@ function calculateAge() {
 }
 
 function update() {
+    // Birthday
     const age = calculateAge()
-
     document.querySelectorAll("span.age").forEach((el) => {
         el.innerHTML = age
+    })
+
+    // Year
+    document.querySelectorAll("span.year").forEach((el) => {
+        el.innerHTML = new Date(Date.now()).getFullYear()
     })
 }
 
 update()
 
-// Automatically update on the off chance someone's browsing between Sept 17th and 18th
+// Automatically update on the off chance it changes mid session
 var currentAge = calculateAge()
+var currentYear = new Date(Date.now()).getFullYear()
 
 setInterval(()=>{
-    if (calculateAge() != currentAge) {
+    if ((calculateAge() != currentAge) || (new Date(Date.now()).getFullYear() != currentYear)) {
         update()
+
+        currentAge = calculateAge()
+        currentYear = new Date(Date.now()).getFullYear()
     }
 }, 60000) // Only every 60 seconds to avoid intensive resource use
