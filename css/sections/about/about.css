@@ -77,7 +77,7 @@
     left: 50%;
     translate: -50% -50%;
 
-    border-radius: var(--radiusSmall);
+    border-radius: calc(var(--radiusLarge));
 }
 
 .about--images .containergrid .container {
