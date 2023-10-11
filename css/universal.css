@@ -113,8 +113,8 @@ main {
     padding-top: calc(var(--sectionGap) * 2); */
 
     /* padding: calc(var(--sectionGap) * 1.5) 0 calc(var(--sectionGap) * 2) 0; */
-    padding: calc(var(--sectionGap) * 1.5) 0 var(--sectionGap) 0;
-}
+    padding: calc(var(--sectionGap) * 0.75) 0 var(--sectionGap) 0;
+} 
 
 footer {
     display: grid;
