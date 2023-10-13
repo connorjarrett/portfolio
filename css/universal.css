@@ -684,8 +684,8 @@ main > section:last-child {
 }
 
 .btn--cta-newtab button:hover::after {
-    left: 105%;
-    top: -5%;
+    left: 120%;
+    top: 0%;
     transition: all 250ms;
 }
 
