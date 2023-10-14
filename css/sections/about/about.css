@@ -59,6 +59,7 @@
 .about--main ul {
     margin: 0;
     padding-inline-start: 20px;
+    list-style-type: square;
 }
 
 @media screen and (max-width: 9.5in) {
