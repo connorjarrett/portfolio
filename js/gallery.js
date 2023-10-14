@@ -1,59 +1,115 @@
 const images = [
     {
         path: "./public/images/inspiration/bfi.jpeg",
-        alt: "The BFI IMAX in London"
+        alt: "The BFI IMAX in London",
+        geo: {
+            lat: 51.50442207433304,
+            long: -0.11413300475342586
+        }
     },
     {
         path: "./public/images/inspiration/bigben.jpeg",
-        alt: "Big Ben in the evening"
+        alt: "Big Ben in the evening",
+        geo: {
+            lat: 51.500863300989266,
+            long: -0.12630153119095058
+        }
     },
     {
         path: "./public/images/inspiration/cablecar.jpeg",
-        alt: "A San Francisco Cable Car"
+        alt: "A San Francisco Cable Car",
+        geo: {
+            lat: 37.78472216801049,
+            long: -122.40776355965818
+        }
     },
     {
         path: "./public/images/inspiration/golden_gate_bridge.jpeg",
-        alt: "The Golden Gate Bridge from Fort Baker"
+        alt: "The Golden Gate Bridge from Fort Baker",
+        geo: {
+            lat: 37.83387360557684,
+            long: -122.47708259469437
+        }
     },
     {
         path: "./public/images/inspiration/levis.jpeg",
-        alt: "1255 Battery Street in Levi's Plaza"
+        alt: "1255 Battery Street in Levi's Plaza",
+        geo: {
+            lat: 37.80221432210142,
+            long: -122.40232905034911
+        }
     },
     {
         path: "./public/images/inspiration/picadilly.jpeg",
-        alt: "Picadilly Circus in London"
+        alt: "Picadilly Circus in London",
+        geo: {
+            lat: 51.50994623425053,
+            long: -0.13428739684250132
+        }
     },
     {
         path: "./public/images/inspiration/salesforce.jpeg",
-        alt: "Salesforce Tower at night"
+        alt: "Salesforce Tower at night",
+        geo: {
+            lat: 37.788988227624934,
+            long: -122.39725953987666
+        }
     },
     {
         path: "./public/images/inspiration/southbank_place.jpeg",
-        alt: "Southbank Place in London, from Strand"
+        alt: "Southbank Place in London, from Strand",
+        geo: {
+            lat: 51.51007582579332,
+            long: -0.1226563474300477
+        }
     },
     {
         path: "./public/images/gallery/181freemont.jpg",
-        alt: "181 Freemont from Salesforce Park, San Francisco"
+        alt: "181 Freemont from Salesforce Park, San Francisco",
+        geo: {
+            lat: 37.78881841408536,
+            long: -122.39697652071325
+        }
     },
     {
         path: "./public/images/gallery/560mission.jpg",
-        alt: "560 Mission Street in San Francisco"
+        alt: "560 Mission Street in San Francisco",
+        geo: {
+            lat: 37.78875692550084,
+            long: -122.3990320265763
+        }
     },
     {
         path: "./public/images/gallery/bank.jpg",
-        alt: "Bank in the City of London, empty"
+        alt: "Outside Bank Station in the City of London, empty",
+        geo: {
+            lat: 51.5140139,
+            long: -0.0868917
+        }
     },
     {
         path: "./public/images/gallery/goldengate2.jpg",
-        alt: "The Golen Gate Bridge from Hawk Hill"
+        alt: "The Golen Gate Bridge from Hawk Hill",
+        geo: {
+            lat: 37.8269694,
+            long: -122.499925
+        }
     },
     {
         path: "./public/images/gallery/onecassonsq.jpg",
-        alt: "One Casson Square in London"
+        alt: "One Casson Square in London",
+        geo: {
+            lat: 51.504095975821706,
+            long: -0.11459121463639162
+        }
     },
     {
         path: "./public/images/gallery/shard.jpg",
-        alt: "The Shard from Borough Market"
+        alt: "The Shard from Borough Market",
+        geo: {
+            lat: 51.50594843486887,
+            long: -0.09023246299904947
+        }
     }
 ]
 
