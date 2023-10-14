@@ -82,7 +82,7 @@ function hideCard() {
     lenis.options.wrapper = window
     lenis.options.content = document.documentElement
 
-    window.location.hash = "_"
+    history.pushState("", document.title, window.location.pathname + window.location.search);
 
     const card = document.querySelector(".card[data-shown]")
     
