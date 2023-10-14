@@ -30,6 +30,30 @@ const images = [
     {
         path: "./public/images/inspiration/southbank_place.jpeg",
         alt: "Southbank Place in London, from Strand"
+    },
+    {
+        path: "./public/images/gallery/181freemont.jpg",
+        alt: "181 Freemont from Salesforce Park, San Francisco"
+    },
+    {
+        path: "./public/images/gallery/560mission.jpg",
+        alt: "560 Mission Street in San Francisco"
+    },
+    {
+        path: "./public/images/gallery/bank.jpg",
+        alt: "Bank in the City of London, empty"
+    },
+    {
+        path: "./public/images/gallery/goldengate2.jpg",
+        alt: "The Golen Gate Bridge from Hawk Hill"
+    },
+    {
+        path: "./public/images/gallery/onecassonsq.jpg",
+        alt: "One Casson Square in London"
+    },
+    {
+        path: "./public/images/gallery/shard.jpg",
+        alt: "The Shard from Borough Market"
     }
 ]
 
