@@ -119,3 +119,24 @@
     color: var(--black2);
     font-size: 1.5em;
 }
+
+.workentry--technology .container {
+    background-color: var(--main1);
+}
+
+.workentry--technology h2 {
+    color: var(--black1);
+    font-size: 3.5em;
+}
+
+.workentry--technology li {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.workentry--technology ul {
+    margin: 0;
+    padding-inline-start: 30px;
+    list-style-type: square;
+}

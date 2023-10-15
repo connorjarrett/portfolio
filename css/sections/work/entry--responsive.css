@@ -8,3 +8,20 @@
         grid-template-columns: 15% auto 15%;
     }
 }
+
+@container (width < 5in) {
+    .workentry--technology article {
+        padding: 80px 40px 80px 40px !important;
+    }
+
+    .workentry--technology h2 {
+        color: var(--black1);
+        font-size: 2em;
+    }
+    
+    .workentry--technology li {
+        font-size: 1.5em;
+        font-weight: 500;
+        color: var(--black2);
+    }
+}
