@@ -50,7 +50,11 @@
     z-index: 10;
 }
 
-.workentry--hero .line span:not(.main)::before {
+.workentry--hero .line span.nomarker:not(.main), .workentry--hero .line span.highlight:not(.main) {
+    background-color: red;
+}
+
+.workentry--hero .line span:not(.main):not(.nomarker)::before {
     content: '';
     background-color: white;
     height: 200%;
