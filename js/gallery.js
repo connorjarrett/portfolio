@@ -135,6 +135,7 @@ $('document').ready(() => {
                 const div = nodes[realIndex]
                 const img = document.createElement("img")
 
+                img.loading = "lazy"
                 img.src = image.path
                 img.alt = image.alt
                 img.style.opacity = 0
@@ -186,14 +187,15 @@ $('document').ready(() => {
                         width: im.width,
                         height: im.height,
                         aspect: aspect,
-                        orientation: aspect < 1 ? "portrait" : "landscape"
+                        orientation: aspect < 1 ? "portrait" : "landscape",
+                        el: el
                     })
                 }
 
                 im.src = image.path
             }))
 
-            container.appendChild(el)
+            // container.appendChild(el)
         })
 
         // Once all images are loaded, sort
@@ -275,7 +277,8 @@ $('document').ready(() => {
 
 
                     row.forEach((image) => {
-                        const el = container.querySelector(`img[src="${image.img.path}"]`) 
+                        const el = image.el
+                        el.loading = "lazy"
 
                         rowDiv.appendChild(el)
                     })
