@@ -170,11 +170,6 @@ $('document').ready(() => {
         var promises = []
 
         images.forEach((image) => {
-            const el = document.createElement("img")
-
-            el.src = image.path
-            el.alt = image.alt
-
             promises.push(new Promise((res) => {
                 const im = new Image()
 
@@ -187,21 +182,18 @@ $('document').ready(() => {
                         width: im.width,
                         height: im.height,
                         aspect: aspect,
-                        orientation: aspect < 1 ? "portrait" : "landscape",
-                        el: el
+                        orientation: aspect < 1 ? "portrait" : "landscape"
                     })
                 }
 
                 im.src = image.path
             }))
-
-            // container.appendChild(el)
         })
 
         // Once all images are loaded, sort
         Promise.all(promises).then(data => {
             function sortIntoLayout(options) {
-                container.querySelectorAll("img").forEach((image) => container.appendChild(image))
+                // container.querySelectorAll("img").forEach((image) => container.appendChild(image))
                 container.querySelectorAll(".row").forEach((e) => e.remove())
 
                 const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
@@ -277,7 +269,10 @@ $('document').ready(() => {
 
 
                     row.forEach((image) => {
-                        const el = image.el
+                        const el = document.createElement("img")
+
+                        el.src = image.img.path
+                        el.alt = image.img.alt
                         el.loading = "lazy"
 
                         rowDiv.appendChild(el)
