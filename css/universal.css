@@ -262,6 +262,18 @@ main > section:last-child {
     height: 100%;
 }
 
+.container.container--nomin {
+    min-height: unset;
+}
+
+.container.container--nomin article {
+    padding: 50px 80px 50px 80px;
+}
+
+.container.container--nomin article, .container.container--nomin .background {
+    position: relative;
+}
+
 .container--centrecontent article {
     position: relative;
     width: max-content;
