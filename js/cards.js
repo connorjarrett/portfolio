@@ -25,24 +25,17 @@ function showCard(card) {
     document.body.style.position = "fixed"
 
     card.dataset.shown = ""
-    card.style.display = "flex"
 
     lenis.dimensions.content = card
     lenis.options.content = card
     lenis.options.wrapper = card
 
-
-    for (let i=0; i<10; i++) {
-        setTimeout(()=>{
-            lenis.dimensions.resize()
-            lenis.targetScroll = 0
-            lenis.animatedScroll = 0
-
-            lenis.scrollTo(0)
-        }, 50 * i)
-    }
-
     setTimeout(()=>{
+        lenis.dimensions.resize()
+        lenis.targetScroll = 0
+        lenis.animatedScroll = 0
+
+        lenis.scrollTo(0)
 
         card.classList.add("lenis-scrolling")
 
@@ -60,6 +53,7 @@ function showCard(card) {
         screen.style.backdropFilter = "blur(15px)"
         screen.style.webkitBackdropFilter = "blur(15px)"
 
+        card.style.display = "flex"
         setCardOpenPosition(card)
     }, 25)
 }
