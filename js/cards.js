@@ -30,13 +30,18 @@ function showCard(card) {
     lenis.options.content = card
     lenis.options.wrapper = card
 
+    let savedDuration = lenis.duration
+    lenis.duration = 0
+
+    lenis.dimensions.resize()
+    lenis.targetScroll = 0
+    lenis.animatedScroll = 0
+
+    lenis.scrollTo(0)
+
+    lenis.duration = savedDuration
+
     setTimeout(()=>{
-        lenis.dimensions.resize()
-        lenis.targetScroll = 0
-        lenis.animatedScroll = 0
-
-        lenis.scrollTo(0)
-
         card.classList.add("lenis-scrolling")
 
         if (!iOS) {
