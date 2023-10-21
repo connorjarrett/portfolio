@@ -44,6 +44,8 @@
     --btnRadius2: 20px;
 
     --grad: radial-gradient(141.42% 141.42% at -0.00% 100.00%, #FDC426 0%, #89D1F0 43.11%, #DF6FDF 100%);
+
+    --cardTransitionTime: 250ms
 }
 
 html {
@@ -406,7 +408,7 @@ main > section:last-child {
     backdrop-filter: blur(0px);
 
     pointer-events: none;
-    transition: background-color 250ms, backdrop-filter 300ms, -webkit-backdrop-filter 300ms;
+    transition: background-color var(--cardTransitionTime), backdrop-filter var(--cardTransitionTime), -webkit-backdrop-filter var(--cardTransitionTime);
 }
 
 .card {
@@ -431,7 +433,7 @@ main > section:last-child {
     /* scrollbar-width: none;
     -ms-overflow-style: none; */
 
-    transition: box-shadow 250ms;
+    transition: box-shadow var(--cardTransitionTime);
 }
 
 /* .card::-webkit-scrollbar {
@@ -439,7 +441,7 @@ main > section:last-child {
 } */
 
 .card .container {
-    transition: top 250ms ease-in-out, translate 250ms;
+    transition: top var(--cardTransitionTime) ease-in-out, translate var(--cardTransitionTime);
 
     translate: 0 0%;
     top: 100%;
