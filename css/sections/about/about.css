@@ -66,9 +66,23 @@
     .about--main .container:nth-child(2) {
         display: none;
     }
+
+    .about--main img:not(article.nopad img) {
+        display: block !important;
+    }
 }
 
-.about--main img {
+.about--main img:not(article.nopad img) {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    margin-top: 10px;
+
+    border-radius: calc(80px - var(--radiusLarge));
+}
+
+.about--main article.nopad img {
     width: calc(100% - var(--radiusLarge));
     height: calc(100% - var(--radiusLarge));
     object-fit: cover;
@@ -78,7 +92,7 @@
     left: 50%;
     translate: -50% -50%;
 
-    border-radius: calc(var(--radiusLarge));
+    border-radius: calc(var(--radiusLarge) / 2);
 }
 
 .about--images .containergrid .container {
