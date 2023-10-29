@@ -703,6 +703,10 @@ main > section:last-child {
     transition: all 275ms;
 }
 
+a.btn {
+    display: inline-block;
+}
+
 a:not(.btn) {
     color: var(--btn);
     text-decoration: none;
