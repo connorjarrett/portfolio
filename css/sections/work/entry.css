@@ -130,7 +130,7 @@
 
 .workentry--technology h2 {
     color: var(--black1);
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 .workentry--technology li {
@@ -143,4 +143,28 @@
     margin: 0;
     padding-inline-start: 30px;
     list-style-type: square;
+}
+
+.workentry--general .container {
+    background-color: var(--accent4);
+}
+
+.workentry--general h2 {
+    color: var(--black1);
+    font-size: 2.5em;
+}
+
+.workentry--general p {
+    color: var(--black2);
+    font-size: 1.5em;
+
+    margin: 15px 0 15px 0;
+}
+
+.workentry--general p:first-child {
+    margin: 5px 0 15px 0;
+}
+
+.workentry--general .btn button::before {
+    background-color: white;
 }

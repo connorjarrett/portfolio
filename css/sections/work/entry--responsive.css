@@ -24,4 +24,16 @@
         font-weight: 500;
         color: var(--black2);
     }
+
+    .workentry--general h2 {
+        color: var(--black1);
+        font-size: 2.2em;
+    }
+    
+    .workentry--general p {
+        color: var(--black2);
+        font-size: 1.2em;
+    
+        margin: 15px 0 15px 0;
+    }
 }
