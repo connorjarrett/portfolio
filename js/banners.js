@@ -15,7 +15,7 @@ function scroll() {
 
     let opacity = dist / distMin * 0.65
 
-    container.style.boxShadow = `0 25px 26px rgba(61, 61, 61, ${opacity >= 0 ? opacity : 0})`
+    container.style.boxShadow = `0 25px 26px rgba(130, 130, 130, ${opacity >= 0 ? opacity : 0})`
     container.style.translate = `0 calc(50% - ${distOffset}px)`
 }
 
