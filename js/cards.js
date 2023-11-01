@@ -183,16 +183,6 @@ $('document').ready(() => {
                 setCardOpenPosition(card)
             }
         }).observe(container)
-
-        card.onscroll = () => {
-            if (lenis.dimensions.content == card) {
-                if (lenis.dimensions.scrollHeight != card.scrollHeight) {
-                    lenis.dimensions.resize()
-
-                    console.log("RESIZING")
-                }
-            }
-        }
     })
 
     openByHash()

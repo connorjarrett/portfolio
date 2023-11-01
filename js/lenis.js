@@ -23,3 +23,9 @@ $('document').ready(function(){
         });
     })
 })
+
+window.addEventListener('scroll', ()=>{
+    if (lenis.options.content.scrollHeight != lenis.dimensions.scrollHeight) {
+        lenis.dimensions.resize()
+    }
+}, true)
