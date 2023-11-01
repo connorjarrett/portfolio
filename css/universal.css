@@ -390,6 +390,20 @@ main > section:last-child {
     }
 }
 
+.banner {
+    position: relative;
+}
+
+.banner .container {
+    position: absolute;
+    translate: 0 50%;
+    z-index: 2;
+
+    background-color: salmon;
+
+    box-shadow: 0 25px 26px rgba(61, 61, 61, 0.5);
+}
+
 .cardScreen {
     z-index: 19;
 
