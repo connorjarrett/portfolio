@@ -45,7 +45,6 @@
 }
 
 /* Main */
-
 .about--main h2 {
     font-size: 2.5em;
     font-weight: 700;
@@ -97,6 +96,7 @@
     border-radius: calc(var(--radiusLarge) / 2);
 }
 
+/* Images */
 .about--images .containergrid .container {
     min-height: unset !important;
 }
