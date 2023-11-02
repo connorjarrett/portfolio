@@ -264,6 +264,10 @@ main > section:last-child {
     height: 100%;
 }
 
+.container .padmin article {
+    padding: 40px;
+}
+
 .container.container--nomin {
     min-height: unset;
 }
