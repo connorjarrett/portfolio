@@ -153,6 +153,19 @@
     max-width: 25m;
 }
 
+.about--inspiration .card h2, .about--inspiration .card p {
+    width: 100%;
+    text-align: left;
+}
+
+.about--inspiration .card h2 {
+    font-size: 3em;
+}
+
+.about--inspiration .card p {
+    font-size: 1.75em;
+    margin: 10px 0 10px 0;
+}
 
 .about--inspiration .btn button {
     font-weight: 500;
