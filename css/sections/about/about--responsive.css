@@ -44,3 +44,41 @@
         -4px  0   0 var(--black1);
     }
 }
+
+@container (width < 3.75in) {
+    .imagegrid {
+        grid-template-columns: 100%;
+        grid-template-rows: 100%
+    }
+}
+
+@container (width < 4.5in) {
+    .imagegrid {
+        grid-template-columns: 100%
+    }
+}
+
+@media screen and (max-width: 8in) {
+    .about--inspiration .imagecontainer img:nth-child(2),  .about--inspiration .imagecontainer img:nth-child(3) {
+        opacity: 0;
+    }
+
+    .about--inspiration .imagecontainer:nth-child(1) img {
+        width: 70% !important;
+        border-radius: 20px;
+    }
+
+    .about--inspiration .imagecontainer:nth-child(2) img {
+        width: 100% !important;
+    }
+}
+
+@container (width < 5in) {
+    .about--inspiration .imagecontainer {
+        display: none;
+    }
+
+    .about--inspiration h2 {
+        font-size: 3em;
+    }
+}

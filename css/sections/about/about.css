@@ -117,3 +117,119 @@
 
     color: var(--black3);
 }
+
+/* Inspiration  */
+.about--inspiration h2 {
+    line-height: 95%;
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--black1);
+}
+
+.about--inspiration p {
+    margin: 10px auto 0 auto;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--black3);
+
+    text-align: center;
+    width: 100%;
+    max-width: 25m;
+}
+
+
+.about--inspiration .btn button {
+    font-weight: 500;
+    background-color: var(--accent2);
+    color: var(--black2);
+    font-size: 1.15em;
+    margin-top: 1em;
+}
+
+.about--inspiration .imagecontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    align-items: center;
+}
+
+.about--inspiration .imagecontainer img {
+    background-color: white;
+    aspect-ratio: 1/1;
+    border-radius: var(--radiusSmall);
+    width: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    object-fit: cover;
+    container-type: inline-size;
+}
+
+.about--inspiration .imagecontainer:nth-child(1) img {
+    animation-name: jiggle-top;
+}
+
+.about--inspiration .imagecontainer:nth-child(2) img {
+    animation-name: jiggle-bottom;
+}
+
+.about--inspiration .imagecontainer:nth-child(1) img:nth-child(1) {
+    width: 60%;
+    animation-delay: 500ms;
+    animation-duration: 3.5s;
+}
+
+.about--inspiration .imagecontainer:nth-child(1) img:nth-child(2) {
+    width: 75%;
+    animation-delay: 750ms;
+    animation-duration: 4s;
+}
+
+.about--inspiration .imagecontainer:nth-child(1) img:nth-child(3) {
+    width: 70%;
+    animation-delay: 625ms;
+    animation-duration: 5.1s;
+}
+
+.about--inspiration .imagecontainer:nth-child(1) img:nth-child(4) {
+    width: 60%;
+    animation-delay: 750ms;
+    animation-duration: 3.2s;
+}
+
+.about--inspiration .imagecontainer:nth-child(2) img:nth-child(1) {
+    width: 75%;
+    animation-delay: 575ms;
+    animation-duration: 5s;
+}
+
+.about--inspiration .imagecontainer:nth-child(2) img:nth-child(2) {
+    width: 60%;
+    animation-delay: 625ms;
+    animation-duration: 4s;
+}
+
+.about--inspiration .imagecontainer:nth-child(2) img:nth-child(3) {
+    width: 65%;
+    animation-delay: 1s;
+    animation-duration: 3.5s;
+}
+
+.about--inspiration .imagecontainer:nth-child(2) img:nth-child(4) {
+    width: 75%;
+    animation-delay: 0;
+    animation-duration: 4.87s;
+}
+
+@keyframes jiggle-top {
+    0%   {margin-top: -10px;}
+    50% {margin-top: 10px;}
+    100% {margin-top: -10px;}
+}
+
+@keyframes jiggle-bottom {
+    0%   {margin-bottom: -10px;}
+    50% {margin-bottom: 10px;}
+    100% {margin-bottom: -10px;}
+}
