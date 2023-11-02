@@ -51,16 +51,10 @@
     color: var(--black1);
 }
 
-.about--main p, .about--main li {
+.about--main p {
     font-size: 1.5em;
     font-weight: 500;
     color: var(--black2);
-}
-
-.about--main ul {
-    margin: 0;
-    padding-inline-start: 20px;
-    list-style-type: square;
 }
 
 @media screen and (max-width: 9.5in) {
@@ -101,7 +95,7 @@
     min-height: unset !important;
 }
 
-.about--images .card h2 {
+.about--images-facts .card h2 {
     font-size: 4em;
     text-align: left;
     width: 100%;
@@ -109,7 +103,7 @@
     color: var(--black2);
 }
 
-.about--images .card p {
+.about--images-facts .card p {
     font-size: 1.75em;
     font-weight: 500;
     text-align: left;
@@ -118,6 +112,26 @@
     margin: 5px 0 5px 0;
 
     color: var(--black3);
+}
+
+/* Quick Facts */
+.about--images-facts h2 {
+    margin: 10px 0 10px 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--black1);
+}
+
+.about--images-facts li {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.about--images-facts ul {
+    margin: 0;
+    padding-inline-start: 0px;
+    list-style-type: none;
 }
 
 /* Inspiration  */
