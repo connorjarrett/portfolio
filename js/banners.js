@@ -26,6 +26,37 @@ function scroll() {
     container.style.translate = `0 calc(50% - ${distOffset}px)`
 }
 
+// Get event
+$.ajax({
+    url: "./public/data/bannerevents.json",
+    success: (events) => {
+        const event = events.find(e => Date.now() >= e.dates.start * 1000 && Date.now() < e.dates.end * 1000)
+
+        if (!event) {
+            // No event, remove banner
+            banner.remove()
+
+            return false
+        }
+
+        // Valid event, continue
+        $.ajax({
+            url: `./public/data/banner-events/${event.name}.html`,
+            success: (eventHTML) => {
+                // Event HTML found, put it in container
+                container.innerHTML = eventHTML
+            },
+            error: () => {
+                // No event html found, remove banner
+                banner.remove()
+            }
+        })
+    },
+    error: () => {
+        // No event index found, remove banner
+        banner.remove()
+    }
+})
 
 // Listen to and activate events
 document.body.onresize = resize
