@@ -271,6 +271,7 @@ $('document').ready(() => {
                     row.forEach((image) => {
                         const el = document.createElement("img")
 
+                        el.loading = "lazy"
                         el.src = image.img.path
                         el.alt = image.img.alt
                         el.loading = "lazy"
