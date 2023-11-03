@@ -20,6 +20,12 @@
     }
 }
 
+@container (width < 8in) {
+    .about--main p {
+        font-size: 1.25em
+    }
+}
+
 @container (width < 5.5in) {
     .about--hero .background img {
         object-position: 81.5% 0;
@@ -80,5 +86,9 @@
 
     .about--inspiration h2 {
         font-size: 3em;
+    }
+
+    .about--main p {
+        font-size: 1em
     }
 }
