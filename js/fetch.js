@@ -13,7 +13,7 @@ $.ajax({
             let post = slice[i]
 
             listElement.innerHTML = `
-            <img src="${post.image}" alt=${post.SEOdescription}>
+            <img src="${post.image}" alt=${post.SEOdescription} loading="lazy">
             <p>${post.title}</p>
             <a class="btn btn--halfround btn--underline btn--pad" href="${post.share.url}cjrt" target="_BLANK"><button>Read</button></a>
             `
