@@ -1,12 +1,10 @@
 # connorjarrett.com
-A website about me (V2)
+It's about me.
 
-## V2 - What's new?
-- New theme!
+### What's new in v3?
+- New theme
 - Better integration with Lab Notebook
-- Work is prioritised
-- Work pages will be more clear
+- Work section is improved
 - Smooth scrolling
-- More on the /about page
-
-I hope all this happens, but I can't promise as I'm not done yet.
+- Better page structure
+- Cleaner code
