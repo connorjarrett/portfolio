@@ -20,12 +20,6 @@
     }
 }
 
-@container (width < 8in) {
-    .about--main p {
-        font-size: 1.25em
-    }
-}
-
 @container (width < 5.5in) {
     .about--hero .background img {
         object-position: 81.5% 0;
@@ -64,6 +58,18 @@
     }
 }
 
+@media screen and (max-width: 9.5in) {
+    .about--main p {
+        font-size: 1.25em ;
+    }
+}
+
+@media screen and (max-width: 5in) {
+    .about--main p {
+        font-size: 1em ;
+    }
+}
+
 @media screen and (max-width: 8in) {
     .about--inspiration .imagecontainer img:nth-child(2),  .about--inspiration .imagecontainer img:nth-child(3) {
         opacity: 0;
@@ -86,9 +92,5 @@
 
     .about--inspiration h2 {
         font-size: 3em;
-    }
-
-    .about--main p {
-        font-size: 1em
     }
 }
