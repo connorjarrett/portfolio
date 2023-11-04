@@ -1,0 +1,12 @@
+@container (width < 6.5in) {
+    .work--hero .container .background {
+        background-position: bottom center;
+        background-size: 100%;
+    }
+}
+
+@container (width < 3.5in) {
+    .work--hero h1 {
+        font-size: 5em;
+    }
+}

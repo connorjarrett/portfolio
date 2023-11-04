@@ -1,6 +1,9 @@
 /* Hero */
-.work--hero .container {
-    background-color: var(--accent4);
+.work--hero .container .background {
+    background: var(--main1) url("../../../public/images/canary_wharf.svg");
+    background-size: 75%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
 }
 
 .work--hero h1 {
@@ -13,20 +16,21 @@
 .work--hero h2 {
     font-size: 2.5em;
     font-weight: 900;
-    color: var(--accent3);
+    color: var(--accent1);
     text-transform: lowercase;
 }
 
 .work--hero .btn button {
     font-weight: 600;
-    background-color: var(--accent3);
-    color: white;
+    background-color: var(--accent2);
+    color: var(--black2);
     font-size: 1.15em;
     text-transform: lowercase;
 }
 
 .work--hero .btn#about button {
-    background-color: var(--btn);
+    background-color: var(--accent1);
+    color: white;
 }
 
 /* Experience */
