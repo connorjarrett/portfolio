@@ -1,13 +1,6 @@
 [
     {
-        "name": "test",
-        "dates": {
-            "start": 0,
-            "end": 1699228800
-        }
-    },
-    {
-        "name": "anniversary",
+        "name": "firstbirthday",
         "dates": {
             "start": 1699228800,
             "end": 1699315200
