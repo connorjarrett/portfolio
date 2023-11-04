@@ -115,6 +115,13 @@ const images = [
 
 const interval = 100
 
+images.sort((a,b) => {
+    let aLoc = a.geo.lat + a.geo.long
+    let bLoc = b.geo.lat + b.geo.long
+
+    return aLoc - bLoc
+})
+
 $('document').ready(() => {
     document.querySelectorAll(".imagegrid").forEach((container) => {
         // Get child nodes
@@ -271,10 +278,9 @@ $('document').ready(() => {
                     row.forEach((image) => {
                         const el = document.createElement("img")
 
-                        el.loading = "lazy"
+                        // el.loading = "lazy"
                         el.src = image.img.path
                         el.alt = image.img.alt
-                        el.loading = "lazy"
 
                         rowDiv.appendChild(el)
                     })
