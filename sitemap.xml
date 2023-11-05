@@ -23,6 +23,9 @@
 		<image:image>
 			<image:loc>https://www.connorjarrett.com/images/connor/memoji--thumbs.png</image:loc>
 		</image:image>
+		<image:image>
+			<image:loc>https://www.connorjarrett.com/images/connor/memoji--laptop.png</image:loc>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://www.connorjarrett.com/work/</loc>
