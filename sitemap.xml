@@ -3,28 +3,28 @@
 	<url>
 		<loc>https://www.connorjarrett.com</loc>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/uk_map.png</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/uk_map.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/main.jpg</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/main.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/memoji--laptop.png</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/memoji--laptop.png</image:loc>
 		</image:image>
 	</url>
 	<url>
 		<loc>https://www.connorjarrett.com/about</loc>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/main.jpg</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/main.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/2.jpg</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/2.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/memoji--thumbs.png</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/memoji--thumbs.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://www.connorjarrett.com/images/connor/memoji--laptop.png</image:loc>
+			<image:loc>https://www.connorjarrett.com/public/images/connor/memoji--laptop.png</image:loc>
 		</image:image>
 	</url>
 	<url>
