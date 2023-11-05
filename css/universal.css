@@ -395,6 +395,7 @@ main > section:last-child {
 }
 
 .banner {
+    display: none;
     position: relative;
 }
 
@@ -402,8 +403,6 @@ main > section:last-child {
     position: absolute;
     translate: 0 0%;
     z-index: 2;
-
-    background-color: salmon;
 
     box-shadow: 0 25px 26px rgba(130, 130, 130, 0.5);
 }

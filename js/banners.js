@@ -45,6 +45,14 @@ $.ajax({
             success: (eventHTML) => {
                 // Event HTML found, put it in container
                 container.innerHTML = eventHTML
+
+                banner.style.display = "grid"
+
+                // Listen to and activate events
+                document.body.onresize = resize
+                document.body.onscroll = scroll
+                resize()
+                scroll()
             },
             error: () => {
                 // No event html found, remove banner
@@ -57,9 +65,3 @@ $.ajax({
         banner.remove()
     }
 })
-
-// Listen to and activate events
-document.body.onresize = resize
-document.body.onscroll = scroll
-resize()
-scroll()
