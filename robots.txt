@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /public/images/icons/
+Disallow: /public/images/logos/
+Disallow: /public/images/hero/
 Sitemap: https://www.connorjarrett.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow: /public/images/seo/twitter/
