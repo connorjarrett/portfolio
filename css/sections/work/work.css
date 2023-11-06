@@ -1,6 +1,6 @@
 /* Hero */
 .work--hero .container .background {
-    background: var(--main1) url("../../../public/images/canary_wharf.svg");
+    background: var(--main1) url("../../../public/images/hero/canary_wharf.svg");
     background-size: 75%;
     background-position: bottom right;
     background-repeat: no-repeat;
