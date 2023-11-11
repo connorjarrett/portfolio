@@ -115,7 +115,7 @@ const images = [
 
 const interval = 250
 
-images.sort((a,b) => {
+images.sort((a, b) => {
     let aLoc = a.geo.lat + a.geo.long
     let bLoc = b.geo.lat + b.geo.long
 
@@ -256,7 +256,7 @@ $('document').ready(() => {
                 }
 
                 const bestLayout = findBestLayout();
-                
+
                 // Back to human written code
 
                 bestLayout.forEach((row) => {
@@ -274,13 +274,13 @@ $('document').ready(() => {
                         rowDiv.style.height = `${height}px`
                     }).observe(container)
 
-
                     row.forEach((image) => {
                         const el = document.createElement("img")
 
                         el.loading = "lazy"
-                        el.src = image.img.path
                         el.alt = image.img.alt
+                        el.style.aspectRatio = image.aspect
+                        el.src = image.img.path
 
                         rowDiv.appendChild(el)
                     })
@@ -316,9 +316,9 @@ $('document').ready(() => {
 
             }).observe(container)
 
-            
+
             sortIntoLayout(options[(container.clientWidth < 700 ? "small" : "big")])
-            
+
         })
     })
 })
