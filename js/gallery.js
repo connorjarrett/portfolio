@@ -1,6 +1,6 @@
 const images = [
     {
-        path: "./public/images/inspiration/bfi.jpeg",
+        path: "./public/images/gallery/webp/bfi.webp",
         alt: "The BFI IMAX in London",
         geo: {
             lat: 51.50442207433304,
@@ -8,7 +8,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/bigben.jpeg",
+        path: "./public/images/gallery/webp/bigben.webp",
         alt: "Big Ben in the evening",
         geo: {
             lat: 51.500863300989266,
@@ -16,7 +16,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/cablecar.jpeg",
+        path: "./public/images/gallery/webp/cablecar.webp",
         alt: "A San Francisco Cable Car",
         geo: {
             lat: 37.78472216801049,
@@ -24,7 +24,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/golden_gate_bridge.jpeg",
+        path: "./public/images/gallery/webp/golden_gate_bridge.webp",
         alt: "The Golden Gate Bridge from Fort Baker",
         geo: {
             lat: 37.83387360557684,
@@ -32,7 +32,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/levis.jpeg",
+        path: "./public/images/gallery/webp/levis.webp",
         alt: "1255 Battery Street in Levi's Plaza",
         geo: {
             lat: 37.80221432210142,
@@ -40,7 +40,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/picadilly.jpeg",
+        path: "./public/images/gallery/webp/picadilly.webp",
         alt: "Picadilly Circus in London",
         geo: {
             lat: 51.50994623425053,
@@ -48,7 +48,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/salesforce.jpeg",
+        path: "./public/images/gallery/webp/salesforce.webp",
         alt: "Salesforce Tower at night",
         geo: {
             lat: 37.788988227624934,
@@ -56,7 +56,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/inspiration/southbank_place.jpeg",
+        path: "./public/images/gallery/webp/southbank_place.webp",
         alt: "Southbank Place in London, from Strand",
         geo: {
             lat: 51.51007582579332,
@@ -64,7 +64,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/181freemont.jpg",
+        path: "./public/images/gallery/webp/181freemont.webp",
         alt: "181 Freemont from Salesforce Park, San Francisco",
         geo: {
             lat: 37.78881841408536,
@@ -72,7 +72,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/560mission.jpg",
+        path: "./public/images/gallery/webp/560mission.webp",
         alt: "560 Mission Street in San Francisco",
         geo: {
             lat: 37.78875692550084,
@@ -80,7 +80,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/bank.jpg",
+        path: "./public/images/gallery/webp/bank.webp",
         alt: "Outside Bank Station in the City of London, empty",
         geo: {
             lat: 51.5140139,
@@ -88,7 +88,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/goldengate2.jpg",
+        path: "./public/images/gallery/webp/goldengate2.webp",
         alt: "The Golen Gate Bridge from Hawk Hill",
         geo: {
             lat: 37.8269694,
@@ -96,7 +96,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/onecassonsq.jpg",
+        path: "./public/images/gallery/webp/onecassonsq.webp",
         alt: "One Casson Square in London",
         geo: {
             lat: 51.504095975821706,
@@ -104,7 +104,7 @@ const images = [
         }
     },
     {
-        path: "./public/images/gallery/shard.jpg",
+        path: "./public/images/gallery/webp/shard.webp",
         alt: "The Shard from Borough Market",
         geo: {
             lat: 51.50594843486887,
@@ -113,7 +113,7 @@ const images = [
     }
 ]
 
-const interval = 100
+const interval = 250
 
 images.sort((a,b) => {
     let aLoc = a.geo.lat + a.geo.long
@@ -142,7 +142,7 @@ $('document').ready(() => {
                 const div = nodes[realIndex]
                 const img = document.createElement("img")
 
-                img.loading = "lazy"
+                // img.loading = "lazy"
                 img.src = image.path
                 img.alt = image.alt
                 img.style.opacity = 0
@@ -278,7 +278,7 @@ $('document').ready(() => {
                     row.forEach((image) => {
                         const el = document.createElement("img")
 
-                        // el.loading = "lazy"
+                        el.loading = "lazy"
                         el.src = image.img.path
                         el.alt = image.img.alt
 
