@@ -6,24 +6,6 @@ window.mobileCheck = function () {
     return check;
 };
 
-// https://stackoverflow.com/questions/1397329/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-r/5298684#5298684
-function removeHash () { 
-    var scrollV, scrollH, loc = window.location;
-    if ("pushState" in history)
-        history.pushState("", document.title, loc.pathname + loc.search);
-    else {
-        // Prevent scrolling by storing the page's current scroll offset
-        scrollV = document.body.scrollTop;
-        scrollH = document.body.scrollLeft;
-
-        loc.hash = "";
-
-        // Restore the scroll offset, should be flicker free
-        document.body.scrollTop = scrollV;
-        document.body.scrollLeft = scrollH;
-    }
-}
-
 const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
 const isMobile = window.mobileCheck()
 
@@ -101,7 +83,15 @@ function hideCard() {
     lenis.options.wrapper = window
     lenis.options.content = document.documentElement
 
-   removeHash()
+    var uri = window.location.toString();
+
+    if (uri.indexOf("#") > 0) {
+        var clean_uri = uri.substring(0,
+            uri.indexOf("#"));
+
+        window.history.replaceState({},
+            document.title, clean_uri);
+    }
 
     const card = document.querySelector(".card[data-shown]")
 
@@ -151,7 +141,7 @@ function setCard(trigger) {
         window.location.replace(window.location.pathname + window.location.search + `#${hash}`)
 
         const card = document.querySelector(`.card#${cardID}`)
-        // showCard(card)
+        showCard(card)
     }
 }
 
@@ -211,6 +201,8 @@ $('document').ready(() => {
         }).observe(container)
     })
 
+    hideCard()
+
     openByHash()
 })
-$(window).on('hashchange', openByHash)
+// $(window).on('hashchange', openByHash)
