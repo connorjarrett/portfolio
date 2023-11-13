@@ -201,8 +201,6 @@ $('document').ready(() => {
         }).observe(container)
     })
 
-    hideCard()
-
     openByHash()
 })
 // $(window).on('hashchange', openByHash)
