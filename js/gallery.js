@@ -197,6 +197,10 @@ $('document').ready(() => {
             }))
         })
 
+        var loadingMain = document.createElement("div")
+        loadingMain.classList = "loading"
+        container.appendChild(loadingMain)
+
         // Once all images are loaded, sort
         Promise.all(promises).then(data => {
             function sortIntoLayout(options) {
@@ -259,7 +263,7 @@ $('document').ready(() => {
 
                 // Back to human written code
 
-                bestLayout.forEach((row) => {
+                bestLayout.forEach((row, i) => {
                     const rowDiv = document.createElement("div")
                     rowDiv.classList = "row"
 
@@ -281,11 +285,23 @@ $('document').ready(() => {
                         el.alt = image.img.alt
                         el.style.aspectRatio = image.aspect
                         el.src = image.img.path
+                        el.classList = "loading"
+
+                        el.onload = ()=>{
+                            el.classList = ""
+                        }
 
                         rowDiv.appendChild(el)
                     })
 
                     container.appendChild(rowDiv)
+
+                    if (i + 1 < bestLayout.length) {
+                        container.appendChild(loadingMain)
+                    } else {
+                        loadingMain.remove()
+                    }
+                    
                 })
             }
 

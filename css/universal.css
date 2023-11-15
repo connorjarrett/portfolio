@@ -564,6 +564,19 @@ main > section:last-child {
     scale: 0.95;
 }
 
+.allimages .loading {
+    width: 100%;
+    height: 100px;
+    background: white url("../public/images/icons/loader.gif");
+    background-size: auto 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.allimages .row .loading {
+    height: 100%;
+}
+
 .fill--75 {
     width: 75%;
 }
