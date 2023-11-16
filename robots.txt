@@ -2,10 +2,12 @@ User-agent: Googlebot
 Disallow: /public/images/icons
 Disallow: /public/images/hero
 Disallow: /public/images/logo
+Disallow: /public/images/gallery/min
 Disallow: /public/images/seo/twitter
 
 User-agent: *
 Disallow: /public/images/icons
 Disallow: /public/images/hero
 Disallow: /public/images/logo
+Disallow: /public/images/gallery/min
 Sitemap: https://www.connorjarrett.com/sitemap.xml
