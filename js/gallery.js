@@ -1,6 +1,7 @@
 const images = [
     {
         path: "./public/images/gallery/webp/bfi.webp",
+        pathMin: "./public/images/gallery/min/bfi.webp",
         alt: "The BFI IMAX in London",
         geo: {
             lat: 51.50442207433304,
@@ -9,6 +10,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/bigben.webp",
+        pathMin: "./public/images/gallery/min/bigben.webp",
         alt: "Big Ben in the evening",
         geo: {
             lat: 51.500863300989266,
@@ -17,6 +19,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/cablecar.webp",
+        pathMin: "./public/images/gallery/min/cablecar.webp",
         alt: "A San Francisco Cable Car",
         geo: {
             lat: 37.78472216801049,
@@ -25,6 +28,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/golden_gate_bridge.webp",
+        pathMin: "./public/images/gallery/min/golden_gate_bridge.webp",
         alt: "The Golden Gate Bridge from Fort Baker",
         geo: {
             lat: 37.83387360557684,
@@ -33,6 +37,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/levis.webp",
+        pathMin: "./public/images/gallery/min/levis.webp",
         alt: "1255 Battery Street in Levi's Plaza",
         geo: {
             lat: 37.80221432210142,
@@ -41,6 +46,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/picadilly.webp",
+        pathMin: "./public/images/gallery/min/picadilly.webp",
         alt: "Picadilly Circus in London",
         geo: {
             lat: 51.50994623425053,
@@ -49,6 +55,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/salesforce.webp",
+        pathMin: "./public/images/gallery/min/salesforce.webp",
         alt: "Salesforce Tower at night",
         geo: {
             lat: 37.788988227624934,
@@ -57,6 +64,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/southbank_place.webp",
+        pathMin: "./public/images/gallery/min/southbank_place.webp",
         alt: "Southbank Place in London, from Strand",
         geo: {
             lat: 51.51007582579332,
@@ -65,6 +73,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/181freemont.webp",
+        pathMin: "./public/images/gallery/min/181freemont.webp",
         alt: "181 Freemont from Salesforce Park, San Francisco",
         geo: {
             lat: 37.78881841408536,
@@ -73,6 +82,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/560mission.webp",
+        pathMin: "./public/images/gallery/min/560mission.webp",
         alt: "560 Mission Street in San Francisco",
         geo: {
             lat: 37.78875692550084,
@@ -81,6 +91,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/bank.webp",
+        pathMin: "./public/images/gallery/min/bank.webp",
         alt: "Outside Bank Station in the City of London, empty",
         geo: {
             lat: 51.5140139,
@@ -89,7 +100,8 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/goldengate2.webp",
-        alt: "The Golen Gate Bridge from Hawk Hill",
+        pathMin: "./public/images/gallery/min/goldengate2.webp",
+        alt: "The Golden Gate Bridge from Hawk Hill",
         geo: {
             lat: 37.8269694,
             long: -122.499925
@@ -97,6 +109,7 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/onecassonsq.webp",
+        pathMin: "./public/images/gallery/min/onecassonsq.webp",
         alt: "One Casson Square in London",
         geo: {
             lat: 51.504095975821706,
@@ -105,13 +118,14 @@ const images = [
     },
     {
         path: "./public/images/gallery/webp/shard.webp",
+        pathMin: "./public/images/gallery/min/shard.webp",
         alt: "The Shard from Borough Market",
         geo: {
             lat: 51.50594843486887,
             long: -0.09023246299904947
         }
     }
-]
+];
 
 const interval = 250
 
@@ -193,7 +207,7 @@ $('document').ready(() => {
                     })
                 }
 
-                im.src = image.path
+                im.src = image.pathMin ? image.pathMin : image.path
             }))
         })
 
@@ -284,11 +298,15 @@ $('document').ready(() => {
                         el.loading = "lazy"
                         el.alt = image.img.alt
                         el.style.aspectRatio = image.aspect
-                        el.src = image.img.path
+                        el.src = image.img.pathMin ? image.img.pathMin : image.img.path
                         el.classList = "loading"
 
                         el.onload = ()=>{
                             el.classList = ""
+
+                            if (image.pathMin) {
+                                image.src = image.img.path
+                            }
                         }
 
                         rowDiv.appendChild(el)
