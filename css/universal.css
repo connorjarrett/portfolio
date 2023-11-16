@@ -575,6 +575,7 @@ main > section:last-child {
 
 .allimages .row .loading {
     height: 100%;
+    background-size: min(50px, 50%) auto;
 }
 
 .fill--75 {
