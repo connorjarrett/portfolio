@@ -23,11 +23,11 @@ $.ajax({
 
 // GitHub
 $.ajax({
-    url: "https://api.github.com/users/conjardev/repos",
+    url: "https://api.github.com/users/connorjarrett/repos",
     success: function(repoData) {
         // Reduced Array
         const blacklist = [
-            "conjardev",
+            "connorjarrett",
             "portfolio"
         ]
 
