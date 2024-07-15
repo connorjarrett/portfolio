@@ -1,0 +1,141 @@
+:root {
+    /* --backgroundColour: rgb(13, 17, 23);
+    --fontColour: rgb(230, 237, 243);
+    --fontDark: rgb(132, 141, 151);
+
+    --mainBackgroundColour: rgb(22, 27, 34);
+    --borderColour: rgb(48, 54, 61); */
+
+    --backgroundColour: rgb(251, 251, 251);
+
+    --fontColour: rgb(72, 73, 77);
+    --fontDark: rgb(132, 141, 151);
+
+    --mainBackgroundColour: rgb(247, 247, 247);
+    --borderColour: rgb(215, 220, 224);
+
+    --linkColour: rgb(68, 147, 248);
+}
+
+body {
+    background-color: var(--backgroundColour);
+    color: var(--fontColour);
+
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    border: 1px solid var(--borderColour);
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 1840px;
+    width: -webkit-fill-available;
+}
+
+.headerBar {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", monospace;
+    display: block;
+
+    margin: 10px 0;
+}
+
+.headerBar span {
+    color: var(--fontDark);
+    display: inline-block;
+}
+
+@supports (font-variation-settings: normal) {
+    article {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+article {
+    font-family: "Inter", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+
+    background-color: var(--mainBackgroundColour);
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(78, 78, 78);
+    font-weight: 600;
+    font-size: 2em;
+
+    margin: 10px 0 5px 0;
+}
+
+h2 {
+    color: rgb(78, 78, 78);
+    font-weight: 400;
+    font-size: 1.5em;
+    
+    margin: 5px 0 10px 0;
+}
+
+h3 {
+    margin: 10px 0 -10px;
+
+    color: rgb(80, 80, 80);
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+p {
+    color: rgb(90, 90, 90);
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '\21B3';
+    margin-right: 4px;
+}
+
+ul li {
+    color: rgb(90, 90, 90);
+
+    display: block;
+    font-size: 1.25em;
+}
+
+a {
+    color: var(--linkColour);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.discreet {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        padding: 10px;
+    }
+}
