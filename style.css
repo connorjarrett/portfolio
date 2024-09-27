@@ -13,6 +13,22 @@
     --linkColour: rgb(68, 147, 248);
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroundColour: rgb(13, 17, 23);
+
+        --fontColour: rgb(255, 255, 255);
+        --fontHeading: rgb(237, 237, 237);
+        --fontH3: rgb(240, 240, 240);
+        --fontParagraph: rgb(224, 224, 224);
+
+        --mainBackgroundColour: rgb(21, 27, 35);
+        --borderColour: rgb(61, 68, 77);
+        
+        --linkColour: rgb(114, 174, 251);
+    }
+}
+
 body {
     background-color: var(--backgroundColour);
     color: var(--fontColour);
