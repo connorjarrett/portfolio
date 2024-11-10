@@ -122,6 +122,11 @@ p, th, td {
     font-size: 1.5em;
 }
 
+.smalltype {
+    margin: 15px 0 0;
+    font-size: 1.25em;
+}
+
 p.small {
     margin: 7px 0;
 }
@@ -199,6 +204,12 @@ table td:first-child, table th:first-child {
 table td:not(:first-child), table th:not(:first-child) {
     border-left: 1px solid var(--borderColour);
     padding: 0 0.2em;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1em;
 }
 
 @media screen and (max-width: 800px) {
