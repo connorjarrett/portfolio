@@ -1,0 +1,56 @@
+/* .photo-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 43% 25%;
+}
+
+.photo-grid > div {
+    margin: 5px;
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    border: 1px solid var(--borderColour);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.photo-grid > div img {
+    width: 100%;
+}
+
+.photo-grid > div > span {
+    padding: 5px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.photo-grid > div > span span {
+    display: block;
+}
+
+.photo-grid .geo {
+    color: black;
+    font-size: 0.75em;
+} */
+
+.photo-grid {
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-grid .row {
+    width: 100%;
+    display: flex;
+}
+
+.photo-grid img {
+    height: 100%;
+    border-radius: 2px;
+    scale: 0.95;
+}
