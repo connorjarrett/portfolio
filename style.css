@@ -33,11 +33,12 @@ body {
     background-color: var(--backgroundColour);
     color: var(--fontColour);
 
-    height: 100dvh;
+    min-height: 100dvh;
     display: grid;
     place-items: center;
 
     margin: 0;
+    gap: 20px;
     padding: 20px;
     box-sizing: border-box;
     overflow-x: hidden;
