@@ -164,6 +164,13 @@ a:hover {
     text-decoration: underline;
 }
 
+a i {
+    font-size: 0.9em;
+    display: inline-block !important;
+    bottom: 0.05em;
+    position: relative;
+}
+
 .flag {
     font-size: 2em;
 }
