@@ -58,11 +58,11 @@ main {
     width: -webkit-fill-available;
 }
 
-@media screen and (max-width: 1840px) {
+/* @media screen and (max-width: 1840px) {
     main {
-        max-width: calc(100vw - 40px);
+        max-width: 1340px;
     }
-}
+} */
 
 .headerBar {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", monospace;
