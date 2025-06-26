@@ -265,6 +265,14 @@ const images = [
             lat: 51.503883,
             long: -0.025703
         }
+    },
+    {
+        path: "gallery/lis_street.jpeg",
+        alt: "A street in Lisbon",
+        geo: {
+            lat: 38.72081730110662,
+            long: -9.144448135366726
+        }
     }
 ];
 
