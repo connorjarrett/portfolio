@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Connor Jarrett &#65372; Duochat</title>
+</head>
+
+<body>
+    <main>
+        <span data-nosnippet class="headerBar"><a class="discreet" href="../">connorjarrett.com</a><span
+                style="padding: 0 2px 0 2px;">/</span><a class="discreet" href="../projects">projects</a><span
+                style="padding: 0 2px 0 2px;">/</span>duochat<span>.html</span></span>
+        <article>
+            <h1>Duochat</h1>
+            <h2>July 2025</h2>
+
+            <p class="smalltype">
+                Duochat is a language learning tool I made, similar to a language exchange, where you practice
+                conversational language
+                skills by chatting to an AI character from somewhere across the world.
+            </p>
+
+            <br>
+
+            <h2>Development Journey</h2>
+            <h3>Chats & Characters</h3>
+            <p class="smalltype">Prompting AIs to act human is something I've never done before, and this was my first
+                experience working
+                with the <code>gpt-4.1</code> model.
+            </p>
+
+            <p class="smalltype">Originally, all my chats were routed through the same system prompt using
+                <code>gpt-4.1-nano</code> with a hard-coded character inside.
+            </p>
+
+            <p class="smalltype">I quickly found that if I wanted the characters to be <i>interchangeable</i> and
+                <i>interesting</i>, I'd have to use more than just one good system prompt.
+            </p>
+
+            <p class="smalltype">Now, characters are created using a prompt of <code>gpt-4.1</code>, creating a full
+                JSON
+                object of their profile, along with a detailed list of hobbies, quirks, and speech examples.
+            </p>
+
+            <p class="smalltype">
+                Then, this is routed through <a href="https://handlebarsjs.com"
+                    target="_blank"><code>handlebars.js</code></a> into a template of a system
+                prompt. The prompt along with chat context is then sent to <code>gpt-4.1-mini</code> for a quick, but
+                layered
+                reply.
+            </p>
+
+            <p class="smalltype">
+                My first tests used <code>gpt-4.1-nano</code>, but it often lacked understanding of text etiquette and
+                rules and could easily slip out of the character and into "chatbot mode".
+            </p>
+
+            <h3>Profile Pictures</h3>
+
+            <p class="smalltype">
+                While I wanted to avoid AI image generation as it's costly and I didn't think it would be able to match
+                my quality threshold, I deemed having a picture to be vital for these characters to feel real at all,
+                especially when multiple characters are present on the same page.
+            </p>
+
+            <table class="pad">
+                <tr>
+                    <td></td>
+                    <td>V1</td>
+                    <td>V2</td>
+                    <td>V3</td>
+                    <td>V4</td>
+                    <td>V5</td>
+                    <td>V6</td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td><img src="../media/pfps/v1.png">
+                    </td>
+                    <td><img src="../media/pfps/v2.png">
+                    </td>
+                    <td><img src="../media/pfps/v3.png">
+                    </td>
+                    <td><img src="../media/pfps/v4.png">
+                    </td>
+                    <td><img src="../media/pfps/v5.png">
+                    </td>
+                    <td><img src="../media/pfps/v6.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>text2img</td>
+                    <td>GPT Image 1</td>
+                    <td>GPT Image 1</td>
+                    <td>GPT Image 1</td>
+                    <td>GPT Image 1</td>
+                    <td>GPT Image 1</td>
+                </tr>
+                <tr>
+                    <td>Changes</td>
+                    <td>-</td>
+                    <td>Switched Model</td>
+                    <td>Adjusted setting to outdoors</td>
+                    <td>Tried to diversify framing</td>
+                    <td>Tried to reinforce age</td>
+                    <td>Simplified prompt, more vague</td>
+                </tr>
+            </table>
+
+            <p class="smalltype">
+                My initial tests used <a href="https://deepai.org/machine-learning-model/text2img"
+                    target="_blank">DeepAI's text2img model</a>, ran
+                through their web portal, not an API. I found these outputs jarring and far too cartoon-like, and deemed
+                that they would impair the realism of the characters rather than improve it.
+            </p>
+
+            <p class="smalltype">
+                My shift then moved to <a href="https://platform.openai.com/docs/models/gpt-image-1"
+                    target="_blank">OpenAI's GPT Image 1 model</a>, which, while being quite expensive, generated far
+                more realistic images.
+            </p>
+
+            <p class="smalltype">
+                I found that its initial results were quite good (<code>v2, v3</code>), but attempts to constrain it
+                into using off-center framing (<code>v4</code>) and then using more detailed facial-structure prompting
+                to solidify age (<code>v5</code>) ended up with my characters looking uncanny. Less turned out to be
+                more.
+            </p>
+
+            <p class="smalltype">
+                In the most recent version (<code>v6</code>), characters tend to be against river embankments, which
+                will be looked in to further in an attempt to diversify them. They also still are centrally framed and
+                have short depth of field, both giveaway traits of AI generation.
+            </p>
+
+            <p class="smalltype">
+                OpenAI's Sora model shows promise
+                <a href="https://sora.chatgpt.com/g/gen_01jytqxebjf4j9btkf7p0px294" target="_blank">[1]</a>
+                <a href="https://sora.chatgpt.com/g/gen_01jyv3nddce9drqdwfxsgrahra" target="_blank">[2]</a>
+                <a href="https://sora.chatgpt.com/g/gen_01jypyr735e96sjrazpq22kakt" target="_blank">[3]</a>
+                of being able to create realistic photos in a candid style, which no model on the market can currently
+                do. However, there's no public API and usage requires ChatGPT Premium so I haven't done any tests of my
+                own.
+            </p>
+
+            <p class="smalltype">
+                Before serving, images are lowered in resolution and artificially sharpened, then compressed to webp
+                with
+                <a href="https://sharp.pixelplumbing.com" target="_blank"><code>sharp.js</code></a>
+                to try and remove some of the perfection from AI generation.
+            </p>
+
+            <p class="smalltype">
+                Images are stored in Firebase storage, and sizes of <code>200x200</code>, <code>600x600</code>, and
+                <code>1024x1024</code> are available, before then being scaled down to the desired output.
+            </p>
+
+            <br>
+            <h2>Design Language</h2>
+
+            <p class="smalltype">
+                I wanted the design to feel familiar and human. I didn't want the clear giveaways that usually come when
+                chatting with AI like purple hues and gradients, or the dreaded ✨️ emoji.
+            </p>
+
+            <h3>Messages</h3>
+
+            <p class="smalltype">
+                For the messages page, I basically mirrored the Messages app on iPhone
+                (<a href="https://github.com/connorjarrett/chatbot" target="_blank">something I've done before</a>)
+                to try and create that feeling of familiarity with an interface that many people already link with real
+                people on their own.
+            </p>
+
+            <p class="smalltype">
+                I added this with staggered delays from the AI's responses along with typing indicators so each message
+                takes a different amount of time to be "typed out" despite all actually arriving at the same time.
+            </p>
+
+            <p class="smalltype">
+                I also added a roughly 1 second cooldown between a user typing the message and the AI responding to give
+                them time to start typing a second message. This is where a lot of other AI chat apps fall short, where
+                messages can only be exchanged evenly one at a time. No one does that with real texting.
+            </p>
+
+            <h3>Profile</h3>
+
+            <p class="smalltype">
+                My biggest inspiration for the profile page was
+                <a href="http://tandem.net/" target="_blank">Tandem</a>,
+                which was also really the whole inspiration for the project. I'm not a big fan of Tandem's design so I
+                took the core components of it but styled them in a way that felt consistent with the Apple design
+                language used earlier in the messages page.
+            </p>
+
+            <p class="smalltype">
+                I wanted to balance it with giving the user lots of insight about the character they're chatting to
+                (e.g. the personality bars), but didn't want to do a dead giveaway that the character isn't real.
+            </p>
+
+            <p class="smalltype">
+                I found that adding their local time and a quick "motivation" for them being on the app (even though
+                it's in the third person), and small bulleted interests provided the right balance of human-believable
+                and still helpful to a user who knows they're not a real person.
+            </p>
+
+            <h3>Community</h3>
+
+            <p class="smalltype">
+                The community page was the hardest one for me to conceptualise. I was still going in with those Apple
+                design principles, but it's hard finding examples of their UI introducing strangers, usually they focus
+                on people you already know.
+            </p>
+
+            <p class="smalltype">
+                This is the stage where I realised profile pictures were necessary. I settled on having 3 big boxes
+                labelled as "Top Picks" at the top. This makes it feel even more human, as apps would often have this
+                with users who were highly rated (or, more realistically, bought the subscription service) and was an
+                easy way for me to push my best characters.
+            </p>
+
+            <p class="smalltype">
+                Using an automated ranking system, the characters are sorted. If the search is filtered, relevant then
+                random filler characters will be brought in to pad results to a minimum of 3.
+            </p>
+
+            <p class="smalltype">
+                The searching/recommendations system is currently very bare bones but I am only using a small pool of 7
+                test characters right now. As I expand, I plan to refine and diversify search results.
+            </p>
+
+            <br>
+            <h2>Hosting</h2>
+
+            <p class="smalltype">Currently, due to it's small, personal project nature, and the fact it's still
+                inivte-based and not login-based, I host Duochat using <a href="https://render.com"
+                    target="_blank">Render's free tier</a>, which does mean some increased loading time but at such a
+                small scale it's not really an issue.
+            </p>
+
+            <br>
+            <h2>Invite-Only Beta</h2>
+            <p class="smalltype">A signup to the ongoing beta is available via <a href="https://tally.so/r/mRQBqd"
+                    target="_blank">this form</a>!
+            </p>
+            <p class="smalltype">View the landing/login page at <a href="https://duochat.connorjarrett.com">duochat.connorjarrett.com</a></p>
+        </article>
+    </main>
+</body>
+
+</html>
