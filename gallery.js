@@ -285,174 +285,176 @@ images.sort((a, b) => {
     return aLoc - bLoc
 })
 
-document.querySelectorAll(".photo-grid").forEach((container) => {
-    var promises = []
+document.body.onload = () => {
+    document.querySelectorAll(".photo-grid").forEach((container) => {
+        var promises = []
 
-    images.forEach((image) => {
-        promises.push(new Promise((res) => {
-            const im = new Image()
+        images.forEach((image) => {
+            promises.push(new Promise((res) => {
+                const im = new Image()
 
-            im.onload = () => {
-                // const aspect = Math.round((im.width / im.height) * 100) / 100
-                const aspect = im.width / im.height
+                im.onload = () => {
+                    // const aspect = Math.round((im.width / im.height) * 100) / 100
+                    const aspect = im.width / im.height
 
-                res({
-                    img: image,
-                    width: im.width,
-                    height: im.height,
-                    aspect: aspect,
-                    orientation: aspect < 1 ? "portrait" : "landscape"
-                })
-            }
+                    res({
+                        img: image,
+                        width: im.width,
+                        height: im.height,
+                        aspect: aspect,
+                        orientation: aspect < 1 ? "portrait" : "landscape"
+                    })
+                }
 
-            im.src = image.pathMin ? image.pathMin : image.path
-        }))
-    })
+                im.src = image.pathMin ? image.pathMin : image.path
+            }))
+        })
 
-    var loadingMain = document.createElement("div")
-    loadingMain.classList = "loading"
-    container.appendChild(loadingMain)
+        var loadingMain = document.createElement("div")
+        loadingMain.classList = "loading"
+        container.appendChild(loadingMain)
 
-    // Once all images are loaded, sort
-    Promise.all(promises).then(data => {
-        function sortIntoLayout(options) {
-            // container.querySelectorAll("img").forEach((image) => container.appendChild(image))
-            container.querySelectorAll(".row").forEach((e) => e.remove())
+        // Once all images are loaded, sort
+        Promise.all(promises).then(data => {
+            function sortIntoLayout(options) {
+                // container.querySelectorAll("img").forEach((image) => container.appendChild(image))
+                container.querySelectorAll(".row").forEach((e) => e.remove())
 
-            const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
-            const minRow = options.sort((a, b) => { return b.length - a.length }).slice(-1)[0].length
+                const maxRow = options.sort((a, b) => { return b.length - a.length })[0].length
+                const minRow = options.sort((a, b) => { return b.length - a.length }).slice(-1)[0].length
 
-            const portrait = data.filter(e => e.orientation == "portrait")
-            const landscape = data.filter(e => !portrait.includes(e))
+                const portrait = data.filter(e => e.orientation == "portrait")
+                const landscape = data.filter(e => !portrait.includes(e))
 
-            console.log(`Portrait: ${portrait.length}\nLandscape: ${landscape.length}`)
+                console.log(`Portrait: ${portrait.length}\nLandscape: ${landscape.length}`)
 
-            function generateCombinations(template) {
-                const combinations = [];
-                const rowCount = Math.ceil(data.length / template.length);
+                function generateCombinations(template) {
+                    const combinations = [];
+                    const rowCount = Math.ceil(data.length / template.length);
 
-                for (let i = 0; i < rowCount; i++) {
-                    const row = [];
-                    for (let j = 0; j < template.length; j++) {
-                        const dataIndex = i * template.length + j;
-                        if (dataIndex < data.length) {
-                            row.push(data[dataIndex])
+                    for (let i = 0; i < rowCount; i++) {
+                        const row = [];
+                        for (let j = 0; j < template.length; j++) {
+                            const dataIndex = i * template.length + j;
+                            if (dataIndex < data.length) {
+                                row.push(data[dataIndex])
+                            }
+                        }
+                        combinations.push(row);
+                    }
+
+                    return combinations;
+                }
+
+                function findBestLayout() {
+                    let bestLayout = null;
+                    let bestOverflowCount = data.length;
+
+                    for (const template of options) {
+                        const combinations = generateCombinations(template);
+                        const overflowCount = combinations.reduce((total, row) => total + Math.max(0, row.length - maxRow), 0);
+
+                        if (overflowCount < bestOverflowCount) {
+                            bestOverflowCount = overflowCount;
+                            bestLayout = combinations;
                         }
                     }
-                    combinations.push(row);
+
+                    return bestLayout;
                 }
 
-                return combinations;
-            }
+                const bestLayout = findBestLayout();
 
-            function findBestLayout() {
-                let bestLayout = null;
-                let bestOverflowCount = data.length;
+                bestLayout.forEach((row, i) => {
+                    const rowDiv = document.createElement("div")
+                    rowDiv.classList = "row"
 
-                for (const template of options) {
-                    const combinations = generateCombinations(template);
-                    const overflowCount = combinations.reduce((total, row) => total + Math.max(0, row.length - maxRow), 0);
-
-                    if (overflowCount < bestOverflowCount) {
-                        bestOverflowCount = overflowCount;
-                        bestLayout = combinations;
-                    }
-                }
-
-                return bestLayout;
-            }
-
-            const bestLayout = findBestLayout();
-
-            bestLayout.forEach((row, i) => {
-                const rowDiv = document.createElement("div")
-                rowDiv.classList = "row"
-
-                const combinedRowRatio = row.map(e => e.aspect).reduce((a, b) => a + b, 0)
-                var height = container.getBoundingClientRect().width / combinedRowRatio
-
-                rowDiv.style.height = `${height}px`
-
-                new ResizeObserver(() => {
-                    height = container.getBoundingClientRect().width / combinedRowRatio
+                    const combinedRowRatio = row.map(e => e.aspect).reduce((a, b) => a + b, 0)
+                    var height = container.getBoundingClientRect().width / combinedRowRatio
 
                     rowDiv.style.height = `${height}px`
-                }).observe(container)
 
-                row.forEach((image) => {
-                    const el = document.createElement("img")
+                    new ResizeObserver(() => {
+                        height = container.getBoundingClientRect().width / combinedRowRatio
 
-                    var Img = new Image()
-                    Img.src = image.img.path
+                        rowDiv.style.height = `${height}px`
+                    }).observe(container)
 
-                    if (image.pathMin) {
-                        el.src = image.img.pathMin
-                    }
+                    row.forEach((image) => {
+                        const el = document.createElement("img")
 
-                    el.loading = "lazy"
-                    el.style.aspectRatio = image.aspect
-
-                    Img.onload = () => {
-                        el.src = image.img.path
-                    }
-
-                    // el.loading = "lazy"
-                    // el.alt = image.img.alt
-                    // el.style.aspectRatio = image.aspect
-                    // el.src = image.img.pathMin ? image.img.pathMin : image.img.path
-                    // el.classList = "loading"
-
-                    /*el.onload = () => {
-                        el.classList = ""
+                        var Img = new Image()
+                        Img.src = image.img.path
 
                         if (image.pathMin) {
-                            image.src = image.img.path
+                            el.src = image.img.pathMin
                         }
-                    }*/
 
-                    rowDiv.appendChild(el)
+                        el.loading = "lazy"
+                        el.style.aspectRatio = image.aspect
+
+                        Img.onload = () => {
+                            el.src = image.img.path
+                        }
+
+                        // el.loading = "lazy"
+                        // el.alt = image.img.alt
+                        // el.style.aspectRatio = image.aspect
+                        // el.src = image.img.pathMin ? image.img.pathMin : image.img.path
+                        // el.classList = "loading"
+
+                        /*el.onload = () => {
+                            el.classList = ""
+    
+                            if (image.pathMin) {
+                                image.src = image.img.path
+                            }
+                        }*/
+
+                        rowDiv.appendChild(el)
+                    })
+
+                    container.appendChild(rowDiv)
+
+                    if (i + 1 < bestLayout.length) {
+                        container.appendChild(loadingMain)
+                    } else {
+                        loadingMain.remove()
+                    }
+
                 })
-
-                container.appendChild(rowDiv)
-
-                if (i + 1 < bestLayout.length) {
-                    container.appendChild(loadingMain)
-                } else {
-                    loadingMain.remove()
-                }
-
-            })
-        }
-
-        const options = {
-            big: [
-                ["portrait", "landscape"],
-                ["portrait", "portrait"],
-                ["portrait", "portrait", "landscape"],
-                ["landscape", "landscape"]
-            ],
-
-            small: [
-                ["portrait", "landscape"],
-                ["portrait", "portrait"],
-                ["landscape", "landscape"]
-            ]
-        }
-
-
-        var lastSize = "big"
-        new ResizeObserver(() => {
-            const size = (container.clientWidth < 700 ? "small" : "big")
-
-            if (size != lastSize) {
-                sortIntoLayout(options[size])
-                lastSize = size
             }
 
-        }).observe(container)
+            const options = {
+                big: [
+                    ["portrait", "landscape"],
+                    ["portrait", "portrait"],
+                    ["portrait", "portrait", "landscape"],
+                    ["landscape", "landscape"]
+                ],
+
+                small: [
+                    ["portrait", "landscape"],
+                    ["portrait", "portrait"],
+                    ["landscape", "landscape"]
+                ]
+            }
 
 
-        sortIntoLayout(options[(container.clientWidth < 700 ? "small" : "big")])
+            var lastSize = "big"
+            new ResizeObserver(() => {
+                const size = (container.clientWidth < 700 ? "small" : "big")
 
+                if (size != lastSize) {
+                    sortIntoLayout(options[size])
+                    lastSize = size
+                }
+
+            }).observe(container)
+
+
+            sortIntoLayout(options[(container.clientWidth < 700 ? "small" : "big")])
+
+        })
     })
-})
+}
