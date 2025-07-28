@@ -1,0 +1,20 @@
+.photo-grid {
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-grid .row {
+    width: 100%;
+    display: flex;
+}
+
+.photo-grid img {
+    height: 100%;
+    border: 1px solid var(--borderColour);
+    background-color: var(--fontDark);
+    border-radius: 4px;
+    scale: 0.95;
+}

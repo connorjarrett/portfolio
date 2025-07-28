@@ -1,0 +1,218 @@
+:root {
+    --backgroundColour: rgb(251, 251, 251);
+
+    --fontColour: rgb(72, 73, 77);
+    --fontHeading: rgb(78, 78, 78);
+    --fontH3: rgb(51, 51, 51);
+    --fontParagraph: rgb(89, 89, 89);
+    --fontDark: rgb(132, 141, 151);
+
+    --mainBackgroundColour: rgb(247, 247, 247);
+    --borderColour: rgb(215, 220, 224);
+
+    --linkColour: rgb(68, 147, 248);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroundColour: rgb(13, 17, 23);
+
+        --fontColour: rgb(255, 255, 255);
+        --fontHeading: rgb(237, 237, 237);
+        --fontH3: rgb(240, 240, 240);
+        --fontParagraph: rgb(224, 224, 224);
+
+        --mainBackgroundColour: rgb(21, 27, 35);
+        --borderColour: rgb(61, 68, 77);
+
+        --linkColour: rgb(114, 174, 251);
+    }
+}
+
+body {
+    background-color: var(--backgroundColour);
+    color: var(--fontColour);
+
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+
+    margin: 0;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+main {
+    border: 1px solid var(--borderColour);
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 1340px;
+    width: -webkit-fill-available;
+}
+
+.headerBar {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", monospace;
+    display: block;
+
+    margin: 10px 0;
+}
+
+.headerBar span {
+    color: var(--fontDark);
+    display: inline-block;
+}
+
+@supports (font-variation-settings: normal) {
+    article {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+article {
+    font-family: "Inter", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+
+    background-color: var(--mainBackgroundColour);
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--fontHeading);
+    font-weight: 600;
+    font-size: 2em;
+
+    margin: 10px 0;
+}
+
+h2 {
+    color: var(--fontHeading);
+    font-weight: 400;
+    font-size: 1.5em;
+
+    margin: 5px 0;
+}
+
+h3 {
+    margin: 10px 0;
+
+    color: var(--fontH3);
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+p {
+    margin: 5px 0;
+
+    color: var(--fontParagraph);
+    font-size: 1.4em;
+    font-weight: 300;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li::before {
+    content: '\21B3';
+    margin-right: 4px;
+}
+
+ul li {
+    color: var(--fontParagraph);
+
+    display: block;
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+a {
+    color: var(--linkColour);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.discreet {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a i {
+    font-size: 0.9em;
+    display: inline-block !important;
+    bottom: 0.05em;
+    position: relative;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 13px;
+    aspect-ratio: 1.777;
+}
+
+table {
+    /* display: block; */
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-spacing: 0;
+    overflow-x: auto;
+}
+
+table img {
+    width: 100%;
+}
+
+table .nowrap {
+    text-wrap: nowrap;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 1px solid var(--borderColour);
+}
+
+table th {
+    font-weight: 500;
+}
+
+table th,
+table td {
+    color: var(--fontParagraph);
+
+    padding: 0;
+    font-size: 1.2em;
+
+    align-items: center;
+    text-align: left;
+}
+
+table.pad td,
+table.pad th {
+    padding: 0.2em 0.5em !important;
+}
+
+table td:first-child,
+table th:first-child {
+    padding-right: 0.2em;
+}
+
+table td:not(:first-child),
+table th:not(:first-child) {
+    border-left: 1px solid var(--borderColour);
+    padding: 0 0.2em;
+}
