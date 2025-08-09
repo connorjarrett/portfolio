@@ -216,3 +216,9 @@ table th:not(:first-child) {
     border-left: 1px solid var(--borderColour);
     padding: 0 0.2em;
 }
+
+hr {
+    border: none;
+    border-bottom: 1px solid var(--borderColour);
+    margin: 30px 0;
+}
